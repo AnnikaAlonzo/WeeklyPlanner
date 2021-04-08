@@ -1,34 +1,21 @@
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@desc 		
- *	@file 		ui_ux_v1
- *	@date 		1617544111241
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
 
-var content_container = document.createElement("div");
-content_container.style.width = "1440px";
-content_container.id = "content_container";
-content_container.style.position = "relative";
-content_container.style.display = "block";
-content_container.style.margin = "0 auto";
-document.body.appendChild(content_container);
+var contentContainer = document.createElement("div");
+contentContainer.style.width = "1440px";
+contentContainer.id = "content_container";
+contentContainer.style.position = "relative";
+contentContainer.style.display = "block";
+contentContainer.style.margin = "0 auto";
+document.body.appendChild(contentContainer);
 
-var _bg__main = document.createElement("div");
-_bg__main.id = "_bg__main";
-_bg__main.style.left = "0px";
-_bg__main.style.top = "0px";
-_bg__main.style.width = "1440px";
-_bg__main.style.height = "1182px";
-_bg__main.style.background = 'rgba(181,212,235,1)';
+var bgMain = document.createElement("div");
+bgMain.id = "_bg__main";
+bgMain.style.left = "0px";
+bgMain.style.top = "0px";
+bgMain.style.width = "1440px";
+bgMain.style.height = "1182px";
+bgMain.style.background = 'rgba(181,212,235,1)';
 
-content_container.appendChild(_bg__main);
+contentContainer.appendChild(bgMain);
 
 var header = document.createElement("div");
 header.id = "header";
@@ -37,302 +24,298 @@ header.style.height = "177px";
 header.style.left = "0px";
 header.style.top = "0px";
 header.style.position = "absolute";
-content_container.appendChild(header);
+contentContainer.appendChild(header);
 
-var rectangle_6 = document.createElement("div");
-rectangle_6.id = "rectangle_6";
-rectangle_6.style.left = "0px";
-rectangle_6.style.top = "0px";
-rectangle_6.style.width = "1440px";
-rectangle_6.style.height = "177px";
-rectangle_6.style.background = 'rgba(225,221,221,1)';
+var headerRect = document.createElement("div");
+headerRect.id = "rectangle_6";
+headerRect.style.left = "0px";
+headerRect.style.top = "0px";
+headerRect.style.width = "1440px";
+headerRect.style.height = "177px";
+headerRect.style.background = 'rgba(225,221,221,1)';
 
-header.appendChild(rectangle_6);
+header.appendChild(headerRect);
 
-var weekly_planner = document.createElement("div");
-weekly_planner.innerHTML = "WEEKLY<br/>           PLANNER";
-weekly_planner.style.textAlign = "center";
-weekly_planner.id = "weekly_planner";
-weekly_planner.style.left = "-47px";
-weekly_planner.style.top = "56px";
-weekly_planner.style.width = "414px";
-weekly_planner.style.height = "100px";
-weekly_planner.style.fontFamily = "Sansation";
-weekly_planner.style.fontSize = "50px";
-weekly_planner.style.textShadow = "0px 4px 1px rgba(0,0,0,0.25)";
-weekly_planner.style.overflow = "hidden";
-weekly_planner.style.color = "#000000";
+var weeklyPlanner = document.createElement("div");
+weeklyPlanner.innerHTML = "WEEKLY<br/>           PLANNER";
+weeklyPlanner.style.textAlign = "center";
+weeklyPlanner.id = "weekly_planner";
+weeklyPlanner.style.left = "-47px";
+weeklyPlanner.style.top = "40px";
+weeklyPlanner.style.width = "414px";
+weeklyPlanner.style.height = "100px";
+weeklyPlanner.style.fontFamily = "Sansation";
+weeklyPlanner.style.fontSize = "45px";
+weeklyPlanner.style.textShadow = "0px 4px 1px rgba(0,0,0,0.25)";
+weeklyPlanner.style.overflow = "hidden";
+weeklyPlanner.style.color = "#000000";
 
-content_container.appendChild(weekly_planner);
+contentContainer.appendChild(weeklyPlanner);
 
-var _login = document.createElement("div");
-_login.innerHTML = "Login";
-_login.style.textAlign = "center";
-_login.id = "_login";
-_login.style.left = "1258px";
-_login.style.top = "74px";
-_login.style.width = "141px";
-_login.style.height = "56px";
-_login.style.fontFamily = "Sansation";
-_login.style.fontSize = "40px";
-_login.style.overflow = "hidden";
-_login.style.color = "#000000";
+var login = document.createElement("div");
+login.innerHTML = "Login";
+login.style.textAlign = "center";
+login.id = "_login";
+login.style.left = "1240px";
+login.style.top = "74px";
+login.style.width = "141px";
+login.style.height = "56px";
+login.style.fontFamily = "Sansation";
+login.style.fontSize = "40px";
+login.style.overflow = "hidden";
+login.style.color = "#000000";
+login.style.cursor = "pointer";
+login.addEventListener("click", goToLogin);
 
-content_container.appendChild(_login);
-
-_login.style.cursor = "pointer";
-_login.onclick = (e) => {
-	@page_view("login");
+function goToLogin() {
+	location.replace("login.html")
 }
 
-var _line_7 = document.createElement("div");
-_line_7.id = "_line_7";
-_line_7.style.left = "1250px";
-_line_7.style.top = "121px";
-_line_7.style.width = "151px";
-_line_7.style.height = "1px";
-_line_7.style.background = "#000000";
+contentContainer.appendChild(login);
 
-content_container.appendChild(_line_7);
+var loginLine = document.createElement("div");
+loginLine.id = "_line_7";
+loginLine.style.left = "1240px";
+loginLine.style.top = "121px";
+loginLine.style.width = "151px";
+loginLine.style.height = "1px";
+loginLine.style.background = "#000000";
 
-_line_7.style.cursor = "pointer";
-_line_7.onclick = (e) => {
-	@page_view("login");
-}
+contentContainer.appendChild(loginLine);
 
-var about_us = document.createElement("div");
-about_us.innerHTML = "About us";
-about_us.style.textAlign = "center";
-about_us.id = "about_us";
-about_us.style.left = "1001px";
-about_us.style.top = "74px";
-about_us.style.width = "198px";
-about_us.style.height = "56px";
-about_us.style.fontFamily = "Sansation";
-about_us.style.fontSize = "40px";
-about_us.style.overflow = "hidden";
-about_us.style.color = "#000000";
+var aboutUs = document.createElement("div");
+aboutUs.innerHTML = "About us";
+aboutUs.style.textAlign = "center";
+aboutUs.id = "about_us";
+aboutUs.style.left = "1001px";
+aboutUs.style.top = "74px";
+aboutUs.style.width = "198px";
+aboutUs.style.height = "56px";
+aboutUs.style.fontFamily = "Sansation";
+aboutUs.style.fontSize = "40px";
+aboutUs.style.overflow = "hidden";
+aboutUs.style.color = "#000000";
 
-content_container.appendChild(about_us);
+contentContainer.appendChild(aboutUs);
 
-var line_8 = document.createElement("div");
-line_8.id = "line_8";
-line_8.style.left = "1001px";
-line_8.style.top = "121px";
-line_8.style.width = "192px";
-line_8.style.height = "1px";
-line_8.style.background = "#000000";
+var line8 = document.createElement("div");
+line8.id = "line_8";
+line8.style.left = "1001px";
+line8.style.top = "121px";
+line8.style.width = "192px";
+line8.style.height = "1px";
+line8.style.background = "#000000";
 
-content_container.appendChild(line_8);
+contentContainer.appendChild(line8);
 
-var line_10 = document.createElement("div");
-line_10.id = "line_10";
-line_10.style.left = "335px";
-line_10.style.top = "88px";
-line_10.style.width = "225.06px";
-line_10.style.height = "1px";
-line_10.style.transform = "rotate(51.86deg)";
-line_10.style.background = "#000000";
+var line10 = document.createElement("div");
+line10.id = "line_10";
+line10.style.left = "335px";
+line10.style.top = "88px";
+line10.style.width = "225.06px";
+line10.style.height = "1px";
+line10.style.transform = "rotate(51.86deg)";
+line10.style.background = "#000000";
 
-content_container.appendChild(line_10);
+contentContainer.appendChild(line10);
 
-var line_11 = document.createElement("div");
-line_11.id = "line_11";
-line_11.style.left = "364px";
-line_11.style.top = "88px";
-line_11.style.width = "225.06px";
-line_11.style.height = "1px";
-line_11.style.transform = "rotate(51.86deg)";
-line_11.style.background = "#000000";
+var line11 = document.createElement("div");
+line11.id = "line_11";
+line11.style.left = "364px";
+line11.style.top = "88px";
+line11.style.width = "225.06px";
+line11.style.height = "1px";
+line11.style.transform = "rotate(51.86deg)";
+line11.style.background = "#000000";
 
-content_container.appendChild(line_11);
+contentContainer.appendChild(line11);
 
-var line_14 = document.createElement("div");
-line_14.id = "line_14";
-line_14.style.left = "598px";
-line_14.style.top = "88px";
-line_14.style.width = "225.06px";
-line_14.style.height = "1px";
-line_14.style.transform = "rotate(51.86deg)";
-line_14.style.background = "#000000";
+var line14 = document.createElement("div");
+line14.id = "line_14";
+line14.style.left = "598px";
+line14.style.top = "88px";
+line14.style.width = "225.06px";
+line14.style.height = "1px";
+line14.style.transform = "rotate(51.86deg)";
+line14.style.background = "#000000";
 
-content_container.appendChild(line_14);
+contentContainer.appendChild(line14);
 
-var line_15 = document.createElement("div");
-line_15.id = "line_15";
-line_15.style.left = "627px";
-line_15.style.top = "88px";
-line_15.style.width = "225.06px";
-line_15.style.height = "1px";
-line_15.style.transform = "rotate(51.86deg)";
-line_15.style.background = "#000000";
+var line15 = document.createElement("div");
+line15.id = "line_15";
+line15.style.left = "627px";
+line15.style.top = "88px";
+line15.style.width = "225.06px";
+line15.style.height = "1px";
+line15.style.transform = "rotate(51.86deg)";
+line15.style.background = "#000000";
 
-content_container.appendChild(line_15);
+contentContainer.appendChild(line15);
 
-var line_30 = document.createElement("div");
-line_30.id = "line_30";
-line_30.style.left = "723px";
-line_30.style.top = "88px";
-line_30.style.width = "225.06px";
-line_30.style.height = "1px";
-line_30.style.transform = "rotate(51.86deg)";
-line_30.style.background = "#000000";
+var line30 = document.createElement("div");
+line30.id = "line_30";
+line30.style.left = "723px";
+line30.style.top = "88px";
+line30.style.width = "225.06px";
+line30.style.height = "1px";
+line30.style.transform = "rotate(51.86deg)";
+line30.style.background = "#000000";
 
-content_container.appendChild(line_30);
+contentContainer.appendChild(line30);
 
-var line_31 = document.createElement("div");
-line_31.id = "line_31";
-line_31.style.left = "752px";
-line_31.style.top = "88px";
-line_31.style.width = "225.06px";
-line_31.style.height = "1px";
-line_31.style.transform = "rotate(51.86deg)";
-line_31.style.background = "#000000";
+var line31 = document.createElement("div");
+line31.id = "line_31";
+line31.style.left = "752px";
+line31.style.top = "88px";
+line31.style.width = "225.06px";
+line31.style.height = "1px";
+line31.style.transform = "rotate(51.86deg)";
+line31.style.background = "#000000";
 
-content_container.appendChild(line_31);
+contentContainer.appendChild(line31);
 
-var line_12 = document.createElement("div");
-line_12.id = "line_12";
-line_12.style.left = "470px";
-line_12.style.top = "88px";
-line_12.style.width = "225.06px";
-line_12.style.height = "1px";
-line_12.style.transform = "rotate(51.86deg)";
-line_12.style.background = "#000000";
+var line12 = document.createElement("div");
+line12.id = "line_12";
+line12.style.left = "470px";
+line12.style.top = "88px";
+line12.style.width = "225.06px";
+line12.style.height = "1px";
+line12.style.transform = "rotate(51.86deg)";
+line12.style.background = "#000000";
 
-content_container.appendChild(line_12);
+contentContainer.appendChild(line12);
 
-var line_13 = document.createElement("div");
-line_13.id = "line_13";
-line_13.style.left = "499px";
-line_13.style.top = "88px";
-line_13.style.width = "225.06px";
-line_13.style.height = "1px";
-line_13.style.transform = "rotate(51.86deg)";
-line_13.style.background = "#000000";
+var line13 = document.createElement("div");
+line13.id = "line_13";
+line13.style.left = "499px";
+line13.style.top = "88px";
+line13.style.width = "225.06px";
+line13.style.height = "1px";
+line13.style.transform = "rotate(51.86deg)";
+line13.style.background = "#000000";
 
-content_container.appendChild(line_13);
+contentContainer.appendChild(line13);
 
-var rectangle_30 = document.createElement("div");
-rectangle_30.id = "rectangle_30";
-rectangle_30.style.left = "70px";
-rectangle_30.style.top = "229px";
-rectangle_30.style.width = "343px";
-rectangle_30.style.height = "503px";
-rectangle_30.style.background = 'rgba(216,196,213,1)';
+var schedRect1 = document.createElement("div");
+schedRect1.id = "rectangle_30";
+schedRect1.style.left = "70px";
+schedRect1.style.top = "229px";
+schedRect1.style.width = "343px";
+schedRect1.style.height = "503px";
+schedRect1.style.background = 'rgba(216,196,213,1)';
 
-content_container.appendChild(rectangle_30);
+contentContainer.appendChild(schedRect1);
 
-var rectangle_31 = document.createElement("div");
-rectangle_31.id = "rectangle_31";
-rectangle_31.style.left = "118px";
-rectangle_31.style.opacity = "0.52999997138977";
-rectangle_31.style.filter = "alpha(opacity='52.999997138977')";
-rectangle_31.style.top = "286px";
-rectangle_31.style.width = "343px";
-rectangle_31.style.height = "503px";
-rectangle_31.style.background = 'rgba(250.75,247.62,250.3,0.53)';
+var schedRect2 = document.createElement("div");
+schedRect2.id = "rectangle_31";
+schedRect2.style.left = "118px";
+schedRect2.style.opacity = "0.52999997138977";
+schedRect2.style.filter = "alpha(opacity='52.999997138977')";
+schedRect2.style.top = "286px";
+schedRect2.style.width = "343px";
+schedRect2.style.height = "503px";
+schedRect2.style.background = 'rgba(250.75,247.62,250.3,0.53)';
 
-content_container.appendChild(rectangle_31);
+contentContainer.appendChild(schedRect2);
 
-var line_19 = document.createElement("div");
-line_19.id = "line_19";
-line_19.style.left = "118px";
-line_19.style.top = "717px";
-line_19.style.width = "50px";
-line_19.style.height = "1px";
-line_19.style.transform = "rotate(180deg)";
-line_19.style.background = "#000000";
+var line19 = document.createElement("div");
+line19.id = "line_19";
+line19.style.left = "118px";
+line19.style.top = "717px";
+line19.style.width = "50px";
+line19.style.height = "1px";
+line19.style.transform = "rotate(180deg)";
+line19.style.background = "#000000";
 
-content_container.appendChild(line_19);
+contentContainer.appendChild(line19);
 
-var line_18 = document.createElement("div");
-line_18.id = "line_18";
-line_18.style.left = "257px";
-line_18.style.top = "599px";
-line_18.style.width = "204px";
-line_18.style.height = "1px";
-line_18.style.transform = "rotate(-180deg)";
-line_18.style.background = "#000000";
+var line18 = document.createElement("div");
+line18.id = "line_18";
+line18.style.left = "257px";
+line18.style.top = "599px";
+line18.style.width = "204px";
+line18.style.height = "1px";
+line18.style.transform = "rotate(-180deg)";
+line18.style.background = "#000000";
 
-content_container.appendChild(line_18);
+contentContainer.appendChild(line18);
 
-var rectangle_32 = document.createElement("div");
-rectangle_32.id = "rectangle_32";
-rectangle_32.style.left = "531px";
-rectangle_32.style.top = "409px";
-rectangle_32.style.width = "343px";
-rectangle_32.style.height = "503px";
-rectangle_32.style.background = 'rgba(216,196,213,1)';
+var personalNotesRect1 = document.createElement("div");
+personalNotesRect1.id = "rectangle_32";
+personalNotesRect1.style.left = "531px";
+personalNotesRect1.style.top = "409px";
+personalNotesRect1.style.width = "343px";
+personalNotesRect1.style.height = "503px";
+personalNotesRect1.style.background = 'rgba(216,196,213,1)';
 
-content_container.appendChild(rectangle_32);
+contentContainer.appendChild(personalNotesRect1);
 
-var rectangle_33 = document.createElement("div");
-rectangle_33.id = "rectangle_33";
-rectangle_33.style.left = "578px";
-rectangle_33.style.opacity = "0.52999997138977";
-rectangle_33.style.filter = "alpha(opacity='52.999997138977')";
-rectangle_33.style.top = "466px";
-rectangle_33.style.width = "343px";
-rectangle_33.style.height = "503px";
-rectangle_33.style.background = 'rgba(250.75,247.62,250.3,0.53)';
+var personalNotesRect2 = document.createElement("div");
+personalNotesRect2.id = "rectangle_33";
+personalNotesRect2.style.left = "578px";
+personalNotesRect2.style.opacity = "0.52999997138977";
+personalNotesRect2.style.filter = "alpha(opacity='52.999997138977')";
+personalNotesRect2.style.top = "466px";
+personalNotesRect2.style.width = "343px";
+personalNotesRect2.style.height = "503px";
+personalNotesRect2.style.background = 'rgba(250.75,247.62,250.3,0.53)';
 
-content_container.appendChild(rectangle_33);
+contentContainer.appendChild(personalNotesRect2);
 
-var line_21 = document.createElement("div");
-line_21.id = "line_21";
-line_21.style.left = "766px";
-line_21.style.top = "648px";
-line_21.style.width = "155px";
-line_21.style.height = "1px";
-line_21.style.transform = "rotate(-180deg)";
-line_21.style.background = "#000000";
+var line21 = document.createElement("div");
+line21.id = "line_21";
+line21.style.left = "766px";
+line21.style.top = "648px";
+line21.style.width = "155px";
+line21.style.height = "1px";
+line21.style.transform = "rotate(-180deg)";
+line21.style.background = "#000000";
 
-content_container.appendChild(line_21);
+contentContainer.appendChild(line21);
 
-var line_25 = document.createElement("div");
-line_25.id = "line_25";
-line_25.style.left = "773px";
-line_25.style.top = "876px";
-line_25.style.width = "148px";
-line_25.style.height = "1px";
-line_25.style.transform = "rotate(-180deg)";
-line_25.style.background = "#000000";
+var line25 = document.createElement("div");
+line25.id = "line_25";
+line25.style.left = "773px";
+line25.style.top = "876px";
+line25.style.width = "148px";
+line25.style.height = "1px";
+line25.style.transform = "rotate(-180deg)";
+line25.style.background = "#000000";
 
-content_container.appendChild(line_25);
+contentContainer.appendChild(line25);
 
-var line_24 = document.createElement("div");
-line_24.id = "line_24";
-line_24.style.left = "578px";
-line_24.style.top = "762px";
-line_24.style.width = "68px";
-line_24.style.height = "1px";
-line_24.style.transform = "rotate(-180deg)";
-line_24.style.background = "#000000";
+var line24 = document.createElement("div");
+line24.id = "line_24";
+line24.style.left = "578px";
+line24.style.top = "762px";
+line24.style.width = "68px";
+line24.style.height = "1px";
+line24.style.transform = "rotate(-180deg)";
+line24.style.background = "#000000";
 
-content_container.appendChild(line_24);
+contentContainer.appendChild(line24);
 
-var rectangle_34 = document.createElement("div");
-rectangle_34.id = "rectangle_34";
-rectangle_34.style.left = "991px";
-rectangle_34.style.top = "229px";
-rectangle_34.style.width = "343px";
-rectangle_34.style.height = "503px";
-rectangle_34.style.background = 'rgba(216,196,213,1)';
+var expensesRect2 = document.createElement("div");
+expensesRect2.id = "rectangle_34";
+expensesRect2.style.left = "991px";
+expensesRect2.style.top = "229px";
+expensesRect2.style.width = "343px";
+expensesRect2.style.height = "503px";
+expensesRect2.style.background = 'rgba(216,196,213,1)';
 
-content_container.appendChild(rectangle_34);
+contentContainer.appendChild(expensesRect2);
 
-var rectangle_35 = document.createElement("div");
-rectangle_35.id = "rectangle_35";
-rectangle_35.style.left = "1038px";
-rectangle_35.style.opacity = "0.52999997138977";
-rectangle_35.style.filter = "alpha(opacity='52.999997138977')";
-rectangle_35.style.top = "286px";
-rectangle_35.style.width = "343px";
-rectangle_35.style.height = "503px";
-rectangle_35.style.background = 'rgba(250.75,247.62,250.3,0.53)';
+var expensesRect2 = document.createElement("div");
+expensesRect2.id = "rectangle_35";
+expensesRect2.style.left = "1038px";
+expensesRect2.style.opacity = "0.52999997138977";
+expensesRect2.style.filter = "alpha(opacity='52.999997138977')";
+expensesRect2.style.top = "286px";
+expensesRect2.style.width = "343px";
+expensesRect2.style.height = "503px";
+expensesRect2.style.background = 'rgba(250.75,247.62,250.3,0.53)';
 
-content_container.appendChild(rectangle_35);
+contentContainer.appendChild(expensesRect2);
 
 var create = document.createElement("div");
 create.innerHTML = "CREATE";
@@ -348,7 +331,7 @@ create.style.textShadow = "0px 0px 1px #000000";
 create.style.overflow = "hidden";
 create.style.color = "#000000";
 
-content_container.appendChild(create);
+contentContainer.appendChild(create);
 
 var write = document.createElement("div");
 write.innerHTML = "WRITE";
@@ -364,7 +347,7 @@ write.style.textShadow = "0px 0px 1px #000000";
 write.style.overflow = "hidden";
 write.style.color = "#000000";
 
-content_container.appendChild(write);
+contentContainer.appendChild(write);
 
 var down = document.createElement("div");
 down.innerHTML = "DOWN";
@@ -380,7 +363,7 @@ down.style.textShadow = "0px 0px 1px #000000";
 down.style.overflow = "hidden";
 down.style.color = "#000000";
 
-content_container.appendChild(down);
+contentContainer.appendChild(down);
 
 var personal = document.createElement("div");
 personal.innerHTML = "PERSONAL";
@@ -396,7 +379,7 @@ personal.style.textShadow = "0px 0px 1px #000000";
 personal.style.overflow = "hidden";
 personal.style.color = "#000000";
 
-content_container.appendChild(personal);
+contentContainer.appendChild(personal);
 
 var notes = document.createElement("div");
 notes.innerHTML = "NOTES";
@@ -412,7 +395,7 @@ notes.style.textShadow = "0px 0px 1px #000000";
 notes.style.overflow = "hidden";
 notes.style.color = "#000000";
 
-content_container.appendChild(notes);
+contentContainer.appendChild(notes);
 
 var your = document.createElement("div");
 your.innerHTML = "YOUR";
@@ -428,7 +411,7 @@ your.style.textShadow = "0px 0px 1px #000000";
 your.style.overflow = "hidden";
 your.style.color = "#000000";
 
-content_container.appendChild(your);
+contentContainer.appendChild(your);
 
 var own = document.createElement("div");
 own.innerHTML = "OWN";
@@ -444,7 +427,7 @@ own.style.textShadow = "0px 0px 1px #000000";
 own.style.overflow = "hidden";
 own.style.color = "#000000";
 
-content_container.appendChild(own);
+contentContainer.appendChild(own);
 
 var schedule = document.createElement("div");
 schedule.innerHTML = "SCHEDULE";
@@ -460,62 +443,62 @@ schedule.style.textShadow = "0px 0px 1px #000000";
 schedule.style.overflow = "hidden";
 schedule.style.color = "#000000";
 
-content_container.appendChild(schedule);
+contentContainer.appendChild(schedule);
 
-var line_16 = document.createElement("div");
-line_16.id = "line_16";
-line_16.style.left = "322px";
-line_16.style.top = "371px";
-line_16.style.width = "139px";
-line_16.style.height = "1px";
-line_16.style.transform = "rotate(-180deg)";
-line_16.style.background = "#000000";
+var line16 = document.createElement("div");
+line16.id = "line_16";
+line16.style.left = "322px";
+line16.style.top = "371px";
+line16.style.width = "139px";
+line16.style.height = "1px";
+line16.style.transform = "rotate(-180deg)";
+line16.style.background = "#000000";
 
-content_container.appendChild(line_16);
+contentContainer.appendChild(line16);
 
-var line_20 = document.createElement("div");
-line_20.id = "line_20";
-line_20.style.left = "581px";
-line_20.style.top = "537px";
-line_20.style.width = "150px";
-line_20.style.height = "1px";
-line_20.style.transform = "rotate(-180deg)";
-line_20.style.background = "#000000";
+var line20 = document.createElement("div");
+line20.id = "line_20";
+line20.style.left = "581px";
+line20.style.top = "537px";
+line20.style.width = "150px";
+line20.style.height = "1px";
+line20.style.transform = "rotate(-180deg)";
+line20.style.background = "#000000";
 
-content_container.appendChild(line_20);
+contentContainer.appendChild(line20);
 
-var line_17 = document.createElement("div");
-line_17.id = "line_17";
-line_17.style.left = "118px";
-line_17.style.top = "485px";
-line_17.style.width = "180px";
-line_17.style.height = "1px";
-line_17.style.transform = "rotate(180deg)";
-line_17.style.background = "#000000";
+var line17 = document.createElement("div");
+line17.id = "line_17";
+line17.style.left = "118px";
+line17.style.top = "485px";
+line17.style.width = "180px";
+line17.style.height = "1px";
+line17.style.transform = "rotate(180deg)";
+line17.style.background = "#000000";
 
-content_container.appendChild(line_17);
+contentContainer.appendChild(line17);
 
-var line_26 = document.createElement("div");
-line_26.id = "line_26";
-line_26.style.left = "1038px";
-line_26.style.top = "717px";
-line_26.style.width = "72px";
-line_26.style.height = "1px";
-line_26.style.transform = "rotate(180deg)";
-line_26.style.background = "#000000";
+var line26 = document.createElement("div");
+line26.id = "line_26";
+line26.style.left = "1038px";
+line26.style.top = "717px";
+line26.style.width = "72px";
+line26.style.height = "1px";
+line26.style.transform = "rotate(180deg)";
+line26.style.background = "#000000";
 
-content_container.appendChild(line_26);
+contentContainer.appendChild(line26);
 
-var line_27 = document.createElement("div");
-line_27.id = "line_27";
-line_27.style.left = "1254px";
-line_27.style.top = "599px";
-line_27.style.width = "127px";
-line_27.style.height = "1px";
-line_27.style.transform = "rotate(-180deg)";
-line_27.style.background = "#000000";
+var line27 = document.createElement("div");
+line27.id = "line_27";
+line27.style.left = "1254px";
+line27.style.top = "599px";
+line27.style.width = "127px";
+line27.style.height = "1px";
+line27.style.transform = "rotate(-180deg)";
+line27.style.background = "#000000";
 
-content_container.appendChild(line_27);
+contentContainer.appendChild(line27);
 
 var add = document.createElement("div");
 add.innerHTML = "ADD";
@@ -531,23 +514,23 @@ add.style.textShadow = "0px 0px 1px #000000";
 add.style.overflow = "hidden";
 add.style.color = "#000000";
 
-content_container.appendChild(add);
+contentContainer.appendChild(add);
 
-var your_ek1 = document.createElement("div");
-your_ek1.innerHTML = "YOUR";
-your_ek1.style.textAlign = "center";
-your_ek1.id = "your_ek1";
-your_ek1.style.left = "1169px";
-your_ek1.style.top = "452px";
-your_ek1.style.width = "244px";
-your_ek1.style.height = "103px";
-your_ek1.style.fontFamily = "Radley";
-your_ek1.style.fontSize = "48px";
-your_ek1.style.textShadow = "0px 0px 1px #000000";
-your_ek1.style.overflow = "hidden";
-your_ek1.style.color = "#000000";
+var your2 = document.createElement("div");
+your2.innerHTML = "YOUR";
+your2.style.textAlign = "center";
+your2.id = "your_ek1";
+your2.style.left = "1169px";
+your2.style.top = "452px";
+your2.style.width = "244px";
+your2.style.height = "103px";
+your2.style.fontFamily = "Radley";
+your2.style.fontSize = "48px";
+your2.style.textShadow = "0px 0px 1px #000000";
+your2.style.overflow = "hidden";
+your2.style.color = "#000000";
 
-content_container.appendChild(your_ek1);
+contentContainer.appendChild(your2);
 
 var weekly = document.createElement("div");
 weekly.innerHTML = "WEEKLY";
@@ -563,7 +546,7 @@ weekly.style.textShadow = "0px 0px 1px #000000";
 weekly.style.overflow = "hidden";
 weekly.style.color = "#000000";
 
-content_container.appendChild(weekly);
+contentContainer.appendChild(weekly);
 
 var expenses = document.createElement("div");
 expenses.innerHTML = "EXPENSES";
@@ -579,52 +562,51 @@ expenses.style.textShadow = "0px 0px 1px #000000";
 expenses.style.overflow = "hidden";
 expenses.style.color = "#000000";
 
-content_container.appendChild(expenses);
+contentContainer.appendChild(expenses);
 
-var line_28 = document.createElement("div");
-line_28.id = "line_28";
-line_28.style.left = "1174px";
-line_28.style.top = "371px";
-line_28.style.width = "207px";
-line_28.style.height = "1px";
-line_28.style.transform = "rotate(-180deg)";
-line_28.style.background = "#000000";
+var line28 = document.createElement("div");
+line28.id = "line_28";
+line28.style.left = "1174px";
+line28.style.top = "371px";
+line28.style.width = "207px";
+line28.style.height = "1px";
+line28.style.transform = "rotate(-180deg)";
+line28.style.background = "#000000";
 
-content_container.appendChild(line_28);
+contentContainer.appendChild(line28);
 
-var line_29 = document.createElement("div");
-line_29.id = "line_29";
-line_29.style.left = "1038px";
-line_29.style.top = "485px";
-line_29.style.width = "180px";
-line_29.style.height = "1px";
-line_29.style.transform = "rotate(180deg)";
-line_29.style.background = "#000000";
+var line29 = document.createElement("div");
+line29.id = "line_29";
+line29.style.left = "1038px";
+line29.style.top = "485px";
+line29.style.width = "180px";
+line29.style.height = "1px";
+line29.style.transform = "rotate(180deg)";
+line29.style.background = "#000000";
 
-content_container.appendChild(line_29);
+contentContainer.appendChild(line29);
 
-var rectangle_36 = document.createElement("div");
-rectangle_36.id = "rectangle_36";
-rectangle_36.style.left = "182px";
-rectangle_36.style.top = "1020px";
-rectangle_36.style.width = "1096px";
-rectangle_36.style.height = "96px";
-rectangle_36.style.background = 'rgba(216,196,213,1)';
+var signUpRect = document.createElement("div");
+signUpRect.id = "rectangle_36";
+signUpRect.style.left = "182px";
+signUpRect.style.top = "1020px";
+signUpRect.style.width = "1096px";
+signUpRect.style.height = "96px";
+signUpRect.style.background = 'rgba(216,196,213,1)';
 
-content_container.appendChild(rectangle_36);
+contentContainer.appendChild(signUpRect);
 
-var sign_up_now_and_start_creating_your_weekly_planner_ = document.createElement("div");
-sign_up_now_and_start_creating_your_weekly_planner_.innerHTML = "Sign up now and start creating your weekly planner!";
-sign_up_now_and_start_creating_your_weekly_planner_.style.textAlign = "center";
-sign_up_now_and_start_creating_your_weekly_planner_.id = "sign_up_now_and_start_creating_your_weekly_planner_";
-sign_up_now_and_start_creating_your_weekly_planner_.style.left = "196px";
-sign_up_now_and_start_creating_your_weekly_planner_.style.top = "1034px";
-sign_up_now_and_start_creating_your_weekly_planner_.style.width = "1053px";
-sign_up_now_and_start_creating_your_weekly_planner_.style.height = "97px";
-sign_up_now_and_start_creating_your_weekly_planner_.style.fontFamily = "Sansation";
-sign_up_now_and_start_creating_your_weekly_planner_.style.fontSize = "40px";
-sign_up_now_and_start_creating_your_weekly_planner_.style.overflow = "hidden";
-sign_up_now_and_start_creating_your_weekly_planner_.style.color = "#000000";
+var signUpText = document.createElement("div");
+signUpText.innerHTML = "Sign up now and start creating your weekly planner!";
+signUpText.style.textAlign = "center";
+signUpText.id = "sign_up_now_and_start_creating_your_weekly_planner_";
+signUpText.style.left = "196px";
+signUpText.style.top = "1034px";
+signUpText.style.width = "1053px";
+signUpText.style.height = "97px";
+signUpText.style.fontFamily = "Sansation";
+signUpText.style.fontSize = "40px";
+signUpText.style.overflow = "hidden";
+signUpText.style.color = "#000000";
 
-content_container.appendChild(sign_up_now_and_start_creating_your_weekly_planner_);
-
+contentContainer.appendChild(signUpText);

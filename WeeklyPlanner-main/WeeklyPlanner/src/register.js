@@ -1,75 +1,62 @@
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@desc 		
- *	@file 		ui_ux_v1
- *	@date 		1617544098332
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
 
-var content_container = document.createElement("div");
-content_container.style.width = "1440px";
-content_container.id = "content_container";
-content_container.style.position = "relative";
-content_container.style.display = "block";
-content_container.style.margin = "0 auto";
-document.body.appendChild(content_container);
+var contentContainer = document.createElement("div");
+contentContainer.style.width = "1440px";
+contentContainer.id = "content_container";
+contentContainer.style.position = "relative";
+contentContainer.style.display = "block";
+contentContainer.style.margin = "0 auto";
+document.body.appendChild(contentContainer);
 
-var _bg__register = document.createElement("div");
-_bg__register.id = "_bg__register";
-_bg__register.style.left = "0px";
-_bg__register.style.top = "0px";
-_bg__register.style.width = "1440px";
-_bg__register.style.height = "1024px";
-_bg__register.style.background = 'rgba(181,212,235,1)';
+var bgRegister = document.createElement("div");
+bgRegister.id = "_bg__register";
+bgRegister.style.left = "0px";
+bgRegister.style.top = "0px";
+bgRegister.style.width = "1440px";
+bgRegister.style.height = "1024px";
+bgRegister.style.background = 'rgba(181,212,235,1)';
 
-content_container.appendChild(_bg__register);
+contentContainer.appendChild(bgRegister);
 
-var register_box = document.createElement("div");
-register_box.id = "register_box";
-register_box.style.width = "636.12px";
-register_box.style.height = "722px";
-register_box.style.left = "402px";
-register_box.style.top = "151px";
-register_box.style.position = "absolute";
-content_container.appendChild(register_box);
+var registerBox = document.createElement("div");
+registerBox.id = "register_box";
+registerBox.style.width = "636.12px";
+registerBox.style.height = "722px";
+registerBox.style.left = "402px";
+registerBox.style.top = "151px";
+registerBox.style.position = "absolute";
+contentContainer.appendChild(registerBox);
 
-var rectangle_2 = document.createElement("div");
-rectangle_2.id = "rectangle_2";
-rectangle_2.style.left = "0px";
-rectangle_2.style.top = "0px";
-rectangle_2.style.width = "599px";
-rectangle_2.style.height = "724px";
-rectangle_2.style.border = "1px solid #000000";
-rectangle_2.style.background = 'rgba(255,255,255,0)';
-rectangle_2.style.background = "linear-gradient(-90deg , rgba(249,249,250,1) 0%, rgba(255,255,255,0) 100%)";
+var accRegRect = document.createElement("div");
+accRegRect.id = "rectangle_2";
+accRegRect.style.left = "0px";
+accRegRect.style.top = "0px";
+accRegRect.style.width = "599px";
+accRegRect.style.height = "724px";
+accRegRect.style.border = "1px solid #000000";
+accRegRect.style.background = 'rgba(255,255,255,0)';
+accRegRect.style.background = "linear-gradient(-90deg , rgba(249,249,250,1) 0%, rgba(255,255,255,0) 100%)";
 
-register_box.appendChild(rectangle_2);
+registerBox.appendChild(accRegRect);
 
-var passwordbox = document.createElement("div");
-passwordbox.id = "passwordbox";
-passwordbox.style.width = "406px";
-passwordbox.style.height = "45px";
-passwordbox.style.left = "96px";
-passwordbox.style.top = "352px";
-passwordbox.style.position = "absolute";
-register_box.appendChild(passwordbox);
+var passwordBox = document.createElement("div");
+passwordBox.id = "passwordbox";
+passwordBox.style.width = "406px";
+passwordBox.style.height = "45px";
+passwordBox.style.left = "96px";
+passwordBox.style.top = "352px";
+passwordBox.style.position = "absolute";
+registerBox.appendChild(passwordBox);
 
-var rectangle_5 = document.createElement("div");
-rectangle_5.id = "rectangle_5";
-rectangle_5.style.left = "0px";
-rectangle_5.style.top = "0px";
-rectangle_5.style.width = "408px";
-rectangle_5.style.height = "47px";
-rectangle_5.style.border = "1px solid #000000";
-rectangle_5.style.background = 'rgba(255,252.88,252.88,1)';
+var passRect = document.createElement("div");
+passRect.id = "rectangle_5";
+passRect.style.left = "0px";
+passRect.style.top = "0px";
+passRect.style.width = "408px";
+passRect.style.height = "47px";
+passRect.style.border = "1px solid #000000";
+passRect.style.background = 'rgba(255,252.88,252.88,1)';
 
-passwordbox.appendChild(rectangle_5);
+passwordBox.appendChild(passRect);
 
 var password = document.createElement("div");
 password.innerHTML = "Password";
@@ -84,52 +71,78 @@ password.style.fontSize = "24px";
 password.style.overflow = "hidden";
 password.style.color = "#000000";
 
-passwordbox.appendChild(password);
+passwordBox.appendChild(password);
 
-var image_2 = document.createElement("img");
-image_2.id = "image_2";
-image_2.style.left = "6px";
-image_2.style.top = "5px";
-image_2.style.width = "30px";
-image_2.style.height = "32px";
-image_2.src = "skins/image_2.png";
+var passwordTextbox = document.createElement("INPUT");
+passwordTextbox.setAttribute("passwordText","passwordTextbox");
+passwordTextbox.placeholder = "Password";
+passwordTextbox.style.fontFamily = "Roboto";
+passwordTextbox.style.fontSize = "20px";
+passwordTextbox.style.left = "38px";
+passwordTextbox.style.top = "1px";
+passwordTextbox.style.width = "367px";
+passwordTextbox.style.height = "45px";
+passwordTextbox.style.border = "0px solid #000000";
 
-passwordbox.appendChild(image_2);
+passwordBox.appendChild(passwordTextbox);
 
-var passwordbox_ek1 = document.createElement("div");
-passwordbox_ek1.id = "passwordbox_ek1";
-passwordbox_ek1.style.width = "406px";
-passwordbox_ek1.style.height = "45px";
-passwordbox_ek1.style.left = "96px";
-passwordbox_ek1.style.top = "413px";
-passwordbox_ek1.style.position = "absolute";
-register_box.appendChild(passwordbox_ek1);
+var image2 = document.createElement("img");
+image2.id = "image_2";
+image2.style.left = "6px";
+image2.style.top = "5px";
+image2.style.width = "30px";
+image2.style.height = "32px";
+image2.src = "skins/image_2_ek1.png";
 
-var rectangle_5_ek1 = document.createElement("div");
-rectangle_5_ek1.id = "rectangle_5_ek1";
-rectangle_5_ek1.style.left = "0px";
-rectangle_5_ek1.style.top = "0px";
-rectangle_5_ek1.style.width = "408px";
-rectangle_5_ek1.style.height = "47px";
-rectangle_5_ek1.style.border = "1px solid #000000";
-rectangle_5_ek1.style.background = 'rgba(255,252.88,252.88,1)';
+passwordBox.appendChild(image2);
 
-passwordbox_ek1.appendChild(rectangle_5_ek1);
+var confirmPasswordBox = document.createElement("div");
+confirmPasswordBox.id = "passwordbox_ek1";
+confirmPasswordBox.style.width = "406px";
+confirmPasswordBox.style.height = "45px";
+confirmPasswordBox.style.left = "96px";
+confirmPasswordBox.style.top = "413px";
+confirmPasswordBox.style.position = "absolute";
+registerBox.appendChild(confirmPasswordBox);
 
-var confirm_password = document.createElement("div");
-confirm_password.innerHTML = "Confirm Password";
-confirm_password.style.textAlign = "left";
-confirm_password.id = "confirm_password";
-confirm_password.style.left = "46px";
-confirm_password.style.top = "8px";
-confirm_password.style.width = "209px";
-confirm_password.style.height = "45px";
-confirm_password.style.fontFamily = "Roboto";
-confirm_password.style.fontSize = "24px";
-confirm_password.style.overflow = "hidden";
-confirm_password.style.color = "#000000";
+var confirmPassRect = document.createElement("div");
+confirmPassRect.id = "rectangle_5_ek1";
+confirmPassRect.style.left = "0px";
+confirmPassRect.style.top = "0px";
+confirmPassRect.style.width = "408px";
+confirmPassRect.style.height = "47px";
+confirmPassRect.style.border = "1px solid #000000";
+confirmPassRect.style.background = 'rgba(255,252.88,252.88,1)';
 
-passwordbox_ek1.appendChild(confirm_password);
+confirmPasswordBox.appendChild(confirmPassRect);
+
+var confirmPassword = document.createElement("div");
+confirmPassword.innerHTML = "Confirm Password";
+confirmPassword.style.textAlign = "left";
+confirmPassword.id = "confirm_password";
+confirmPassword.style.left = "46px";
+confirmPassword.style.top = "8px";
+confirmPassword.style.width = "209px";
+confirmPassword.style.height = "45px";
+confirmPassword.style.fontFamily = "Roboto";
+confirmPassword.style.fontSize = "24px";
+confirmPassword.style.overflow = "hidden";
+confirmPassword.style.color = "#000000";
+
+confirmPasswordBox.appendChild(confirmPassword);
+
+var confirmPasswordTextbox = document.createElement("INPUT");
+confirmPasswordTextbox.setAttribute("confirmPasswordText","confirmPasswordTextbox");
+confirmPasswordTextbox.placeholder = "Confirm Password";
+confirmPasswordTextbox.style.fontFamily = "Roboto";
+confirmPasswordTextbox.style.fontSize = "20px";
+confirmPasswordTextbox.style.left = "38px";
+confirmPasswordTextbox.style.top = "1px";
+confirmPasswordTextbox.style.width = "367px";
+confirmPasswordTextbox.style.height = "45px";
+confirmPasswordTextbox.style.border = "0px solid #000000";
+
+confirmPasswordBox.appendChild(confirmPasswordTextbox);
 
 var image_2_ek1 = document.createElement("img");
 image_2_ek1.id = "image_2_ek1";
@@ -139,42 +152,55 @@ image_2_ek1.style.width = "30px";
 image_2_ek1.style.height = "32px";
 image_2_ek1.src = "skins/image_2_ek1.png";
 
-passwordbox_ek1.appendChild(image_2_ek1);
+confirmPasswordBox.appendChild(image_2_ek1);
 
-var emailbox = document.createElement("div");
-emailbox.id = "emailbox";
-emailbox.style.width = "406px";
-emailbox.style.height = "45px";
-emailbox.style.left = "96px";
-emailbox.style.top = "169px";
-emailbox.style.position = "absolute";
-register_box.appendChild(emailbox);
+var firstNameBox = document.createElement("div");
+firstNameBox.id = "emailbox";
+firstNameBox.style.width = "406px";
+firstNameBox.style.height = "45px";
+firstNameBox.style.left = "96px";
+firstNameBox.style.top = "169px";
+firstNameBox.style.position = "absolute";
+registerBox.appendChild(firstNameBox);
 
-var rectangle_4 = document.createElement("div");
-rectangle_4.id = "rectangle_4";
-rectangle_4.style.left = "0px";
-rectangle_4.style.top = "0px";
-rectangle_4.style.width = "408px";
-rectangle_4.style.height = "47px";
-rectangle_4.style.border = "1px solid #000000";
-rectangle_4.style.background = 'rgba(255,255,255,1)';
+var fristNameRect = document.createElement("div");
+fristNameRect.id = "rectangle_4";
+fristNameRect.style.left = "0px";
+fristNameRect.style.top = "0px";
+fristNameRect.style.width = "408px";
+fristNameRect.style.height = "47px";
+fristNameRect.style.border = "1px solid #000000";
+fristNameRect.style.background = 'rgba(255,255,255,1)';
 
-emailbox.appendChild(rectangle_4);
+firstNameBox.appendChild(fristNameRect);
 
-var first_name = document.createElement("div");
-first_name.innerHTML = "First Name";
-first_name.style.textAlign = "left";
-first_name.id = "first_name";
-first_name.style.left = "46px";
-first_name.style.top = "11px";
-first_name.style.width = "188px";
-first_name.style.height = "35px";
-first_name.style.fontFamily = "Roboto";
-first_name.style.fontSize = "24px";
-first_name.style.overflow = "hidden";
-first_name.style.color = "#010101";
+var firstName = document.createElement("div");
+firstName.innerHTML = "First Name";
+firstName.style.textAlign = "left";
+firstName.id = "first_name";
+firstName.style.left = "46px";
+firstName.style.top = "11px";
+firstName.style.width = "188px";
+firstName.style.height = "35px";
+firstName.style.fontFamily = "Roboto";
+firstName.style.fontSize = "24px";
+firstName.style.overflow = "hidden";
+firstName.style.color = "#010101";
 
-emailbox.appendChild(first_name);
+firstNameBox.appendChild(firstName);
+
+var firstNameTextbox = document.createElement("INPUT");
+firstNameTextbox.setAttribute("firstNameText","firstNameTextbox");
+firstNameTextbox.placeholder = "First Name";
+firstNameTextbox.style.fontFamily = "Roboto";
+firstNameTextbox.style.fontSize = "20px";
+firstNameTextbox.style.left = "38px";
+firstNameTextbox.style.top = "1px";
+firstNameTextbox.style.width = "367px";
+firstNameTextbox.style.height = "45px";
+firstNameTextbox.style.border = "0px solid #000000";
+
+firstNameBox.appendChild(firstNameTextbox);
 
 var image_1 = document.createElement("img");
 image_1.id = "image_1";
@@ -184,42 +210,55 @@ image_1.style.width = "31px";
 image_1.style.height = "31px";
 image_1.src = "skins/image_1.png";
 
-emailbox.appendChild(image_1);
+firstNameBox.appendChild(image_1);
 
-var emailbox_ek1 = document.createElement("div");
-emailbox_ek1.id = "emailbox_ek1";
-emailbox_ek1.style.width = "406px";
-emailbox_ek1.style.height = "45px";
-emailbox_ek1.style.left = "96px";
-emailbox_ek1.style.top = "230px";
-emailbox_ek1.style.position = "absolute";
-register_box.appendChild(emailbox_ek1);
+var lastNameBox = document.createElement("div");
+lastNameBox.id = "emailbox_ek1";
+lastNameBox.style.width = "406px";
+lastNameBox.style.height = "45px";
+lastNameBox.style.left = "96px";
+lastNameBox.style.top = "230px";
+lastNameBox.style.position = "absolute";
+registerBox.appendChild(lastNameBox);
 
-var rectangle_4_ek1 = document.createElement("div");
-rectangle_4_ek1.id = "rectangle_4_ek1";
-rectangle_4_ek1.style.left = "0px";
-rectangle_4_ek1.style.top = "0px";
-rectangle_4_ek1.style.width = "408px";
-rectangle_4_ek1.style.height = "47px";
-rectangle_4_ek1.style.border = "1px solid #000000";
-rectangle_4_ek1.style.background = 'rgba(255,255,255,1)';
+var lastNameRect = document.createElement("div");
+lastNameRect.id = "rectangle_4_ek1";
+lastNameRect.style.left = "0px";
+lastNameRect.style.top = "0px";
+lastNameRect.style.width = "408px";
+lastNameRect.style.height = "47px";
+lastNameRect.style.border = "1px solid #000000";
+lastNameRect.style.background = 'rgba(255,255,255,1)';
 
-emailbox_ek1.appendChild(rectangle_4_ek1);
+lastNameBox.appendChild(lastNameRect);
 
-var last_name = document.createElement("div");
-last_name.innerHTML = "Last Name";
-last_name.style.textAlign = "left";
-last_name.id = "last_name";
-last_name.style.left = "46px";
-last_name.style.top = "11px";
-last_name.style.width = "188px";
-last_name.style.height = "35px";
-last_name.style.fontFamily = "Roboto";
-last_name.style.fontSize = "24px";
-last_name.style.overflow = "hidden";
-last_name.style.color = "#010101";
+var lastName = document.createElement("div");
+lastName.innerHTML = "Last Name";
+lastName.style.textAlign = "left";
+lastName.id = "last_name";
+lastName.style.left = "46px";
+lastName.style.top = "11px";
+lastName.style.width = "188px";
+lastName.style.height = "35px";
+lastName.style.fontFamily = "Roboto";
+lastName.style.fontSize = "24px";
+lastName.style.overflow = "hidden";
+lastName.style.color = "#010101";
 
-emailbox_ek1.appendChild(last_name);
+lastNameBox.appendChild(lastName);
+
+var lastNameTextbox = document.createElement("INPUT");
+lastNameTextbox.setAttribute("lastNameText","lastNameTextbox");
+lastNameTextbox.placeholder = "Last Name";
+lastNameTextbox.style.fontFamily = "Roboto";
+lastNameTextbox.style.fontSize = "20px";
+lastNameTextbox.style.left = "38px";
+lastNameTextbox.style.top = "1px";
+lastNameTextbox.style.width = "367px";
+lastNameTextbox.style.height = "45px";
+lastNameTextbox.style.border = "0px solid #000000";
+
+lastNameBox.appendChild(lastNameTextbox);
 
 var image_1_ek1 = document.createElement("img");
 image_1_ek1.id = "image_1_ek1";
@@ -229,42 +268,55 @@ image_1_ek1.style.width = "31px";
 image_1_ek1.style.height = "31px";
 image_1_ek1.src = "skins/image_1_ek1.png";
 
-emailbox_ek1.appendChild(image_1_ek1);
+lastNameBox.appendChild(image_1_ek1);
 
-var emailbox_ek2 = document.createElement("div");
-emailbox_ek2.id = "emailbox_ek2";
-emailbox_ek2.style.width = "406px";
-emailbox_ek2.style.height = "45px";
-emailbox_ek2.style.left = "96px";
-emailbox_ek2.style.top = "291px";
-emailbox_ek2.style.position = "absolute";
-register_box.appendChild(emailbox_ek2);
+var emailBox = document.createElement("div");
+emailBox.id = "emailbox_ek2";
+emailBox.style.width = "406px";
+emailBox.style.height = "45px";
+emailBox.style.left = "96px";
+emailBox.style.top = "291px";
+emailBox.style.position = "absolute";
+registerBox.appendChild(emailBox);
 
-var rectangle_4_ek2 = document.createElement("div");
-rectangle_4_ek2.id = "rectangle_4_ek2";
-rectangle_4_ek2.style.left = "0px";
-rectangle_4_ek2.style.top = "0px";
-rectangle_4_ek2.style.width = "408px";
-rectangle_4_ek2.style.height = "47px";
-rectangle_4_ek2.style.border = "1px solid #000000";
-rectangle_4_ek2.style.background = 'rgba(255,255,255,1)';
+var emailRect = document.createElement("div");
+emailRect.id = "rectangle_4_ek2";
+emailRect.style.left = "0px";
+emailRect.style.top = "0px";
+emailRect.style.width = "408px";
+emailRect.style.height = "47px";
+emailRect.style.border = "1px solid #000000";
+emailRect.style.background = 'rgba(255,255,255,1)';
 
-emailbox_ek2.appendChild(rectangle_4_ek2);
+emailBox.appendChild(emailRect);
 
-var email_address = document.createElement("div");
-email_address.innerHTML = "Email Address";
-email_address.style.textAlign = "left";
-email_address.id = "email_address";
-email_address.style.left = "46px";
-email_address.style.top = "11px";
-email_address.style.width = "188px";
-email_address.style.height = "35px";
-email_address.style.fontFamily = "Roboto";
-email_address.style.fontSize = "24px";
-email_address.style.overflow = "hidden";
-email_address.style.color = "#010101";
+var emailAddress = document.createElement("div");
+emailAddress.innerHTML = "Email Address";
+emailAddress.style.textAlign = "left";
+emailAddress.id = "email_address";
+emailAddress.style.left = "46px";
+emailAddress.style.top = "11px";
+emailAddress.style.width = "188px";
+emailAddress.style.height = "35px";
+emailAddress.style.fontFamily = "Roboto";
+emailAddress.style.fontSize = "24px";
+emailAddress.style.overflow = "hidden";
+emailAddress.style.color = "#010101";
 
-emailbox_ek2.appendChild(email_address);
+emailBox.appendChild(emailAddress);
+
+var emailTextbox = document.createElement("INPUT");
+emailTextbox.setAttribute("emailText","emailTextbox");
+emailTextbox.placeholder = "Email Address";
+emailTextbox.style.fontFamily = "Roboto";
+emailTextbox.style.fontSize = "20px";
+emailTextbox.style.left = "38px";
+emailTextbox.style.top = "1px";
+emailTextbox.style.width = "367px";
+emailTextbox.style.height = "45px";
+emailTextbox.style.border = "0px solid #000000";
+
+emailBox.appendChild(emailTextbox);
 
 var image_1_ek2 = document.createElement("img");
 image_1_ek2.id = "image_1_ek2";
@@ -274,36 +326,50 @@ image_1_ek2.style.width = "31px";
 image_1_ek2.style.height = "31px";
 image_1_ek2.src = "skins/image_1_ek2.png";
 
-emailbox_ek2.appendChild(image_1_ek2);
+emailBox.appendChild(image_1_ek2);
 
-var registerbutton = document.createElement("div");
-registerbutton.id = "registerbutton";
-registerbutton.style.width = "540.12px";
-registerbutton.style.height = "66px";
-registerbutton.style.left = "96px";
-registerbutton.style.top = "539px";
-registerbutton.style.position = "absolute";
-register_box.appendChild(registerbutton);
+var registerButton = document.createElement("div");
+registerButton.id = "registerButton";
+registerButton.style.width = "540.12px";
+registerButton.style.height = "66px";
+registerButton.style.left = "96px";
+registerButton.style.top = "539px";
+registerButton.style.position = "absolute";
+registerButton.style.cursor = "pointer";
+registerButton.addEventListener("click", goToLogin);
 
-var rectangle_1 = document.createElement("div");
-rectangle_1.id = "rectangle_1";
-rectangle_1.style.left = "0px";
-rectangle_1.style.opacity = "0";
-rectangle_1.style.filter = "alpha(opacity='0')";
-rectangle_1.style.top = "0px";
-rectangle_1.style.width = "414px";
-rectangle_1.style.height = "74px";
-rectangle_1.style.border = "4px solid #000203";
-rectangle_1.style.background = 'rgba(196,196,196,0)';
+function goToLogin() {
+    if(passwordTextbox.value === confirmPasswordTextbox.value) {
+        alert("First and last name obtained: " + firstNameTextbox.value + " " + lastNameTextbox.value + 
+        "\nEmail obtained: " + emailTextbox.value + "\nPassword obtained: " + passwordTextbox.value);
+        location.replace("login.html");
+    } else {
+        alert("Password does not match.");
+    }
+    
+}
 
-registerbutton.appendChild(rectangle_1);
+registerBox.appendChild(registerButton);
+
+var registerRect = document.createElement("div");
+registerRect.id = "rectangle_1";
+registerRect.style.left = "0px";
+registerRect.style.opacity = "100";
+registerRect.style.filter = "alpha(opacity='0')";
+registerRect.style.top = "0px";
+registerRect.style.width = "414px";
+registerRect.style.height = "74px";
+registerRect.style.border = "4px solid #000203";
+registerRect.style.background = 'rgba(196,196,196,0)';
+
+registerButton.appendChild(registerRect);
 
 var register = document.createElement("div");
 register.innerHTML = "REGISTER";
 register.style.textAlign = "left";
 register.id = "register";
-register.style.left = "148px";
-register.style.top = "20px";
+register.style.left = "155px";
+register.style.top = "26px";
 register.style.width = "404.12px";
 register.style.height = "62.62px";
 register.style.fontFamily = "Roboto";
@@ -311,20 +377,20 @@ register.style.fontSize = "24px";
 register.style.overflow = "hidden";
 register.style.color = "#000000";
 
-registerbutton.appendChild(register);
+registerButton.appendChild(register);
 
-var account_register = document.createElement("div");
-account_register.innerHTML = "Account Register";
-account_register.style.textAlign = "left";
-account_register.id = "account_register";
-account_register.style.left = "514px";
-account_register.style.top = "216px";
-account_register.style.width = "390px";
-account_register.style.height = "90px";
-account_register.style.fontFamily = "Roboto";
-account_register.style.fontSize = "48px";
-account_register.style.overflow = "hidden";
-account_register.style.color = "#000000";
+var accountRegister = document.createElement("div");
+accountRegister.innerHTML = "Account Register";
+accountRegister.style.textAlign = "left";
+accountRegister.id = "account_register";
+accountRegister.style.left = "514px";
+accountRegister.style.top = "216px";
+accountRegister.style.width = "390px";
+accountRegister.style.height = "90px";
+accountRegister.style.fontFamily = "Roboto";
+accountRegister.style.fontSize = "48px";
+accountRegister.style.overflow = "hidden";
+accountRegister.style.color = "#000000";
 
-content_container.appendChild(account_register);
+contentContainer.appendChild(accountRegister);
 

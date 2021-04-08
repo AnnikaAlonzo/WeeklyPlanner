@@ -1,75 +1,62 @@
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@desc 		
- *	@file 		ui_ux_v1
- *	@date 		1617543934951
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
 
-var content_container = document.createElement("div");
-content_container.style.width = "1440px";
-content_container.id = "content_container";
-content_container.style.position = "relative";
-content_container.style.display = "block";
-content_container.style.margin = "0 auto";
-document.body.appendChild(content_container);
+var contentContainer = document.createElement("div");
+contentContainer.style.width = "1440px";
+contentContainer.id = "content_container";
+contentContainer.style.position = "relative";
+contentContainer.style.display = "block";
+contentContainer.style.margin = "0 auto";
+document.body.appendChild(contentContainer);
 
-var _bg__login = document.createElement("div");
-_bg__login.id = "_bg__login";
-_bg__login.style.left = "0px";
-_bg__login.style.top = "0px";
-_bg__login.style.width = "1440px";
-_bg__login.style.height = "1024px";
-_bg__login.style.background = 'rgba(181,212,235,1)';
+var bgLogin = document.createElement("div");
+bgLogin.id = "_bg__login";
+bgLogin.style.left = "0px";
+bgLogin.style.top = "0px";
+bgLogin.style.width = "1440px";
+bgLogin.style.height = "1024px";
+bgLogin.style.background = 'rgba(181,212,235,1)';
 
-content_container.appendChild(_bg__login);
+contentContainer.appendChild(bgLogin);
 
-var login_box = document.createElement("div");
-login_box.id = "login_box";
-login_box.style.width = "609.12px";
-login_box.style.height = "722px";
-login_box.style.left = "415px";
-login_box.style.top = "151px";
-login_box.style.position = "absolute";
-content_container.appendChild(login_box);
+var loginBox = document.createElement("div");
+loginBox.id = "login_box";
+loginBox.style.width = "609.12px";
+loginBox.style.height = "722px";
+loginBox.style.left = "415px";
+loginBox.style.top = "151px";
+loginBox.style.position = "absolute";
+contentContainer.appendChild(loginBox);
 
-var rectangle_2 = document.createElement("div");
-rectangle_2.id = "rectangle_2";
-rectangle_2.style.left = "0px";
-rectangle_2.style.top = "0px";
-rectangle_2.style.width = "599px";
-rectangle_2.style.height = "724px";
-rectangle_2.style.border = "1px solid #000203";
-rectangle_2.style.background = 'rgba(255,255,255,0)';
-rectangle_2.style.background = "linear-gradient(-90deg , rgba(252.88,252.88,252.88,1) 0%, rgba(255,233.75,233.75,0) 100%)";
+var logRect = document.createElement("div");
+logRect.id = "rectangle_2";
+logRect.style.left = "0px";
+logRect.style.top = "0px";
+logRect.style.width = "599px";
+logRect.style.height = "724px";
+logRect.style.border = "1px solid #000203";
+logRect.style.background = 'rgba(255,255,255,0)';
+logRect.style.background = "linear-gradient(-90deg , rgba(252.88,252.88,252.88,1) 0%, rgba(255,233.75,233.75,0) 100%)";
 
-login_box.appendChild(rectangle_2);
+loginBox.appendChild(logRect);
 
-var passwordbox = document.createElement("div");
-passwordbox.id = "passwordbox";
-passwordbox.style.width = "406px";
-passwordbox.style.height = "45px";
-passwordbox.style.left = "96px";
-passwordbox.style.top = "288px";
-passwordbox.style.position = "absolute";
-login_box.appendChild(passwordbox);
+var passwordBox = document.createElement("div");
+passwordBox.id = "passwordbox";
+passwordBox.style.width = "406px";
+passwordBox.style.height = "45px";
+passwordBox.style.left = "96px";
+passwordBox.style.top = "288px";
+passwordBox.style.position = "absolute";
+loginBox.appendChild(passwordBox);
 
-var rectangle_5 = document.createElement("div");
-rectangle_5.id = "rectangle_5";
-rectangle_5.style.left = "0px";
-rectangle_5.style.top = "0px";
-rectangle_5.style.width = "408px";
-rectangle_5.style.height = "47px";
-rectangle_5.style.border = "1px solid #000203";
-rectangle_5.style.background = 'rgba(255,252.88,252.88,1)';
+var passRect = document.createElement("div");
+passRect.id = "rectangle_5";
+passRect.style.left = "0px";
+passRect.style.top = "0px";
+passRect.style.width = "408px";
+passRect.style.height = "47px";
+passRect.style.border = "1px solid #000203";
+passRect.style.background = 'rgba(255,252.88,252.88,1)';
 
-passwordbox.appendChild(rectangle_5);
+passwordBox.appendChild(passRect);
 
 var password = document.createElement("div");
 password.innerHTML = "Password";
@@ -84,7 +71,7 @@ password.style.fontSize = "24px";
 password.style.overflow = "hidden";
 password.style.color = "#000000";
 
-passwordbox.appendChild(password);
+passwordBox.appendChild(password);
 
 var passwordTextbox = document.createElement("INPUT");
 passwordTextbox.setAttribute("passwordText","passwordTextbox");
@@ -97,51 +84,51 @@ passwordTextbox.style.width = "365px";
 passwordTextbox.style.height = "44px";
 passwordTextbox.style.border = "0px solid #000000";
 
-passwordbox.appendChild(passwordTextbox);
+passwordBox.appendChild(passwordTextbox);
 
-var image_2 = document.createElement("img");
-image_2.id = "image_2";
-image_2.style.left = "6px";
-image_2.style.top = "5px";
-image_2.style.width = "30px";
-image_2.style.height = "32px";
-image_2.src = "skins/image_2.png";
+var image2 = document.createElement("img");
+image2.id = "image_2";
+image2.style.left = "6px";
+image2.style.top = "5px";
+image2.style.width = "30px";
+image2.style.height = "32px";
+image2.src = "skins/image_2_ek1.png";
 
-passwordbox.appendChild(image_2);
+passwordBox.appendChild(image2);
 
-var emailbox = document.createElement("div");
-emailbox.id = "emailbox";
-emailbox.style.width = "406px";
-emailbox.style.height = "45px";
-emailbox.style.left = "96px";
-emailbox.style.top = "217px";
-emailbox.style.position = "absolute";
-login_box.appendChild(emailbox);
+var emailBox = document.createElement("div");
+emailBox.id = "emailbox";
+emailBox.style.width = "406px";
+emailBox.style.height = "45px";
+emailBox.style.left = "96px";
+emailBox.style.top = "217px";
+emailBox.style.position = "absolute";
+loginBox.appendChild(emailBox);
 
-var rectangle_4 = document.createElement("div");
-rectangle_4.id = "rectangle_4";
-rectangle_4.style.left = "0px";
-rectangle_4.style.top = "0px";
-rectangle_4.style.width = "408px";
-rectangle_4.style.height = "47px";
-rectangle_4.style.border = "1px solid #000000";
-rectangle_4.style.background = 'rgba(255,255,255,1)';
+var emailRect = document.createElement("div");
+emailRect.id = "rectangle_4";
+emailRect.style.left = "0px";
+emailRect.style.top = "0px";
+emailRect.style.width = "408px";
+emailRect.style.height = "47px";
+emailRect.style.border = "1px solid #000000";
+emailRect.style.background = 'rgba(255,255,255,1)';
 
-emailbox.appendChild(rectangle_4);
+emailBox.appendChild(emailRect);
 
-var emailtextbox = document.createElement("INPUT");
-emailtextbox.setAttribute("text","textbox");
-emailtextbox.placeholder = "Enter Email";
-emailtextbox.style.fontFamily = "Roboto";
-emailtextbox.style.fontSize = "20px";
-emailtextbox.style.left = "40px";
-emailtextbox.style.top = "2px";
-emailtextbox.style.width = "365px";
-emailtextbox.style.height = "44px";
-emailtextbox.style.border = "0px solid #000000";
-emailtextbox.style.background = 'rgba(255,255,255,1)';
+var emailTextbox = document.createElement("INPUT");
+emailTextbox.setAttribute("text","textbox");
+emailTextbox.placeholder = "Enter Email";
+emailTextbox.style.fontFamily = "Roboto";
+emailTextbox.style.fontSize = "20px";
+emailTextbox.style.left = "40px";
+emailTextbox.style.top = "2px";
+emailTextbox.style.width = "365px";
+emailTextbox.style.height = "44px";
+emailTextbox.style.border = "0px solid #000000";
+emailTextbox.style.background = 'rgba(255,255,255,1)';
 
-emailbox.appendChild(emailtextbox);
+emailBox.appendChild(emailTextbox);
 
 var image_1 = document.createElement("img");
 image_1.id = "image_1";
@@ -151,37 +138,37 @@ image_1.style.width = "31px";
 image_1.style.height = "31px";
 image_1.src = "skins/image_1.png";
 
-emailbox.appendChild(image_1);
+emailBox.appendChild(image_1);
 
-var logbutton = document.createElement("div");
-logbutton.id = "logbutton";
-logbutton.style.width = "400px";
-logbutton.style.height = "58px";
-logbutton.style.left = "95px";
-logbutton.style.top = "401px";
-logbutton.style.position = "absolute";
-logbutton.style.cursor = "pointer";
-logbutton.addEventListener("click", gotoPersonalNotes);
+var logButton = document.createElement("div");
+logButton.id = "logbutton";
+logButton.style.width = "400px";
+logButton.style.height = "58px";
+logButton.style.left = "95px";
+logButton.style.top = "401px";
+logButton.style.position = "absolute";
+logButton.style.cursor = "pointer";
+logButton.addEventListener("click", goToMain2);
 
-function gotoPersonalNotes() {
-    alert("Email obtained: " + emailtextbox.value + "\nPassword obtained: " + passwordTextbox.value)
-    location.replace("personalNotes.html")
+function goToMain2() {
+    alert("Email obtained: " + emailTextbox.value + "\nPassword obtained: " + passwordTextbox.value)
+    location.replace("main2.html")
 }
 
-login_box.appendChild(logbutton);
+loginBox.appendChild(logButton);
 
-var rectangle_1 = document.createElement("div");
-rectangle_1.id = "rectangle_1";
-rectangle_1.style.left = "0px";
-rectangle_1.style.opacity = "100";
-rectangle_1.style.filter = "alpha(opacity='0')";
-rectangle_1.style.top = "0px";
-rectangle_1.style.width = "415px";
-rectangle_1.style.height = "66px";
-rectangle_1.style.border = "4px solid #000203";
-rectangle_1.style.background = 'rgba(196,196,196,0)';
+var logButtonRect = document.createElement("div");
+logButtonRect.id = "rectangle_1";
+logButtonRect.style.left = "0px";
+logButtonRect.style.opacity = "100";
+logButtonRect.style.filter = "alpha(opacity='0')";
+logButtonRect.style.top = "0px";
+logButtonRect.style.width = "415px";
+logButtonRect.style.height = "66px";
+logButtonRect.style.border = "4px solid #000203";
+logButtonRect.style.background = 'rgba(196,196,196,0)';
 
-logbutton.appendChild(rectangle_1);
+logButton.appendChild(logButtonRect);
 
 var login = document.createElement("div");
 login.innerHTML = "LOGIN";
@@ -196,29 +183,29 @@ login.style.fontSize = "24px";
 login.style.overflow = "hidden";
 login.style.color = "#000000";
 
-logbutton.appendChild(login);
+logButton.appendChild(login);
 
-var registerbutton = document.createElement("div");
-registerbutton.id = "registerbutton";
-registerbutton.style.width = "513.12px";
-registerbutton.style.height = "66px";
-registerbutton.style.left = "96px";
-registerbutton.style.top = "597px";
-registerbutton.style.position = "absolute";
-login_box.appendChild(registerbutton);
+var registerButton = document.createElement("div");
+registerButton.id = "registerbutton";
+registerButton.style.width = "513.12px";
+registerButton.style.height = "66px";
+registerButton.style.left = "96px";
+registerButton.style.top = "597px";
+registerButton.style.position = "absolute";
+loginBox.appendChild(registerButton);
 
-var rectangle_1_ek1 = document.createElement("div");
-rectangle_1_ek1.id = "rectangle_1_ek1";
-rectangle_1_ek1.style.left = "0px";
-rectangle_1_ek1.style.opacity = "100";
-rectangle_1_ek1.style.filter = "alpha(opacity='0')";
-rectangle_1_ek1.style.top = "0px";
-rectangle_1_ek1.style.width = "414px";
-rectangle_1_ek1.style.height = "74px";
-rectangle_1_ek1.style.border = "4px solid #000203";
-rectangle_1_ek1.style.background = 'rgba(196,196,196,0)';
+var regButtonRect = document.createElement("div");
+regButtonRect.id = "rectangle_1_ek1";
+regButtonRect.style.left = "0px";
+regButtonRect.style.opacity = "100";
+regButtonRect.style.filter = "alpha(opacity='0')";
+regButtonRect.style.top = "0px";
+regButtonRect.style.width = "414px";
+regButtonRect.style.height = "74px";
+regButtonRect.style.border = "4px solid #000203";
+regButtonRect.style.background = 'rgba(196,196,196,0)';
 
-registerbutton.appendChild(rectangle_1_ek1);
+registerButton.appendChild(regButtonRect);
 
 var register = document.createElement("div");
 register.innerHTML = "REGISTER NOW";
@@ -239,27 +226,27 @@ function gotoRegister() {
     location.replace("register.html")
 }
 
-registerbutton.appendChild(register);
+registerButton.appendChild(register);
 
-var vector_2 = document.createElement("img");
-vector_2.id = "vector_2";
-vector_2.style.left = "351px";
-vector_2.style.top = "534px";
-vector_2.style.width = "244px";
-vector_2.style.height = "1px";
-vector_2.src = "skins/vector_2.png";
+var rightLine = document.createElement("img");
+rightLine.id = "vector_2";
+rightLine.style.left = "351px";
+rightLine.style.top = "534px";
+rightLine.style.width = "244px";
+rightLine.style.height = "1px";
+rightLine.src = "skins/vector_2.png";
 
-login_box.appendChild(vector_2);
+loginBox.appendChild(rightLine);
 
-var vector_1 = document.createElement("img");
-vector_1.id = "vector_1";
-vector_1.style.left = "1px";
-vector_1.style.top = "535px";
-vector_1.style.width = "253px";
-vector_1.style.height = "1px";
-vector_1.src = "skins/vector_1.png";
+var leftLine = document.createElement("img");
+leftLine.id = "vector_1";
+leftLine.style.left = "1px";
+leftLine.style.top = "535px";
+leftLine.style.width = "253px";
+leftLine.style.height = "1px";
+leftLine.src = "skins/vector_1.png";
 
-login_box.appendChild(vector_1);
+loginBox.appendChild(leftLine);
 
 var or = document.createElement("div");
 or.innerHTML = "OR";
@@ -275,20 +262,20 @@ or.style.textShadow = "0px 0px 1px #000203";
 or.style.overflow = "hidden";
 or.style.color = "#8A7E7E";
 
-login_box.appendChild(or);
+loginBox.appendChild(or);
 
-var account_login = document.createElement("div");
-account_login.innerHTML = "Account Login";
-account_login.style.textAlign = "left";
-account_login.id = "account_login";
-account_login.style.left = "145px";
-account_login.style.top = "83px";
-account_login.style.width = "332px";
-account_login.style.height = "90px";
-account_login.style.fontFamily = "Roboto";
-account_login.style.fontSize = "48px";
-account_login.style.overflow = "hidden";
-account_login.style.color = "#000000";
+var accountLogin = document.createElement("div");
+accountLogin.innerHTML = "Account Login";
+accountLogin.style.textAlign = "left";
+accountLogin.id = "account_login";
+accountLogin.style.left = "145px";
+accountLogin.style.top = "83px";
+accountLogin.style.width = "332px";
+accountLogin.style.height = "90px";
+accountLogin.style.fontFamily = "Roboto";
+accountLogin.style.fontSize = "48px";
+accountLogin.style.overflow = "hidden";
+accountLogin.style.color = "#000000";
 
-login_box.appendChild(account_login);
+loginBox.appendChild(accountLogin);
 
