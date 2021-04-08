@@ -155,11 +155,19 @@ emailbox.appendChild(image_1);
 
 var logbutton = document.createElement("div");
 logbutton.id = "logbutton";
-logbutton.style.width = "407px";
+logbutton.style.width = "400px";
 logbutton.style.height = "58px";
 logbutton.style.left = "95px";
 logbutton.style.top = "401px";
 logbutton.style.position = "absolute";
+logbutton.style.cursor = "pointer";
+logbutton.addEventListener("click", gotoPersonalNotes);
+
+function gotoPersonalNotes() {
+    alert("Email obtained: " + emailtextbox.value + "\nPassword obtained: " + passwordTextbox.value)
+    location.replace("personalNotes.html")
+}
+
 login_box.appendChild(logbutton);
 
 var rectangle_1 = document.createElement("div");
@@ -214,16 +222,22 @@ registerbutton.appendChild(rectangle_1_ek1);
 
 var register = document.createElement("div");
 register.innerHTML = "REGISTER NOW";
-register.style.textAlign = "left";
+register.style.textAlign = "center";
 register.id = "register";
-register.style.left = "123px";
+register.style.left = "0px";
 register.style.top = "24px";
-register.style.width = "404.12px";
+register.style.width = "420.12px";
 register.style.height = "62.62px";
 register.style.fontFamily = "Roboto";
 register.style.fontSize = "24px";
 register.style.overflow = "hidden";
 register.style.color = "#000000";
+register.style.cursor = "pointer";
+register.addEventListener("click", gotoRegister);
+
+function gotoRegister() {
+    location.replace("register.html")
+}
 
 registerbutton.appendChild(register);
 
@@ -278,4 +292,3 @@ account_login.style.color = "#000000";
 
 login_box.appendChild(account_login);
 
-// Testing testing
