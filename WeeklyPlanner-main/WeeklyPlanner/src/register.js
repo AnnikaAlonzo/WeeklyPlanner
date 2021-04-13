@@ -83,6 +83,7 @@ passwordTextbox.style.top = "1px";
 passwordTextbox.style.width = "367px";
 passwordTextbox.style.height = "45px";
 passwordTextbox.style.border = "0px solid #000000";
+passwordTextbox.setAttribute("type", "password");
 
 passwordBox.appendChild(passwordTextbox);
 
@@ -141,6 +142,7 @@ confirmPasswordTextbox.style.top = "1px";
 confirmPasswordTextbox.style.width = "367px";
 confirmPasswordTextbox.style.height = "45px";
 confirmPasswordTextbox.style.border = "0px solid #000000";
+confirmPasswordTextbox.setAttribute("type", "password");
 
 confirmPasswordBox.appendChild(confirmPasswordTextbox);
 

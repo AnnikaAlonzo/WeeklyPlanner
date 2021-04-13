@@ -83,6 +83,7 @@ passwordTextbox.style.top = "2px";
 passwordTextbox.style.width = "365px";
 passwordTextbox.style.height = "44px";
 passwordTextbox.style.border = "0px solid #000000";
+passwordTextbox.setAttribute("type", "password");
 
 passwordBox.appendChild(passwordTextbox);
 
