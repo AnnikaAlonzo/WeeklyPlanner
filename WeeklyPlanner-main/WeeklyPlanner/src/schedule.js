@@ -7,47 +7,22 @@ contentContainer.style.display = "block";
 contentContainer.style.margin = "0 auto";
 document.body.appendChild(contentContainer);
 
-var bgExpenses = document.createElement("div");
-bgExpenses.id = "bgExpenses";
-bgExpenses.style.left = "0px";
-bgExpenses.style.top = "0px";
-bgExpenses.style.width = "1440px";
-bgExpenses.style.height = "1024px";
-bgExpenses.style.background = 'rgba(181,212,235,1)';
+var bgSchedule = document.createElement("div");
+bgSchedule.id = "bgSchedule";
+bgSchedule.style.left = "0px";
+bgSchedule.style.top = "0px";
+bgSchedule.style.width = "1440px";
+bgSchedule.style.height = "1024px";
+bgSchedule.style.background = 'rgba(181,212,235,1)';
 
-contentContainer.appendChild(bgExpenses);
-
-// var image_6 = document.createElement("img");
-// image_6.id = "image_6";
-// image_6.style.left = "1188px";
-// image_6.style.top = "12px";
-// image_6.style.width = "31px";
-// image_6.style.height = "31px";
-// image_6.src = "skins/image_6.png";
-
-// contentContainer.appendChild(image_6);
-
-// var lance_supangan = document.createElement("div");
-// lance_supangan.innerHTML = "Lance Supangan";
-// lance_supangan.style.textAlign = "center";
-// lance_supangan.id = "lance_supangan";
-// lance_supangan.style.left = "1216px";
-// lance_supangan.style.top = "16px";
-// lance_supangan.style.width = "150px";
-// lance_supangan.style.height = "36px";
-// lance_supangan.style.fontFamily = "Sansation";
-// lance_supangan.style.fontSize = "18px";
-// lance_supangan.style.overflow = "hidden";
-// lance_supangan.style.color = "#000000";
-
-// contentContainer.appendChild(lance_supangan);
+contentContainer.appendChild(bgSchedule);
 
 var header = document.createElement("div");
 header.id = "header";
 header.style.width = "1440px";
 header.style.height = "113px";
 header.style.left = "0px";
-header.style.top = "60px";
+header.style.top = "57px";
 header.style.position = "absolute";
 contentContainer.appendChild(header);
 
@@ -57,24 +32,24 @@ headerRect.style.left = "0px";
 headerRect.style.top = "0px";
 headerRect.style.width = "1440px";
 headerRect.style.height = "113px";
-headerRect.style.background = 'rgba(225,221,221,1)';
+headerRect.style.background = 'rgba(225.25,220.56,220.56,1)';
 
 header.appendChild(headerRect);
 
-var expenses = document.createElement("div");
-expenses.innerHTML = "EXPENSES";
-expenses.style.textAlign = "center";
-expenses.id = "expenses";
-expenses.style.left = "529px";
-expenses.style.top = "17px";
-expenses.style.width = "436px";
-expenses.style.height = "124px";
-expenses.style.fontFamily = "Sansation";
-expenses.style.fontSize = "64px";
-expenses.style.overflow = "hidden";
-expenses.style.color = "#000000";
+var schedule = document.createElement("div");
+schedule.innerHTML = "SCHEDULE";
+schedule.style.textAlign = "center";
+schedule.id = "schedule";
+schedule.style.left = "529px";
+schedule.style.top = "15px";
+schedule.style.width = "436px";
+schedule.style.height = "124px";
+schedule.style.fontFamily = "Sansation";
+schedule.style.fontSize = "64px";
+schedule.style.overflow = "hidden";
+schedule.style.color = "#000000";
 
-header.appendChild(expenses);
+header.appendChild(schedule);
 
 var image_4 = document.createElement("img"); //options
 image_4.id = "image_4";
@@ -107,11 +82,12 @@ scheduleBox.style.top = "224px";
 scheduleBox.style.position = "absolute";
 contentContainer.appendChild(scheduleBox);
 
+//Actual schedule box
 var body = document.createElement("img");
 body.id = "body";
 body.style.left = "0px";
 body.style.top = "0px";
-body.style.width = "925px";
+body.style.width = "926px";
 body.style.height = "627px";
 body.src = "skins/body.png";
 
@@ -125,6 +101,7 @@ days.style.left = "0px";
 days.style.top = "103px";
 days.style.position = "absolute";
 scheduleBox.appendChild(days);
+
 
 //M-Su Dates of Schedule (From rect 8 to 14)
 var monRect = document.createElement("div"); //Monday
@@ -557,7 +534,7 @@ leftArrow.style.cursor = "pointer";
 
 scheduleBox.appendChild(leftArrow);
 
-var downArrow = document.createElement("img");
+var downArrow = document.createElement("img"); //Month and year tab
 downArrow.id = "downArrow";
 downArrow.style.left = "310px";
 downArrow.style.top = "35px";
@@ -580,122 +557,73 @@ function showHide() {
 
 var buttons = document.createElement("div");
 buttons.id = "buttons";
-buttons.style.width = "297px";
-buttons.style.height = "471px";
+buttons.style.width = "294px";
+buttons.style.height = "467px";
 buttons.style.left = "61px";
 buttons.style.top = "340px";
 buttons.style.position = "absolute";
 contentContainer.appendChild(buttons);
 
-var tallyExpButton = document.createElement("div");
-tallyExpButton.id = "tallyExpButton";
-tallyExpButton.style.width = "294px";
-tallyExpButton.style.height = "66px";
-tallyExpButton.style.left = "0px";
-tallyExpButton.style.top = "243px";
-tallyExpButton.style.position = "absolute";
-buttons.appendChild(tallyExpButton);
+var remindersButton = document.createElement("div");
+remindersButton.id = "remindersButton";
+remindersButton.style.width = "294px";
+remindersButton.style.height = "64px";
+remindersButton.style.left = "0px";
+remindersButton.style.top = "323px";
+remindersButton.style.position = "absolute";
+remindersButton.style.cursor = "pointer";
+buttons.appendChild(remindersButton);
 
-var tallyExpRect = document.createElement("div");
-tallyExpRect.id = "tallyExpRect";
-tallyExpRect.style.left = "0px";
-tallyExpRect.style.top = "0px";
-tallyExpRect.style.width = "294px";
-tallyExpRect.style.height = "64px";
-tallyExpRect.style.borderRadius = "50px";
-tallyExpRect.style.background = 'rgba(254,248,232,1)';
+var remindersRect = document.createElement("div");
+remindersRect.id = "remindersRect";
+remindersRect.style.left = "0px";
+remindersRect.style.top = "0px";
+remindersRect.style.width = "294px";
+remindersRect.style.height = "64px";
+remindersRect.style.borderRadius = "50px";
+remindersRect.style.background = 'rgba(254,248,232,1)';
 
-tallyExpButton.appendChild(tallyExpRect);
+remindersButton.appendChild(remindersRect);
 
-var tallyExpText = document.createElement("div");
-tallyExpText.innerHTML = "Tally Expenses";
-tallyExpText.style.textAlign = "left";
-tallyExpText.id = "tallyExpText";
-tallyExpText.style.left = "58px";
-tallyExpText.style.top = "18px";
-tallyExpText.style.width = "198px";
-tallyExpText.style.height = "55px";
-tallyExpText.style.fontFamily = "Radley";
-tallyExpText.style.fontSize = "28px";
-tallyExpText.style.overflow = "hidden";
-tallyExpText.style.color = "#000000";
+var remindersText = document.createElement("div");
+remindersText.innerHTML = "Reminders";
+remindersText.style.textAlign = "left";
+remindersText.id = "remindersText";
+remindersText.style.left = "58px";
+remindersText.style.top = "18px";
+remindersText.style.width = "148px";
+remindersText.style.height = "55px";
+remindersText.style.fontFamily = "Radley";
+remindersText.style.fontSize = "28px";
+remindersText.style.overflow = "hidden";
+remindersText.style.color = "#000000";
 
-tallyExpButton.appendChild(tallyExpText);
+remindersButton.appendChild(remindersText);
 
-var asteriskSymbol = document.createElement("div");
-asteriskSymbol.innerHTML = "*";
-asteriskSymbol.style.textAlign = "center";
-asteriskSymbol.id = "asteriskSymbol";
-asteriskSymbol.style.left = "9px";
-asteriskSymbol.style.top = "5px";
-asteriskSymbol.style.width = "55px";
-asteriskSymbol.style.height = "97px";
-asteriskSymbol.style.fontFamily = "Radley";
-asteriskSymbol.style.fontSize = "48px";
-asteriskSymbol.style.textShadow = "0px 0px 1px #000000";
-asteriskSymbol.style.overflow = "hidden";
-asteriskSymbol.style.color = "#000000";
+var o = document.createElement("div");
+o.innerHTML = "o";
+o.style.textAlign = "center";
+o.id = "o";
+o.style.left = "10px";
+o.style.top = "1px";
+o.style.width = "53px";
+o.style.height = "97px";
+o.style.fontFamily = "Radley";
+o.style.fontSize = "48px";
+o.style.textShadow = "0px 0px 1px #000000";
+o.style.overflow = "hidden";
+o.style.color = "#000000";
 
-tallyExpButton.appendChild(asteriskSymbol);
-
-var viewExpButton = document.createElement("div");
-viewExpButton.id = "viewExpButton";
-viewExpButton.style.width = "294px";
-viewExpButton.style.height = "66px";
-viewExpButton.style.left = "0px";
-viewExpButton.style.top = "325px";
-viewExpButton.style.position = "absolute";
-buttons.appendChild(viewExpButton);
-
-var viewExpRect = document.createElement("div");
-viewExpRect.id = "viewExpRect";
-viewExpRect.style.left = "0px";
-viewExpRect.style.top = "0px";
-viewExpRect.style.width = "294px";
-viewExpRect.style.height = "64px";
-viewExpRect.style.borderRadius = "50px";
-viewExpRect.style.background = 'rgba(254,248,232,1)';
-
-viewExpButton.appendChild(viewExpRect);
-
-var viewExpText = document.createElement("div");
-viewExpText.innerHTML = "View Expenses";
-viewExpText.style.textAlign = "left";
-viewExpText.id = "viewExpText";
-viewExpText.style.left = "58px";
-viewExpText.style.top = "18px";
-viewExpText.style.width = "197px";
-viewExpText.style.height = "55px";
-viewExpText.style.fontFamily = "Radley";
-viewExpText.style.fontSize = "28px";
-viewExpText.style.overflow = "hidden";
-viewExpText.style.color = "#000000";
-
-viewExpButton.appendChild(viewExpText);
-
-var arrowSymbol = document.createElement("div");
-arrowSymbol.innerHTML = ">";
-arrowSymbol.style.textAlign = "center";
-arrowSymbol.id = "arrowSymbol";
-arrowSymbol.style.left = "16px";
-arrowSymbol.style.top = "5px";
-arrowSymbol.style.width = "41px";
-arrowSymbol.style.height = "97px";
-arrowSymbol.style.fontFamily = "Radley";
-arrowSymbol.style.fontSize = "48px";
-arrowSymbol.style.textShadow = "0px 0px 1px #000000";
-arrowSymbol.style.overflow = "hidden";
-arrowSymbol.style.color = "#000000";
-
-viewExpButton.appendChild(arrowSymbol);
+remindersButton.appendChild(o);
 
 var helpButton = document.createElement("div");
 helpButton.id = "helpButton";
 helpButton.style.width = "294px";
 helpButton.style.height = "64px";
-helpButton.style.left = "3px";
-helpButton.style.top = "407px";
+helpButton.style.left = "0px";
+helpButton.style.top = "403px";
 helpButton.style.position = "absolute";
+helpButton.style.cursor = "pointer";
 buttons.appendChild(helpButton);
 
 var helpRect = document.createElement("div");
@@ -740,40 +668,41 @@ questionMarkSymbol.style.color = "#000000";
 
 helpButton.appendChild(questionMarkSymbol);
 
-var removeExpButton = document.createElement("div");
-removeExpButton.id = "removeExpButton";
-removeExpButton.style.width = "294px";
-removeExpButton.style.height = "64px";
-removeExpButton.style.left = "0px";
-removeExpButton.style.top = "163px";
-removeExpButton.style.position = "absolute";
-buttons.appendChild(removeExpButton);
+var removeSchedButton = document.createElement("div");
+removeSchedButton.id = "removeSchedButton";
+removeSchedButton.style.width = "294px";
+removeSchedButton.style.height = "64px";
+removeSchedButton.style.left = "0px";
+removeSchedButton.style.top = "163px";
+removeSchedButton.style.position = "absolute";
+removeSchedButton.style.cursor = "pointer";
+buttons.appendChild(removeSchedButton);
 
-var removeExpRect = document.createElement("div");
-removeExpRect.id = "removeExpRect";
-removeExpRect.style.left = "0px";
-removeExpRect.style.top = "0px";
-removeExpRect.style.width = "294px";
-removeExpRect.style.height = "64px";
-removeExpRect.style.borderRadius = "50px";
-removeExpRect.style.background = 'rgba(254,248,232,1)';
+var removeTaskButton = document.createElement("div");
+removeTaskButton.id = "removeTaskButton";
+removeTaskButton.style.left = "0px";
+removeTaskButton.style.top = "0px";
+removeTaskButton.style.width = "294px";
+removeTaskButton.style.height = "64px";
+removeTaskButton.style.borderRadius = "50px";
+removeTaskButton.style.background = 'rgba(254,248,232,1)';
 
-removeExpButton.appendChild(removeExpRect);
+removeSchedButton.appendChild(removeTaskButton);
 
-var removeExpText = document.createElement("div");
-removeExpText.innerHTML = "Remove Expense";
-removeExpText.style.textAlign = "left";
-removeExpText.id = "removeExpText";
-removeExpText.style.left = "58px";
-removeExpText.style.top = "18px";
-removeExpText.style.width = "224px";
-removeExpText.style.height = "55px";
-removeExpText.style.fontFamily = "Radley";
-removeExpText.style.fontSize = "28px";
-removeExpText.style.overflow = "hidden";
-removeExpText.style.color = "#000000";
+var removeTaskText = document.createElement("div");
+removeTaskText.innerHTML = "Remove Task";
+removeTaskText.style.textAlign = "left";
+removeTaskText.id = "removeTaskText";
+removeTaskText.style.left = "58px";
+removeTaskText.style.top = "18px";
+removeTaskText.style.width = "178px";
+removeTaskText.style.height = "55px";
+removeTaskText.style.fontFamily = "Radley";
+removeTaskText.style.fontSize = "28px";
+removeTaskText.style.overflow = "hidden";
+removeTaskText.style.color = "#000000";
 
-removeExpButton.appendChild(removeExpText);
+removeSchedButton.appendChild(removeTaskText);
 
 var minusSymbol = document.createElement("div");
 minusSymbol.innerHTML = "-";
@@ -789,42 +718,95 @@ minusSymbol.style.textShadow = "0px 0px 1px #000000";
 minusSymbol.style.overflow = "hidden";
 minusSymbol.style.color = "#000000";
 
-removeExpButton.appendChild(minusSymbol);
+removeSchedButton.appendChild(minusSymbol);
 
-var editExpButton = document.createElement("div");
-editExpButton.id = "editExpButton";
-editExpButton.style.width = "294px";
-editExpButton.style.height = "64px";
-editExpButton.style.left = "0px";
-editExpButton.style.top = "83px";
-editExpButton.style.position = "absolute";
-buttons.appendChild(editExpButton);
+var viewSchedButton = document.createElement("div");
+viewSchedButton.id = "viewSchedButton";
+viewSchedButton.style.width = "294px";
+viewSchedButton.style.height = "64px";
+viewSchedButton.style.left = "0px";
+viewSchedButton.style.top = "243px";
+viewSchedButton.style.position = "absolute";
+viewSchedButton.style.cursor = "pointer";
+buttons.appendChild(viewSchedButton);
 
-var editExpRect = document.createElement("div");
-editExpRect.id = "editExpRect";
-editExpRect.style.left = "0px";
-editExpRect.style.top = "0px";
-editExpRect.style.width = "294px";
-editExpRect.style.height = "64px";
-editExpRect.style.borderRadius = "50px";
-editExpRect.style.background = 'rgba(254,248,232,1)';
+var viewSchedRect = document.createElement("div");
+viewSchedRect.id = "viewSchedRect";
+viewSchedRect.style.left = "0px";
+viewSchedRect.style.top = "0px";
+viewSchedRect.style.width = "294px";
+viewSchedRect.style.height = "64px";
+viewSchedRect.style.borderRadius = "50px";
+viewSchedRect.style.background = 'rgba(254,248,232,1)';
 
-editExpButton.appendChild(editExpRect);
+viewSchedButton.appendChild(viewSchedRect);
 
-var editExpText = document.createElement("div");
-editExpText.innerHTML = "Edit Expense";
-editExpText.style.textAlign = "left";
-editExpText.id = "editExpText";
-editExpText.style.left = "58px";
-editExpText.style.top = "18px";
-editExpText.style.width = "179px";
-editExpText.style.height = "55px";
-editExpText.style.fontFamily = "Radley";
-editExpText.style.fontSize = "28px";
-editExpText.style.overflow = "hidden";
-editExpText.style.color = "#000000";
+var viewSchedText = document.createElement("div");
+viewSchedText.innerHTML = "View Schedule";
+viewSchedText.style.textAlign = "left";
+viewSchedText.id = "viewSchedText";
+viewSchedText.style.left = "58px";
+viewSchedText.style.top = "18px";
+viewSchedText.style.width = "194px";
+viewSchedText.style.height = "55px";
+viewSchedText.style.fontFamily = "Radley";
+viewSchedText.style.fontSize = "28px";
+viewSchedText.style.overflow = "hidden";
+viewSchedText.style.color = "#000000";
 
-editExpButton.appendChild(editExpText);
+viewSchedButton.appendChild(viewSchedText);
+
+var arrowSymbol = document.createElement("div");
+arrowSymbol.innerHTML = ">";
+arrowSymbol.style.textAlign = "center";
+arrowSymbol.id = "arrowSymbol";
+arrowSymbol.style.left = "16px";
+arrowSymbol.style.top = "3px";
+arrowSymbol.style.width = "41px";
+arrowSymbol.style.height = "97px";
+arrowSymbol.style.fontFamily = "Radley";
+arrowSymbol.style.fontSize = "48px";
+arrowSymbol.style.textShadow = "0px 0px 1px #000000";
+arrowSymbol.style.overflow = "hidden";
+arrowSymbol.style.color = "#000000";
+
+viewSchedButton.appendChild(arrowSymbol);
+
+var editTaskButton = document.createElement("div");
+editTaskButton.id = "editTaskButton";
+editTaskButton.style.width = "294px";
+editTaskButton.style.height = "64px";
+editTaskButton.style.left = "0px";
+editTaskButton.style.top = "83px";
+editTaskButton.style.position = "absolute";
+editTaskButton.style.cursor = "pointer";
+buttons.appendChild(editTaskButton);
+
+var editTaskRect = document.createElement("div");
+editTaskRect.id = "editTaskRect";
+editTaskRect.style.left = "0px";
+editTaskRect.style.top = "0px";
+editTaskRect.style.width = "294px";
+editTaskRect.style.height = "64px";
+editTaskRect.style.borderRadius = "50px";
+editTaskRect.style.background = 'rgba(254,248,232,1)';
+
+editTaskButton.appendChild(editTaskRect);
+
+var editTaskText = document.createElement("div");
+editTaskText.innerHTML = "Edit Task";
+editTaskText.style.textAlign = "left";
+editTaskText.id = "editTaskText";
+editTaskText.style.left = "58px";
+editTaskText.style.top = "18px";
+editTaskText.style.width = "133px";
+editTaskText.style.height = "55px";
+editTaskText.style.fontFamily = "Radley";
+editTaskText.style.fontSize = "28px";
+editTaskText.style.overflow = "hidden";
+editTaskText.style.color = "#000000";
+
+editTaskButton.appendChild(editTaskText);
 
 var wavyDashSymbol = document.createElement("div");
 wavyDashSymbol.innerHTML = "~";
@@ -840,42 +822,43 @@ wavyDashSymbol.style.textShadow = "0px 0px 1px #000000";
 wavyDashSymbol.style.overflow = "hidden";
 wavyDashSymbol.style.color = "#000000";
 
-editExpButton.appendChild(wavyDashSymbol);
+editTaskButton.appendChild(wavyDashSymbol);
 
-var addExpButton = document.createElement("div");
-addExpButton.id = "addExpButton";
-addExpButton.style.width = "294px";
-addExpButton.style.height = "67px";
-addExpButton.style.left = "0px";
-addExpButton.style.top = "0px";
-addExpButton.style.position = "absolute";
-buttons.appendChild(addExpButton);
+var addTaskButton = document.createElement("div");
+addTaskButton.id = "addTaskButton";
+addTaskButton.style.width = "294px";
+addTaskButton.style.height = "67px";
+addTaskButton.style.left = "0px";
+addTaskButton.style.top = "0px";
+addTaskButton.style.position = "absolute";
+addTaskButton.style.cursor = "pointer";
+buttons.appendChild(addTaskButton);
 
-var addExpRect = document.createElement("div");
-addExpRect.id = "addExpRect";
-addExpRect.style.left = "0px";
-addExpRect.style.top = "0px";
-addExpRect.style.width = "294px";
-addExpRect.style.height = "67px";
-addExpRect.style.borderRadius = "50px";
-addExpRect.style.background = 'rgba(254,248,232,1)';
+var addTaskRect = document.createElement("div");
+addTaskRect.id = "addTaskRect";
+addTaskRect.style.left = "0px";
+addTaskRect.style.top = "0px";
+addTaskRect.style.width = "294px";
+addTaskRect.style.height = "67px";
+addTaskRect.style.borderRadius = "50px";
+addTaskRect.style.background = 'rgba(253.94,247.59,231.72,1)';
 
-addExpButton.appendChild(addExpRect);
+addTaskButton.appendChild(addTaskRect);
 
-var addExpText = document.createElement("div");
-addExpText.innerHTML = "Add Expense";
-addExpText.style.textAlign = "left";
-addExpText.id = "addExpText";
-addExpText.style.left = "58px";
-addExpText.style.top = "16px";
-addExpText.style.width = "208.11px";
-addExpText.style.height = "55px";
-addExpText.style.fontFamily = "Radley";
-addExpText.style.fontSize = "28px";
-addExpText.style.overflow = "hidden";
-addExpText.style.color = "#000000";
+var addTaskText = document.createElement("div");
+addTaskText.innerHTML = "Add Task";
+addTaskText.style.textAlign = "left";
+addTaskText.id = "addTaskText";
+addTaskText.style.left = "58px";
+addTaskText.style.top = "16px";
+addTaskText.style.width = "208.11px";
+addTaskText.style.height = "55px";
+addTaskText.style.fontFamily = "Radley";
+addTaskText.style.fontSize = "28px";
+addTaskText.style.overflow = "hidden";
+addTaskText.style.color = "#000000";
 
-addExpButton.appendChild(addExpText);
+addTaskButton.appendChild(addTaskText);
 
 var plusSymbol = document.createElement("div");
 plusSymbol.innerHTML = "+";
@@ -891,137 +874,162 @@ plusSymbol.style.textShadow = "0px 0px 1px #000000";
 plusSymbol.style.overflow = "hidden";
 plusSymbol.style.color = "#000000";
 
-addExpButton.appendChild(plusSymbol);
+addTaskButton.appendChild(plusSymbol);
 
-var line30 = document.createElement("div");
-line30.id = "line30";
-line30.style.left = "102px";
-line30.style.top = "117px";
-line30.style.width = "179.14px";
-line30.style.height = "1px";
-line30.style.transform = "rotate(39.11deg)";
-line30.style.background = "#000000";
+// var image_2 = document.createElement("img");
+// image_2.id = "image_2";
+// image_2.style.left = "1188px";
+// image_2.style.top = "12px";
+// image_2.style.width = "31px";
+// image_2.style.height = "31px";
+// image_2.src = "skins/image_2.png";
 
-contentContainer.appendChild(line30);
+// contentContainer.appendChild(image_2);
 
-var line31 = document.createElement("div");
-line31.id = "line31";
-line31.style.left = "131px";
-line31.style.top = "117px";
-line31.style.width = "179.14px";
-line31.style.height = "1px";
-line31.style.transform = "rotate(39.11deg)";
-line31.style.background = "#000000";
+// var lance_supangan = document.createElement("div");
+// lance_supangan.innerHTML = "Lance Supangan";
+// lance_supangan.style.textAlign = "center";
+// lance_supangan.id = "lance_supangan";
+// lance_supangan.style.left = "1216px";
+// lance_supangan.style.top = "16px";
+// lance_supangan.style.width = "150px";
+// lance_supangan.style.height = "36px";
+// lance_supangan.style.fontFamily = "Sansation";
+// lance_supangan.style.fontSize = "18px";
+// lance_supangan.style.overflow = "hidden";
+// lance_supangan.style.color = "#000000";
 
-contentContainer.appendChild(line31);
+// contentContainer.appendChild(lance_supangan);
 
-var line32 = document.createElement("div");
-line32.id = "line32";
-line32.style.left = "365px";
-line32.style.top = "117px";
-line32.style.width = "179.14px";
-line32.style.height = "1px";
-line32.style.transform = "rotate(39.11deg)";
-line32.style.background = "#000000";
+var line42 = document.createElement("div");
+line42.id = "line42";
+line42.style.left = "99px";
+line42.style.top = "114px";
+line42.style.width = "179.14px";
+line42.style.height = "1px";
+line42.style.transform = "rotate(39.11deg)";
+line42.style.background = "#000000";
 
-contentContainer.appendChild(line32);
+contentContainer.appendChild(line42);
 
-var line33 = document.createElement("div");
-line33.id = "line33";
-line33.style.left = "394px";
-line33.style.top = "117px";
-line33.style.width = "179.14px";
-line33.style.height = "1px";
-line33.style.transform = "rotate(39.11deg)";
-line33.style.background = "#000000";
+var line43 = document.createElement("div");
+line43.id = "line43";
+line43.style.left = "128px";
+line43.style.top = "114px";
+line43.style.width = "179.14px";
+line43.style.height = "1px";
+line43.style.transform = "rotate(39.11deg)";
+line43.style.background = "#000000";
 
-contentContainer.appendChild(line33);
+contentContainer.appendChild(line43);
 
-var line34 = document.createElement("div");
-line34.id = "line34";
-line34.style.left = "237px";
-line34.style.top = "117px";
-line34.style.width = "179.14px";
-line34.style.height = "1px";
-line34.style.transform = "rotate(39.11deg)";
-line34.style.background = "#000000";
+var line44 = document.createElement("div");
+line44.id = "line44";
+line44.style.left = "362px";
+line44.style.top = "114px";
+line44.style.width = "179.14px";
+line44.style.height = "1px";
+line44.style.transform = "rotate(39.11deg)";
+line44.style.background = "#000000";
 
-contentContainer.appendChild(line34);
+contentContainer.appendChild(line44);
 
-var line35 = document.createElement("div");
-line35.id = "line35";
-line35.style.left = "266px";
-line35.style.top = "117px";
-line35.style.width = "179.14px";
-line35.style.height = "1px";
-line35.style.transform = "rotate(39.11deg)";
-line35.style.background = "#000000";
+var line45 = document.createElement("div");
+line45.id = "line45";
+line45.style.left = "391px";
+line45.style.top = "114px";
+line45.style.width = "179.14px";
+line45.style.height = "1px";
+line45.style.transform = "rotate(39.11deg)";
+line45.style.background = "#000000";
 
-contentContainer.appendChild(line35);
+contentContainer.appendChild(line45);
 
-var line36 = document.createElement("div");
-line36.id = "line36";
-line36.style.left = "916px";
-line36.style.top = "117px";
-line36.style.width = "179.14px";
-line36.style.height = "1px";
-line36.style.transform = "rotate(-39.11deg)";
-line36.style.background = "#000000";
+var line46 = document.createElement("div");
+line46.id = "line46";
+line46.style.left = "234px";
+line46.style.top = "114px";
+line46.style.width = "179.14px";
+line46.style.height = "1px";
+line46.style.transform = "rotate(39.11deg)";
+line46.style.background = "#000000";
 
-contentContainer.appendChild(line36);
+contentContainer.appendChild(line46);
 
-var line37 = document.createElement("div");
-line37.id = "line37";
-line37.style.left = "945px";
-line37.style.top = "117px";
-line37.style.width = "179.14px";
-line37.style.height = "1px";
-line37.style.transform = "rotate(-39.11deg)";
-line37.style.background = "#000000";
+var line47 = document.createElement("div");
+line47.id = "line47";
+line47.style.left = "263px";
+line47.style.top = "114px";
+line47.style.width = "179.14px";
+line47.style.height = "1px";
+line47.style.transform = "rotate(39.11deg)";
+line47.style.background = "#000000";
 
-contentContainer.appendChild(line37);
+contentContainer.appendChild(line47);
 
-var line38 = document.createElement("div");
-line38.id = "line38";
-line38.style.left = "1179px";
-line38.style.top = "117px";
-line38.style.width = "179.14px";
-line38.style.height = "1px";
-line38.style.transform = "rotate(-39.11deg)";
-line38.style.background = "#000000";
+var line48 = document.createElement("div");
+line48.id = "line48";
+line48.style.left = "913px";
+line48.style.top = "114px";
+line48.style.width = "179.14px";
+line48.style.height = "1px";
+line48.style.transform = "rotate(-39.11deg)";
+line48.style.background = "#000000";
 
-contentContainer.appendChild(line38);
+contentContainer.appendChild(line48);
 
-var line39 = document.createElement("div");
-line39.id = "line39";
-line39.style.left = "1208px";
-line39.style.top = "117px";
-line39.style.width = "179.14px";
-line39.style.height = "1px";
-line39.style.transform = "rotate(-39.11deg)";
-line39.style.background = "#000000";
+var line49 = document.createElement("div");
+line49.id = "line49";
+line49.style.left = "942px";
+line49.style.top = "114px";
+line49.style.width = "179.14px";
+line49.style.height = "1px";
+line49.style.transform = "rotate(-39.11deg)";
+line49.style.background = "#000000";
 
-contentContainer.appendChild(line39);
+contentContainer.appendChild(line49);
 
-var line40 = document.createElement("div");
-line40.id = "line40";
-line40.style.left = "1051px";
-line40.style.top = "117px";
-line40.style.width = "179.14px";
-line40.style.height = "1px";
-line40.style.transform = "rotate(-39.11deg)";
-line40.style.background = "#000000";
+var line50 = document.createElement("div");
+line50.id = "line50";
+line50.style.left = "1176px";
+line50.style.top = "114px";
+line50.style.width = "179.14px";
+line50.style.height = "1px";
+line50.style.transform = "rotate(-39.11deg)";
+line50.style.background = "#000000";
 
-contentContainer.appendChild(line40);
+contentContainer.appendChild(line50);
 
-var line41 = document.createElement("div");
-line41.id = "line41";
-line41.style.left = "1080px";
-line41.style.top = "117px";
-line41.style.width = "179.14px";
-line41.style.height = "1px";
-line41.style.transform = "rotate(-39.11deg)";
-line41.style.background = "#000000";
+var line51 = document.createElement("div");
+line51.id = "line51";
+line51.style.left = "1205px";
+line51.style.top = "114px";
+line51.style.width = "179.14px";
+line51.style.height = "1px";
+line51.style.transform = "rotate(-39.11deg)";
+line51.style.background = "#000000";
 
-contentContainer.appendChild(line41);
+contentContainer.appendChild(line51);
+
+var line52 = document.createElement("div");
+line52.id = "line52";
+line52.style.left = "1048px";
+line52.style.top = "114px";
+line52.style.width = "179.14px";
+line52.style.height = "1px";
+line52.style.transform = "rotate(-39.11deg)";
+line52.style.background = "#000000";
+
+contentContainer.appendChild(line52);
+
+var line53 = document.createElement("div");
+line53.id = "line53";
+line53.style.left = "1077px";
+line53.style.top = "114px";
+line53.style.width = "179.14px";
+line53.style.height = "1px";
+line53.style.transform = "rotate(-39.11deg)";
+line53.style.background = "#000000";
+
+contentContainer.appendChild(line53);
 

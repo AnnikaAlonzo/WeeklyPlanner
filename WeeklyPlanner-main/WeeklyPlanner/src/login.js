@@ -1,14 +1,14 @@
 
 var contentContainer = document.createElement("div");
 contentContainer.style.width = "1440px";
-contentContainer.id = "content_container";
+contentContainer.id = "contentContainer";
 contentContainer.style.position = "relative";
 contentContainer.style.display = "block";
 contentContainer.style.margin = "0 auto";
 document.body.appendChild(contentContainer);
 
 var bgLogin = document.createElement("div");
-bgLogin.id = "_bg__login";
+bgLogin.id = "bgLogin";
 bgLogin.style.left = "0px";
 bgLogin.style.top = "0px";
 bgLogin.style.width = "1440px";
@@ -18,7 +18,7 @@ bgLogin.style.background = 'rgba(181,212,235,1)';
 contentContainer.appendChild(bgLogin);
 
 var loginBox = document.createElement("div");
-loginBox.id = "login_box";
+loginBox.id = "loginBox";
 loginBox.style.width = "609.12px";
 loginBox.style.height = "722px";
 loginBox.style.left = "415px";
@@ -27,7 +27,7 @@ loginBox.style.position = "absolute";
 contentContainer.appendChild(loginBox);
 
 var logRect = document.createElement("div");
-logRect.id = "rectangle_2";
+logRect.id = "logRect";
 logRect.style.left = "0px";
 logRect.style.top = "0px";
 logRect.style.width = "599px";
@@ -48,7 +48,7 @@ passwordBox.style.position = "absolute";
 loginBox.appendChild(passwordBox);
 
 var passRect = document.createElement("div");
-passRect.id = "rectangle_5";
+passRect.id = "passRect";
 passRect.style.left = "0px";
 passRect.style.top = "0px";
 passRect.style.width = "408px";
@@ -88,7 +88,7 @@ passwordTextbox.setAttribute("type", "password");
 passwordBox.appendChild(passwordTextbox);
 
 var image2 = document.createElement("img");
-image2.id = "image_2";
+image2.id = "image2";
 image2.style.left = "6px";
 image2.style.top = "5px";
 image2.style.width = "30px";
@@ -98,7 +98,7 @@ image2.src = "skins/image_2_ek1.png";
 passwordBox.appendChild(image2);
 
 var emailBox = document.createElement("div");
-emailBox.id = "emailbox";
+emailBox.id = "emailBox";
 emailBox.style.width = "406px";
 emailBox.style.height = "45px";
 emailBox.style.left = "96px";
@@ -107,7 +107,7 @@ emailBox.style.position = "absolute";
 loginBox.appendChild(emailBox);
 
 var emailRect = document.createElement("div");
-emailRect.id = "rectangle_4";
+emailRect.id = "emailRect";
 emailRect.style.left = "0px";
 emailRect.style.top = "0px";
 emailRect.style.width = "408px";
@@ -118,7 +118,7 @@ emailRect.style.background = 'rgba(255,255,255,1)';
 emailBox.appendChild(emailRect);
 
 var emailTextbox = document.createElement("INPUT");
-emailTextbox.setAttribute("text","textbox");
+emailTextbox.setAttribute("emailText","emailTextbox");
 emailTextbox.placeholder = "Enter Email";
 emailTextbox.style.fontFamily = "Roboto";
 emailTextbox.style.fontSize = "20px";
@@ -142,7 +142,7 @@ image_1.src = "skins/image_1.png";
 emailBox.appendChild(image_1);
 
 var logButton = document.createElement("div");
-logButton.id = "logbutton";
+logButton.id = "logButton";
 logButton.style.width = "400px";
 logButton.style.height = "58px";
 logButton.style.left = "95px";
@@ -153,13 +153,13 @@ logButton.addEventListener("click", goToMain2);
 
 function goToMain2() {
     alert("Email obtained: " + emailTextbox.value + "\nPassword obtained: " + passwordTextbox.value)
-    location.replace("main2.html")
+    location.href="main2.html"
 }
 
 loginBox.appendChild(logButton);
 
 var logButtonRect = document.createElement("div");
-logButtonRect.id = "rectangle_1";
+logButtonRect.id = "logButtonRect";
 logButtonRect.style.left = "0px";
 logButtonRect.style.opacity = "100";
 logButtonRect.style.filter = "alpha(opacity='0')";
@@ -187,7 +187,7 @@ login.style.color = "#000000";
 logButton.appendChild(login);
 
 var registerButton = document.createElement("div");
-registerButton.id = "registerbutton";
+registerButton.id = "registerButton";
 registerButton.style.width = "513.12px";
 registerButton.style.height = "66px";
 registerButton.style.left = "96px";
@@ -196,7 +196,7 @@ registerButton.style.position = "absolute";
 loginBox.appendChild(registerButton);
 
 var regButtonRect = document.createElement("div");
-regButtonRect.id = "rectangle_1_ek1";
+regButtonRect.id = "regButtonRect";
 regButtonRect.style.left = "0px";
 regButtonRect.style.opacity = "100";
 regButtonRect.style.filter = "alpha(opacity='0')";
@@ -224,13 +224,13 @@ register.style.cursor = "pointer";
 register.addEventListener("click", gotoRegister);
 
 function gotoRegister() {
-    location.replace("register.html")
+    location.href="register.html"
 }
 
 registerButton.appendChild(register);
 
 var rightLine = document.createElement("img");
-rightLine.id = "vector_2";
+rightLine.id = "rightLine";
 rightLine.style.left = "351px";
 rightLine.style.top = "534px";
 rightLine.style.width = "244px";
@@ -240,7 +240,7 @@ rightLine.src = "skins/vector_2.png";
 loginBox.appendChild(rightLine);
 
 var leftLine = document.createElement("img");
-leftLine.id = "vector_1";
+leftLine.id = "leftLine";
 leftLine.style.left = "1px";
 leftLine.style.top = "535px";
 leftLine.style.width = "253px";
@@ -268,7 +268,7 @@ loginBox.appendChild(or);
 var accountLogin = document.createElement("div");
 accountLogin.innerHTML = "Account Login";
 accountLogin.style.textAlign = "left";
-accountLogin.id = "account_login";
+accountLogin.id = "accountLogin";
 accountLogin.style.left = "145px";
 accountLogin.style.top = "83px";
 accountLogin.style.width = "332px";

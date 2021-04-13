@@ -1,14 +1,14 @@
 
 var contentContainer = document.createElement("div");
 contentContainer.style.width = "1440px";
-contentContainer.id = "content_container";
+contentContainer.id = "contentContainer";
 contentContainer.style.position = "relative";
 contentContainer.style.display = "block";
 contentContainer.style.margin = "0 auto";
 document.body.appendChild(contentContainer);
 
 var bgRegister = document.createElement("div");
-bgRegister.id = "_bg__register";
+bgRegister.id = "bgRegister";
 bgRegister.style.left = "0px";
 bgRegister.style.top = "0px";
 bgRegister.style.width = "1440px";
@@ -18,7 +18,7 @@ bgRegister.style.background = 'rgba(181,212,235,1)';
 contentContainer.appendChild(bgRegister);
 
 var registerBox = document.createElement("div");
-registerBox.id = "register_box";
+registerBox.id = "registerBox";
 registerBox.style.width = "636.12px";
 registerBox.style.height = "722px";
 registerBox.style.left = "402px";
@@ -27,7 +27,7 @@ registerBox.style.position = "absolute";
 contentContainer.appendChild(registerBox);
 
 var accRegRect = document.createElement("div");
-accRegRect.id = "rectangle_2";
+accRegRect.id = "accRegRect";
 accRegRect.style.left = "0px";
 accRegRect.style.top = "0px";
 accRegRect.style.width = "599px";
@@ -39,7 +39,7 @@ accRegRect.style.background = "linear-gradient(-90deg , rgba(249,249,250,1) 0%, 
 registerBox.appendChild(accRegRect);
 
 var passwordBox = document.createElement("div");
-passwordBox.id = "passwordbox";
+passwordBox.id = "passwordBox";
 passwordBox.style.width = "406px";
 passwordBox.style.height = "45px";
 passwordBox.style.left = "96px";
@@ -48,7 +48,7 @@ passwordBox.style.position = "absolute";
 registerBox.appendChild(passwordBox);
 
 var passRect = document.createElement("div");
-passRect.id = "rectangle_5";
+passRect.id = "passRect";
 passRect.style.left = "0px";
 passRect.style.top = "0px";
 passRect.style.width = "408px";
@@ -88,7 +88,7 @@ passwordTextbox.setAttribute("type", "password");
 passwordBox.appendChild(passwordTextbox);
 
 var image2 = document.createElement("img");
-image2.id = "image_2";
+image2.id = "image2";
 image2.style.left = "6px";
 image2.style.top = "5px";
 image2.style.width = "30px";
@@ -98,7 +98,7 @@ image2.src = "skins/image_2_ek1.png";
 passwordBox.appendChild(image2);
 
 var confirmPasswordBox = document.createElement("div");
-confirmPasswordBox.id = "passwordbox_ek1";
+confirmPasswordBox.id = "confirmPasswordBox";
 confirmPasswordBox.style.width = "406px";
 confirmPasswordBox.style.height = "45px";
 confirmPasswordBox.style.left = "96px";
@@ -107,7 +107,7 @@ confirmPasswordBox.style.position = "absolute";
 registerBox.appendChild(confirmPasswordBox);
 
 var confirmPassRect = document.createElement("div");
-confirmPassRect.id = "rectangle_5_ek1";
+confirmPassRect.id = "confirmPassRect";
 confirmPassRect.style.left = "0px";
 confirmPassRect.style.top = "0px";
 confirmPassRect.style.width = "408px";
@@ -120,7 +120,7 @@ confirmPasswordBox.appendChild(confirmPassRect);
 var confirmPassword = document.createElement("div");
 confirmPassword.innerHTML = "Confirm Password";
 confirmPassword.style.textAlign = "left";
-confirmPassword.id = "confirm_password";
+confirmPassword.id = "confirmPassword";
 confirmPassword.style.left = "46px";
 confirmPassword.style.top = "8px";
 confirmPassword.style.width = "209px";
@@ -157,7 +157,7 @@ image_2_ek1.src = "skins/image_2_ek1.png";
 confirmPasswordBox.appendChild(image_2_ek1);
 
 var firstNameBox = document.createElement("div");
-firstNameBox.id = "emailbox";
+firstNameBox.id = "firstNameBox";
 firstNameBox.style.width = "406px";
 firstNameBox.style.height = "45px";
 firstNameBox.style.left = "96px";
@@ -166,7 +166,7 @@ firstNameBox.style.position = "absolute";
 registerBox.appendChild(firstNameBox);
 
 var fristNameRect = document.createElement("div");
-fristNameRect.id = "rectangle_4";
+fristNameRect.id = "fristNameRect";
 fristNameRect.style.left = "0px";
 fristNameRect.style.top = "0px";
 fristNameRect.style.width = "408px";
@@ -179,7 +179,7 @@ firstNameBox.appendChild(fristNameRect);
 var firstName = document.createElement("div");
 firstName.innerHTML = "First Name";
 firstName.style.textAlign = "left";
-firstName.id = "first_name";
+firstName.id = "firstName";
 firstName.style.left = "46px";
 firstName.style.top = "11px";
 firstName.style.width = "188px";
@@ -215,7 +215,7 @@ image_1.src = "skins/image_1.png";
 firstNameBox.appendChild(image_1);
 
 var lastNameBox = document.createElement("div");
-lastNameBox.id = "emailbox_ek1";
+lastNameBox.id = "lastNameBox";
 lastNameBox.style.width = "406px";
 lastNameBox.style.height = "45px";
 lastNameBox.style.left = "96px";
@@ -224,7 +224,7 @@ lastNameBox.style.position = "absolute";
 registerBox.appendChild(lastNameBox);
 
 var lastNameRect = document.createElement("div");
-lastNameRect.id = "rectangle_4_ek1";
+lastNameRect.id = "lastNameRect";
 lastNameRect.style.left = "0px";
 lastNameRect.style.top = "0px";
 lastNameRect.style.width = "408px";
@@ -237,7 +237,7 @@ lastNameBox.appendChild(lastNameRect);
 var lastName = document.createElement("div");
 lastName.innerHTML = "Last Name";
 lastName.style.textAlign = "left";
-lastName.id = "last_name";
+lastName.id = "lastName";
 lastName.style.left = "46px";
 lastName.style.top = "11px";
 lastName.style.width = "188px";
@@ -273,7 +273,7 @@ image_1_ek1.src = "skins/image_1_ek1.png";
 lastNameBox.appendChild(image_1_ek1);
 
 var emailBox = document.createElement("div");
-emailBox.id = "emailbox_ek2";
+emailBox.id = "emailBox";
 emailBox.style.width = "406px";
 emailBox.style.height = "45px";
 emailBox.style.left = "96px";
@@ -282,7 +282,7 @@ emailBox.style.position = "absolute";
 registerBox.appendChild(emailBox);
 
 var emailRect = document.createElement("div");
-emailRect.id = "rectangle_4_ek2";
+emailRect.id = "emailRect";
 emailRect.style.left = "0px";
 emailRect.style.top = "0px";
 emailRect.style.width = "408px";
@@ -295,7 +295,7 @@ emailBox.appendChild(emailRect);
 var emailAddress = document.createElement("div");
 emailAddress.innerHTML = "Email Address";
 emailAddress.style.textAlign = "left";
-emailAddress.id = "email_address";
+emailAddress.id = "emailAddress";
 emailAddress.style.left = "46px";
 emailAddress.style.top = "11px";
 emailAddress.style.width = "188px";
@@ -344,7 +344,7 @@ function goToLogin() {
     if(passwordTextbox.value === confirmPasswordTextbox.value) {
         alert("First and last name obtained: " + firstNameTextbox.value + " " + lastNameTextbox.value + 
         "\nEmail obtained: " + emailTextbox.value + "\nPassword obtained: " + passwordTextbox.value);
-        location.replace("login.html");
+        location.href="login.html";
     } else {
         alert("Password does not match.");
     }
@@ -354,7 +354,7 @@ function goToLogin() {
 registerBox.appendChild(registerButton);
 
 var registerRect = document.createElement("div");
-registerRect.id = "rectangle_1";
+registerRect.id = "registerRect";
 registerRect.style.left = "0px";
 registerRect.style.opacity = "100";
 registerRect.style.filter = "alpha(opacity='0')";
@@ -384,7 +384,7 @@ registerButton.appendChild(register);
 var accountRegister = document.createElement("div");
 accountRegister.innerHTML = "Account Register";
 accountRegister.style.textAlign = "left";
-accountRegister.id = "account_register";
+accountRegister.id = "accountRegister";
 accountRegister.style.left = "514px";
 accountRegister.style.top = "216px";
 accountRegister.style.width = "390px";

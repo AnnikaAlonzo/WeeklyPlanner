@@ -1,14 +1,14 @@
 
 var contentContainer = document.createElement("div");
 contentContainer.style.width = "1440px";
-contentContainer.id = "content_container";
+contentContainer.id = "contentContainer";
 contentContainer.style.position = "relative";
 contentContainer.style.display = "block";
 contentContainer.style.margin = "0 auto";
 document.body.appendChild(contentContainer);
 
 var bgMain2 = document.createElement("div");
-bgMain2.id = "_bg__main__user_logged_in_";
+bgMain2.id = "bgMain2";
 bgMain2.style.left = "0px";
 bgMain2.style.top = "0px";
 bgMain2.style.width = "1440px";
@@ -27,7 +27,7 @@ header.style.position = "absolute";
 contentContainer.appendChild(header);
 
 var headerRect = document.createElement("div");
-headerRect.id = "rectangle_6";
+headerRect.id = "headerRect";
 headerRect.style.left = "0px";
 headerRect.style.top = "0px";
 headerRect.style.width = "1440px";
@@ -39,7 +39,7 @@ header.appendChild(headerRect);
 var weeklyPlanner = document.createElement("div");
 weeklyPlanner.innerHTML = "WEEKLY<br/>           PLANNER";
 weeklyPlanner.style.textAlign = "center";
-weeklyPlanner.id = "weekly_planner";
+weeklyPlanner.id = "weeklyPlanner";
 weeklyPlanner.style.left = "-47px";
 weeklyPlanner.style.top = "40px";
 weeklyPlanner.style.width = "414px";
@@ -55,7 +55,7 @@ contentContainer.appendChild(weeklyPlanner);
 var welcomeUser = document.createElement("div");
 welcomeUser.innerHTML = "Welcome,<br/>Lance!";
 welcomeUser.style.textAlign = "center";
-welcomeUser.id = "welcome__lance_";
+welcomeUser.id = "welcomeUser";
 welcomeUser.style.left = "1220px";
 welcomeUser.style.top = "60px";
 welcomeUser.style.width = "182px";
@@ -68,7 +68,7 @@ welcomeUser.style.color = "#000000";
 contentContainer.appendChild(welcomeUser);
 
 var welcomeLine = document.createElement("div");
-welcomeLine.id = "line_7";
+welcomeLine.id = "welcomeLine";
 welcomeLine.style.left = "1230px";
 welcomeLine.style.top = "121px";
 welcomeLine.style.width = "151px";
@@ -80,7 +80,7 @@ contentContainer.appendChild(welcomeLine);
 var aboutUs = document.createElement("div");
 aboutUs.innerHTML = "About us";
 aboutUs.style.textAlign = "center";
-aboutUs.id = "about_us";
+aboutUs.id = "aboutUs";
 aboutUs.style.left = "1001px";
 aboutUs.style.top = "74px";
 aboutUs.style.width = "198px";
@@ -93,7 +93,7 @@ aboutUs.style.color = "#000000";
 contentContainer.appendChild(aboutUs);
 
 var line8 = document.createElement("div");
-line8.id = "line_8";
+line8.id = "line8";
 line8.style.left = "1001px";
 line8.style.top = "121px";
 line8.style.width = "192px";
@@ -103,7 +103,7 @@ line8.style.background = "#000000";
 contentContainer.appendChild(line8);
 
 var schedRect1 = document.createElement("div");
-schedRect1.id = "rectangle_30";
+schedRect1.id = "schedRect1";
 schedRect1.style.left = "70px";
 schedRect1.style.top = "229px";
 schedRect1.style.width = "343px";
@@ -113,7 +113,7 @@ schedRect1.style.background = 'rgba(216,196,213,1)';
 contentContainer.appendChild(schedRect1);
 
 var schedRect2 = document.createElement("div");
-schedRect2.id = "rectangle_31";
+schedRect2.id = "schedRect2";
 schedRect2.style.left = "118px";
 schedRect2.style.opacity = "0.52999997138977";
 schedRect2.style.filter = "alpha(opacity='52.999997138977')";
@@ -125,13 +125,13 @@ schedRect2.style.cursor = "pointer";
 schedRect2.addEventListener("click", goToSchedule);
 
 function goToSchedule() {
-    location.replace("schedule.html")
+    location.href="schedule.html"
 }
 
 contentContainer.appendChild(schedRect2);
 
 var line19 = document.createElement("div");
-line19.id = "line_19";
+line19.id = "line19";
 line19.style.left = "118px";
 line19.style.top = "717px";
 line19.style.width = "50px";
@@ -142,7 +142,7 @@ line19.style.background = "#000000";
 contentContainer.appendChild(line19);
 
 var line18 = document.createElement("div");
-line18.id = "line_18";
+line18.id = "line18";
 line18.style.left = "257px";
 line18.style.top = "599px";
 line18.style.width = "204px";
@@ -153,7 +153,7 @@ line18.style.background = "#000000";
 contentContainer.appendChild(line18);
 
 var personalNotesRect1 = document.createElement("div");
-personalNotesRect1.id = "rectangle_32";
+personalNotesRect1.id = "personalNotesRect1";
 personalNotesRect1.style.left = "531px";
 personalNotesRect1.style.top = "409px";
 personalNotesRect1.style.width = "343px";
@@ -163,7 +163,7 @@ personalNotesRect1.style.background = 'rgba(216,196,213,1)';
 contentContainer.appendChild(personalNotesRect1);
 
 var personalNotesRect2 = document.createElement("div");
-personalNotesRect2.id = "rectangle_33";
+personalNotesRect2.id = "personalNotesRect2";
 personalNotesRect2.style.left = "578px";
 personalNotesRect2.style.opacity = "0.52999997138977";
 personalNotesRect2.style.filter = "alpha(opacity='52.999997138977')";
@@ -175,13 +175,13 @@ personalNotesRect2.style.cursor = "pointer";
 personalNotesRect2.addEventListener("click", goToPersonalNotes);
 
 function goToPersonalNotes() {
-    location.replace("personalNotes.html")
+    location.href="personalNotes.html"
 }
 
 contentContainer.appendChild(personalNotesRect2);
 
 var line21 = document.createElement("div");
-line21.id = "line_21";
+line21.id = "line21";
 line21.style.left = "766px";
 line21.style.top = "648px";
 line21.style.width = "155px";
@@ -192,7 +192,7 @@ line21.style.background = "#000000";
 contentContainer.appendChild(line21);
 
 var line25 = document.createElement("div");
-line25.id = "line_25";
+line25.id = "line25";
 line25.style.left = "773px";
 line25.style.top = "876px";
 line25.style.width = "148px";
@@ -203,7 +203,7 @@ line25.style.background = "#000000";
 contentContainer.appendChild(line25);
 
 var line24 = document.createElement("div");
-line24.id = "line_24";
+line24.id = "line24";
 line24.style.left = "578px";
 line24.style.top = "762px";
 line24.style.width = "68px";
@@ -214,7 +214,7 @@ line24.style.background = "#000000";
 contentContainer.appendChild(line24);
 
 var expensesRect2 = document.createElement("div");
-expensesRect2.id = "rectangle_34";
+expensesRect2.id = "expensesRect2";
 expensesRect2.style.left = "991px";
 expensesRect2.style.top = "229px";
 expensesRect2.style.width = "343px";
@@ -224,7 +224,7 @@ expensesRect2.style.background = 'rgba(216,196,213,1)';
 contentContainer.appendChild(expensesRect2);
 
 var expensesRect2 = document.createElement("div");
-expensesRect2.id = "rectangle_35";
+expensesRect2.id = "expensesRect2";
 expensesRect2.style.left = "1038px";
 expensesRect2.style.opacity = "0.52999997138977";
 expensesRect2.style.filter = "alpha(opacity='52.999997138977')";
@@ -236,7 +236,7 @@ expensesRect2.style.cursor = "pointer";
 expensesRect2.addEventListener("click", goToExpenses);
 
 function goToExpenses() {
-    location.replace("expenses.html")
+    location.href="expenses.html"
 }
 
 contentContainer.appendChild(expensesRect2);
@@ -370,7 +370,7 @@ schedule.style.color = "#000000";
 contentContainer.appendChild(schedule);
 
 var line16 = document.createElement("div");
-line16.id = "line_16";
+line16.id = "line16";
 line16.style.left = "322px";
 line16.style.top = "371px";
 line16.style.width = "139px";
@@ -381,7 +381,7 @@ line16.style.background = "#000000";
 contentContainer.appendChild(line16);
 
 var line20 = document.createElement("div");
-line20.id = "line_20";
+line20.id = "line20";
 line20.style.left = "581px";
 line20.style.top = "537px";
 line20.style.width = "150px";
@@ -392,7 +392,7 @@ line20.style.background = "#000000";
 contentContainer.appendChild(line20);
 
 var line17 = document.createElement("div");
-line17.id = "line_17";
+line17.id = "line17";
 line17.style.left = "118px";
 line17.style.top = "485px";
 line17.style.width = "180px";
@@ -403,7 +403,7 @@ line17.style.background = "#000000";
 contentContainer.appendChild(line17);
 
 var line26 = document.createElement("div");
-line26.id = "line_26";
+line26.id = "line26";
 line26.style.left = "1038px";
 line26.style.top = "717px";
 line26.style.width = "72px";
@@ -414,7 +414,7 @@ line26.style.background = "#000000";
 contentContainer.appendChild(line26);
 
 var line27 = document.createElement("div");
-line27.id = "line_27";
+line27.id = "line27";
 line27.style.left = "1254px";
 line27.style.top = "599px";
 line27.style.width = "127px";
@@ -443,7 +443,7 @@ contentContainer.appendChild(add);
 var your2 = document.createElement("div");
 your2.innerHTML = "YOUR";
 your2.style.textAlign = "center";
-your2.id = "your_ek1";
+your2.id = "your2";
 your2.style.left = "1169px";
 your2.style.top = "452px";
 your2.style.width = "244px";
@@ -489,7 +489,7 @@ expenses.style.color = "#000000";
 contentContainer.appendChild(expenses);
 
 var line28 = document.createElement("div");
-line28.id = "line_28";
+line28.id = "line28";
 line28.style.left = "1174px";
 line28.style.top = "371px";
 line28.style.width = "207px";
@@ -500,7 +500,7 @@ line28.style.background = "#000000";
 contentContainer.appendChild(line28);
 
 var line29 = document.createElement("div");
-line29.id = "line_29";
+line29.id = "line29";
 line29.style.left = "1038px";
 line29.style.top = "485px";
 line29.style.width = "180px";
@@ -511,7 +511,7 @@ line29.style.background = "#000000";
 contentContainer.appendChild(line29);
 
 var line32 = document.createElement("div");
-line32.id = "line_32";
+line32.id = "line32";
 line32.style.left = "335px";
 line32.style.top = "88px";
 line32.style.width = "225.06px";
@@ -522,7 +522,7 @@ line32.style.background = "#000000";
 contentContainer.appendChild(line32);
 
 var line33 = document.createElement("div");
-line33.id = "line_33";
+line33.id = "line33";
 line33.style.left = "364px";
 line33.style.top = "88px";
 line33.style.width = "225.06px";
@@ -533,7 +533,7 @@ line33.style.background = "#000000";
 contentContainer.appendChild(line33);
 
 var line34 = document.createElement("div");
-line34.id = "line_34";
+line34.id = "line34";
 line34.style.left = "598px";
 line34.style.top = "88px";
 line34.style.width = "225.06px";
@@ -544,7 +544,7 @@ line34.style.background = "#000000";
 contentContainer.appendChild(line34);
 
 var line35 = document.createElement("div");
-line35.id = "line_35";
+line35.id = "line35";
 line35.style.left = "627px";
 line35.style.top = "88px";
 line35.style.width = "225.06px";
@@ -555,7 +555,7 @@ line35.style.background = "#000000";
 contentContainer.appendChild(line35);
 
 var line36 = document.createElement("div");
-line36.id = "line_36";
+line36.id = "line36";
 line36.style.left = "723px";
 line36.style.top = "88px";
 line36.style.width = "225.06px";
@@ -566,7 +566,7 @@ line36.style.background = "#000000";
 contentContainer.appendChild(line36);
 
 var line37 = document.createElement("div");
-line37.id = "line_37";
+line37.id = "line37";
 line37.style.left = "752px";
 line37.style.top = "88px";
 line37.style.width = "225.06px";
@@ -577,7 +577,7 @@ line37.style.background = "#000000";
 contentContainer.appendChild(line37);
 
 var line38 = document.createElement("div");
-line38.id = "line_38";
+line38.id = "line38";
 line38.style.left = "470px";
 line38.style.top = "88px";
 line38.style.width = "225.06px";
@@ -588,7 +588,7 @@ line38.style.background = "#000000";
 contentContainer.appendChild(line38);
 
 var line39 = document.createElement("div");
-line39.id = "line_39";
+line39.id = "line39";
 line39.style.left = "499px";
 line39.style.top = "88px";
 line39.style.width = "225.06px";
