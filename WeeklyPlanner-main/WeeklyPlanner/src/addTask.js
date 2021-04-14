@@ -1,16 +1,3 @@
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@desc 		
- *	@file 		ui_ux_v1
- *	@date 		1617544267915
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
 
 var content_container = document.createElement("div");
 content_container.style.width = "595px";
@@ -20,191 +7,175 @@ content_container.style.display = "block";
 content_container.style.margin = "0 auto";
 document.body.appendChild(content_container);
 
-var _bg__add_task = document.createElement("div");
-_bg__add_task.id = "_bg__add_task";
-_bg__add_task.style.left = "0px";
-_bg__add_task.style.top = "0px";
-_bg__add_task.style.width = "595px";
-_bg__add_task.style.height = "790px";
-_bg__add_task.style.background = 'rgba(253.94,238.52,199.98,1)';
+var bgAddTask = document.createElement("div");
+bgAddTask.id = "bgAddTask";
+bgAddTask.style.left = "0px";
+bgAddTask.style.top = "0px";
+bgAddTask.style.width = "595px";
+bgAddTask.style.height = "790px";
+bgAddTask.style.background = 'rgba(253.94,238.52,199.98,1)';
 
-content_container.appendChild(_bg__add_task);
+content_container.appendChild(bgAddTask);
 
-var task_name_ = document.createElement("div");
-task_name_.innerHTML = "TASK NAME:<br/>";
-task_name_.style.textAlign = "left";
-task_name_.id = "task_name_";
-task_name_.style.left = "38px";
-task_name_.style.top = "63px";
-task_name_.style.width = "237px";
-task_name_.style.height = "62px";
-task_name_.style.fontFamily = "Sansation";
-task_name_.style.fontSize = "30px";
-task_name_.style.overflow = "hidden";
-task_name_.style.color = "#000000";
+var taskNameText = document.createElement("div");
+taskNameText.innerHTML = "TASK NAME:<br/>";
+taskNameText.style.textAlign = "left";
+taskNameText.id = "taskNameText";
+taskNameText.style.left = "38px";
+taskNameText.style.top = "63px";
+taskNameText.style.width = "237px";
+taskNameText.style.height = "62px";
+taskNameText.style.fontFamily = "Sansation";
+taskNameText.style.fontSize = "30px";
+taskNameText.style.overflow = "hidden";
+taskNameText.style.color = "#000000";
 
-content_container.appendChild(task_name_);
+content_container.appendChild(taskNameText);
 
-var rectangle_37 = document.createElement("div");
-rectangle_37.id = "rectangle_37";
-rectangle_37.style.left = "37px";
-rectangle_37.style.top = "115px";
-rectangle_37.style.width = "524px";
-rectangle_37.style.height = "48px";
-rectangle_37.style.border = "1px solid #000000";
-rectangle_37.style.background = 'rgba(255,255,255,1)';
+var taskNameTextbox = document.createElement("div");
+taskNameTextbox.id = "taskNameTextbox";
+taskNameTextbox.style.left = "37px";
+taskNameTextbox.style.top = "115px";
+taskNameTextbox.style.width = "524px";
+taskNameTextbox.style.height = "48px";
+taskNameTextbox.style.border = "1px solid #000000";
+taskNameTextbox.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_37);
+content_container.appendChild(taskNameTextbox);
 
-var day_of_the_week_ = document.createElement("div");
-day_of_the_week_.innerHTML = "DAY OF THE WEEK:";
-day_of_the_week_.style.textAlign = "left";
-day_of_the_week_.id = "day_of_the_week_";
-day_of_the_week_.style.left = "38px";
-day_of_the_week_.style.top = "434px";
-day_of_the_week_.style.width = "360px";
-day_of_the_week_.style.height = "64px";
-day_of_the_week_.style.fontFamily = "Sansation";
-day_of_the_week_.style.fontSize = "30px";
-day_of_the_week_.style.overflow = "hidden";
-day_of_the_week_.style.color = "#000000";
+var dayOfTheWeekText = document.createElement("div");
+dayOfTheWeekText.innerHTML = "DAY OF THE WEEK:";
+dayOfTheWeekText.style.textAlign = "left";
+dayOfTheWeekText.id = "dayOfTheWeekText";
+dayOfTheWeekText.style.left = "38px";
+dayOfTheWeekText.style.top = "434px";
+dayOfTheWeekText.style.width = "360px";
+dayOfTheWeekText.style.height = "64px";
+dayOfTheWeekText.style.fontFamily = "Sansation";
+dayOfTheWeekText.style.fontSize = "30px";
+dayOfTheWeekText.style.overflow = "hidden";
+dayOfTheWeekText.style.color = "#000000";
 
-content_container.appendChild(day_of_the_week_);
+content_container.appendChild(dayOfTheWeekText);
 
-var rectangle_39 = document.createElement("div");
-rectangle_39.id = "rectangle_39";
-rectangle_39.style.left = "37px";
-rectangle_39.style.top = "486px";
-rectangle_39.style.width = "68px";
-rectangle_39.style.height = "55px";
-rectangle_39.style.border = "1px solid #000000";
-rectangle_39.style.background = 'rgba(255,255,255,1)';
+var monRect = document.createElement("div");
+monRect.id = "monRect";
+monRect.style.left = "37px";
+monRect.style.top = "486px";
+monRect.style.width = "68px";
+monRect.style.height = "55px";
+monRect.style.border = "1px solid #000000";
+monRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_39);
+content_container.appendChild(monRect);
 
-var rectangle_40 = document.createElement("div");
-rectangle_40.id = "rectangle_40";
-rectangle_40.style.left = "433px";
-rectangle_40.style.top = "486px";
-rectangle_40.style.width = "68px";
-rectangle_40.style.height = "55px";
-rectangle_40.style.border = "1px solid #000000";
-rectangle_40.style.background = 'rgba(255,255,255,1)';
+var sunRect = document.createElement("div");
+sunRect.id = "sunRect";
+sunRect.style.left = "433px";
+sunRect.style.top = "486px";
+sunRect.style.width = "68px";
+sunRect.style.height = "55px";
+sunRect.style.border = "1px solid #000000";
+sunRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_40);
+content_container.appendChild(sunRect);
 
-var rectangle_41 = document.createElement("div");
-rectangle_41.id = "rectangle_41";
-rectangle_41.style.left = "367px";
-rectangle_41.style.top = "486px";
-rectangle_41.style.width = "68px";
-rectangle_41.style.height = "55px";
-rectangle_41.style.border = "1px solid #000000";
-rectangle_41.style.background = 'rgba(255,255,255,1)';
+var satRect = document.createElement("div");
+satRect.id = "satRect";
+satRect.style.left = "367px";
+satRect.style.top = "486px";
+satRect.style.width = "68px";
+satRect.style.height = "55px";
+satRect.style.border = "1px solid #000000";
+satRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_41);
+content_container.appendChild(satRect);
 
-var rectangle_42 = document.createElement("div");
-rectangle_42.id = "rectangle_42";
-rectangle_42.style.left = "301px";
-rectangle_42.style.top = "486px";
-rectangle_42.style.width = "68px";
-rectangle_42.style.height = "55px";
-rectangle_42.style.border = "1px solid #000000";
-rectangle_42.style.background = 'rgba(255,255,255,1)';
+var friRect = document.createElement("div");
+friRect.id = "friRect";
+friRect.style.left = "301px";
+friRect.style.top = "486px";
+friRect.style.width = "68px";
+friRect.style.height = "55px";
+friRect.style.border = "1px solid #000000";
+friRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_42);
+content_container.appendChild(friRect);
 
-var rectangle_43 = document.createElement("div");
-rectangle_43.id = "rectangle_43";
-rectangle_43.style.left = "235px";
-rectangle_43.style.top = "486px";
-rectangle_43.style.width = "68px";
-rectangle_43.style.height = "55px";
-rectangle_43.style.border = "1px solid #000000";
-rectangle_43.style.background = 'rgba(255,255,255,1)';
+var thursRect = document.createElement("div");
+thursRect.id = "thursRect";
+thursRect.style.left = "235px";
+thursRect.style.top = "486px";
+thursRect.style.width = "68px";
+thursRect.style.height = "55px";
+thursRect.style.border = "1px solid #000000";
+thursRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_43);
+content_container.appendChild(thursRect);
 
-var rectangle_44 = document.createElement("div");
-rectangle_44.id = "rectangle_44";
-rectangle_44.style.left = "169px";
-rectangle_44.style.top = "486px";
-rectangle_44.style.width = "68px";
-rectangle_44.style.height = "55px";
-rectangle_44.style.border = "1px solid #000000";
-rectangle_44.style.background = 'rgba(255,255,255,1)';
+var wedRect = document.createElement("div");
+wedRect.id = "wedRect";
+wedRect.style.left = "169px";
+wedRect.style.top = "486px";
+wedRect.style.width = "68px";
+wedRect.style.height = "55px";
+wedRect.style.border = "1px solid #000000";
+wedRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_44);
+content_container.appendChild(wedRect);
 
-var rectangle_45 = document.createElement("div");
-rectangle_45.id = "rectangle_45";
-rectangle_45.style.left = "103px";
-rectangle_45.style.top = "486px";
-rectangle_45.style.width = "68px";
-rectangle_45.style.height = "55px";
-rectangle_45.style.border = "1px solid #000000";
-rectangle_45.style.background = 'rgba(255,255,255,1)';
+var tuesRect = document.createElement("div");
+tuesRect.id = "tuesRect";
+tuesRect.style.left = "103px";
+tuesRect.style.top = "486px";
+tuesRect.style.width = "68px";
+tuesRect.style.height = "55px";
+tuesRect.style.border = "1px solid #000000";
+tuesRect.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_45);
+content_container.appendChild(tuesRect);
 
-var task_description_ = document.createElement("div");
-task_description_.innerHTML = "TASK DESCRIPTION:<br/>";
-task_description_.style.textAlign = "left";
-task_description_.id = "task_description_";
-task_description_.style.left = "38px";
-task_description_.style.top = "200px";
-task_description_.style.width = "360px";
-task_description_.style.height = "62px";
-task_description_.style.fontFamily = "Sansation";
-task_description_.style.fontSize = "30px";
-task_description_.style.overflow = "hidden";
-task_description_.style.color = "#000000";
+var taskDescriptionText = document.createElement("div");
+taskDescriptionText.innerHTML = "TASK DESCRIPTION:<br/>";
+taskDescriptionText.style.textAlign = "left";
+taskDescriptionText.id = "taskDescriptionText";
+taskDescriptionText.style.left = "38px";
+taskDescriptionText.style.top = "200px";
+taskDescriptionText.style.width = "360px";
+taskDescriptionText.style.height = "62px";
+taskDescriptionText.style.fontFamily = "Sansation";
+taskDescriptionText.style.fontSize = "30px";
+taskDescriptionText.style.overflow = "hidden";
+taskDescriptionText.style.color = "#000000";
 
-content_container.appendChild(task_description_);
+content_container.appendChild(taskDescriptionText);
 
-var rectangle_38 = document.createElement("div");
-rectangle_38.id = "rectangle_38";
-rectangle_38.style.left = "37px";
-rectangle_38.style.top = "252px";
-rectangle_38.style.width = "524px";
-rectangle_38.style.height = "145px";
-rectangle_38.style.border = "1px solid #000000";
-rectangle_38.style.background = 'rgba(255,255,255,1)';
+var taskDescriptionTextbox = document.createElement("div");
+taskDescriptionTextbox.id = "taskDescriptionTextbox";
+taskDescriptionTextbox.style.left = "37px";
+taskDescriptionTextbox.style.top = "252px";
+taskDescriptionTextbox.style.width = "524px";
+taskDescriptionTextbox.style.height = "145px";
+taskDescriptionTextbox.style.border = "1px solid #000000";
+taskDescriptionTextbox.style.background = 'rgba(255,255,255,1)';
 
-content_container.appendChild(rectangle_38);
+content_container.appendChild(taskDescriptionTextbox);
 
 var m = document.createElement("div");
 m.innerHTML = "M";
 m.style.textAlign = "center";
 m.id = "m";
-m.style.left = "44px";
+m.style.left = "43px";
 m.style.top = "494px";
 m.style.width = "58px";
 m.style.height = "61px";
 m.style.fontFamily = "Sansation";
 m.style.fontSize = "30px";
-m.style.textShadow = "0px 0px 1px #000000";
+m.style.textShadow = "1px 1px 1px #000000";
 m.style.overflow = "hidden";
-m.style.color = "#E1DDDD";
+m.style.color = "#000000";
 
 content_container.appendChild(m);
-
-var m_ek1 = document.createElement("div");
-m_ek1.innerHTML = "M";
-m_ek1.style.textAlign = "center";
-m_ek1.id = "m_ek1";
-m_ek1.style.left = "44px";
-m_ek1.style.top = "494px";
-m_ek1.style.width = "58px";
-m_ek1.style.height = "61px";
-m_ek1.style.fontFamily = "Sansation";
-m_ek1.style.fontSize = "30px";
-m_ek1.style.textShadow = "0px 0px 1px #000000";
-m_ek1.style.overflow = "hidden";
-m_ek1.style.color = "#E1DDDD";
-
-content_container.appendChild(m_ek1);
 
 var su = document.createElement("div");
 su.innerHTML = "Su";

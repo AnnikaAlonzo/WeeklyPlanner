@@ -1,34 +1,21 @@
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@desc 		
- *	@file 		ui_ux_v1
- *	@date 		1617544204596
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
 
-var content_container = document.createElement("div");
-content_container.style.width = "632px";
-content_container.id = "content_container";
-content_container.style.position = "relative";
-content_container.style.display = "block";
-content_container.style.margin = "0 auto";
-document.body.appendChild(content_container);
+var contentContainer = document.createElement("div");
+contentContainer.style.width = "632px";
+contentContainer.id = "contentContainer";
+contentContainer.style.position = "relative";
+contentContainer.style.display = "block";
+contentContainer.style.margin = "0 auto";
+document.body.appendChild(contentContainer);
 
-var _bg__burger_menu = document.createElement("div");
-_bg__burger_menu.id = "_bg__burger_menu";
-_bg__burger_menu.style.left = "0px";
-_bg__burger_menu.style.top = "0px";
-_bg__burger_menu.style.width = "632px";
-_bg__burger_menu.style.height = "1024px";
-_bg__burger_menu.style.background = 'rgba(160.44,146.4,158.19,1)';
+var bgBurgerMenu = document.createElement("div");
+bgBurgerMenu.id = "bgBurgerMenu";
+bgBurgerMenu.style.left = "0px";
+bgBurgerMenu.style.top = "0px";
+bgBurgerMenu.style.width = "632px";
+bgBurgerMenu.style.height = "1024px";
+bgBurgerMenu.style.background = 'rgba(160.44,146.4,158.19,1)';
 
-content_container.appendChild(_bg__burger_menu);
+contentContainer.appendChild(bgBurgerMenu);
 
 var borger_menu = document.createElement("div");
 borger_menu.id = "borger_menu";
@@ -37,7 +24,7 @@ borger_menu.style.height = "1024px";
 borger_menu.style.left = "0px";
 borger_menu.style.top = "0px";
 borger_menu.style.position = "absolute";
-content_container.appendChild(borger_menu);
+contentContainer.appendChild(borger_menu);
 
 var rectangle_19 = document.createElement("div");
 rectangle_19.id = "rectangle_19";
@@ -80,11 +67,6 @@ _rectangle_28.style.background = 'rgba(215.69,195.92,213.36,1)';
 
 borger_menu.appendChild(_rectangle_28);
 
-_rectangle_28.style.cursor = "pointer";
-_rectangle_28.onclick = (e) => {
-	@page_view("main");
-}
-
 var rectangle_27 = document.createElement("div");
 rectangle_27.id = "rectangle_27";
 rectangle_27.style.left = "0px";
@@ -125,11 +107,6 @@ _rectangle_24.style.background = 'rgba(215.69,195.92,213.36,1)';
 
 borger_menu.appendChild(_rectangle_24);
 
-_rectangle_24.style.cursor = "pointer";
-_rectangle_24.onclick = (e) => {
-	@page_view("expenses");
-}
-
 var _rectangle_30 = document.createElement("div");
 _rectangle_30.id = "_rectangle_30";
 _rectangle_30.style.left = "0px";
@@ -140,11 +117,6 @@ _rectangle_30.style.background = 'rgba(215.69,195.92,213.36,1)';
 
 borger_menu.appendChild(_rectangle_30);
 
-_rectangle_30.style.cursor = "pointer";
-_rectangle_30.onclick = (e) => {
-	@page_view("schedule");
-}
-
 var _rectangle_31 = document.createElement("div");
 _rectangle_31.id = "_rectangle_31";
 _rectangle_31.style.left = "0px";
@@ -154,11 +126,6 @@ _rectangle_31.style.height = "108px";
 _rectangle_31.style.background = 'rgba(215.69,195.92,213.36,1)';
 
 borger_menu.appendChild(_rectangle_31);
-
-_rectangle_31.style.cursor = "pointer";
-_rectangle_31.onclick = (e) => {
-	@page_view("personal_notes");
-}
 
 var weekly_planner = document.createElement("div");
 weekly_planner.innerHTML = "WEEKLY<br/>                 PLANNER";
@@ -174,7 +141,7 @@ weekly_planner.style.textShadow = "0px 4px 1px rgba(0,0,0,0.25)";
 weekly_planner.style.overflow = "hidden";
 weekly_planner.style.color = "#000000";
 
-content_container.appendChild(weekly_planner);
+contentContainer.appendChild(weekly_planner);
 
 var schedule = document.createElement("div");
 schedule.innerHTML = "SCHEDULE";
@@ -189,7 +156,7 @@ schedule.style.fontSize = "50px";
 schedule.style.overflow = "hidden";
 schedule.style.color = "#000000";
 
-content_container.appendChild(schedule);
+contentContainer.appendChild(schedule);
 
 var expenses = document.createElement("div");
 expenses.innerHTML = "EXPENSES";
@@ -204,7 +171,7 @@ expenses.style.fontSize = "50px";
 expenses.style.overflow = "hidden";
 expenses.style.color = "#000000";
 
-content_container.appendChild(expenses);
+contentContainer.appendChild(expenses);
 
 var about_us = document.createElement("div");
 about_us.innerHTML = "ABOUT US";
@@ -219,7 +186,7 @@ about_us.style.fontSize = "50px";
 about_us.style.overflow = "hidden";
 about_us.style.color = "#000000";
 
-content_container.appendChild(about_us);
+contentContainer.appendChild(about_us);
 
 var help = document.createElement("div");
 help.innerHTML = "HELP";
@@ -234,7 +201,7 @@ help.style.fontSize = "50px";
 help.style.overflow = "hidden";
 help.style.color = "#000000";
 
-content_container.appendChild(help);
+contentContainer.appendChild(help);
 
 var log_out = document.createElement("div");
 log_out.innerHTML = "LOG OUT";
@@ -249,7 +216,7 @@ log_out.style.fontSize = "50px";
 log_out.style.overflow = "hidden";
 log_out.style.color = "#000000";
 
-content_container.appendChild(log_out);
+contentContainer.appendChild(log_out);
 
 var personal_notes = document.createElement("div");
 personal_notes.innerHTML = "PERSONAL NOTES";
@@ -264,5 +231,5 @@ personal_notes.style.fontSize = "50px";
 personal_notes.style.overflow = "hidden";
 personal_notes.style.color = "#000000";
 
-content_container.appendChild(personal_notes);
+contentContainer.appendChild(personal_notes);
 
