@@ -1,37 +1,204 @@
-<!-- 
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@file 		ui_ux_v1
- *	@date 		1617544181553
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
- -->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
-	<head>
-		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<title>Personal Notes</title>
-		<style type="text/css">
 
-			/* Only edit this if you know what you are doing! */
-body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
-			/* Only edit this if you know what you are doing! */
-img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
-			/* Only edit this if you know what you are doing! */
-div { position: absolute; }
-			input, textarea{ position:absolute; display:block; }
-			/* Add your custom CSS here */
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+	 <head>
+		 <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		 <title>Personal Notes</title>
+		 <link rel="stylesheet" type="text/css" href="style.css">
 
-		</style>
-		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=4"></script>
-	</head>
-	<body>
-		<script type="text/javascript" src="personalNotes.js"></script>
-	</body>
-</html>
+		 <style type="text/css">
+ 
+ .sidenav {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #D8C4D5;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+ }
+ 
+ .sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: black;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidenav b {
+   padding: 8px 8px 8px 32px;
+   font-size: 25px;
+   color: black;
+   background-color: #B5D4EB;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidenav a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+ 
+ #main {
+   transition: margin-left .5s;
+   padding: 16px;
+ }
+ 
+ @media screen and (max-height: 450px) {
+   .sidenav {
+	   padding-top: 15px;
+	   }
+   .sidenav a {
+	   font-size: 18px;
+	   }
+   .overlay {
+	   padding-top: 15px;
+	   }
+   .overlay a {
+	   font-size: 18px;
+	   }
+ }
+ 
+ /*--END OF SIDEBAR CSS--*/
+ 
+ /*--START OF OVERLAY CSS--*/
+ 
+ .overlay {
+   height: 0;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 10%;
+   left: 33%;
+   background-color: #D8C4D5;
+   overflow-x: hidden;
+   transition: 0.7s;
+   padding-top: 0;
+ }
+ 
+ .overlay a {
+	 padding: 8px 8px 8px 32px;
+	 text-decoration: none;
+	 font-size: 25px;
+	 color: black;
+	 display: block;
+	 transition: 0.3s;
+ }
+ 
+ .overlay a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .overlay .closeNoteBtn {
+	 position: absolute;
+	 top: 0;
+	 right: 25px;
+	 font-size: 36px;
+	 margin-left: 50px;
+ }
+ 
+ #mainOverlay {
+	 transition: margin-left .5s;
+	 padding: 16px;
+ }
+ 
+ /*--END OF OVERLAY CSS--*/
+ 
+ input[type=title] {
+   font-family: monospace;
+   width: 90%;
+   padding: 12px 20px;
+   margin: 0px 15px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+ }
+ 
+ input[type=desc], textarea {
+   font-family: monospace;
+   width: 90%;
+   height: 200px;
+   left: 15px;
+   padding: 12px 20px;
+   margin: 1px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   resize: none;
+ }
+ 
+ label {
+	 padding: 0px 15px;
+ }
+ 
+			 /* Only edit this if you know what you are doing! */
+ body { 
+	 margin: 0px; 
+	 padding: 0px; 
+	 font-family:"Arial"; 
+	 overflow-x:hidden; 
+	 }
+			 /* Only edit this if you know what you are doing! */
+ img { 
+	 position: absolute; 
+	 display: block; 
+	 margin: 0px; 
+	 border: none; 
+	 padding: 0px; 
+	 }
+			 /* Only edit this if you know what you are doing! */
+ div { 
+	 position: absolute; 
+	 }
+			 input, textarea{ 
+				 position:absolute; 
+				 display:block; 
+				 }
+			 /* Add your custom CSS here */
+ 
+		 </style>
+		 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=4"></script>
+	 </head>
+	 <body>
+		 <script type="text/javascript" src="personalNotes.js"></script>
+		 <div id="mySidenav" class="sidenav">
+			<b><a href="main2.html">WEEKLY<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLANNER</a></b>
+			 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+			 <a href="schdeule.html">Schedule</a>
+			 <a href="personalNotes.html">Personal Notes</a>
+			 <a href="expenses.html">Expenses</a>
+			 <a href="aboutUs.html">About Us</a>
+			 <a href="help.html">Help</a>
+			 <a></a>
+			 <a></a>
+			 <a href="#">Log Out</a>
+		 </div>
+		 <div id="main"></div>
+ 
+		 <div id="myOverlay" class="overlay">
+			 <a href="javascript:void(0)" class="closeNoteBtn" onclick="closeNote();clearInput()">x</a><br><br><br>
+			 <label>Title</label><br>
+			 <input type="title" id="titleInp" placeholder="Enter Title"><br><br><br><br>
+ 
+			 <label>Description</label><br>
+			 <textarea type="desc" id="descInp" placeholder="Description"></textarea><br><br><br><br>
+ 
+			 
+		 </div>
+		 <div id="mainOverlay"></div>
+	 </body>
+ </html>
