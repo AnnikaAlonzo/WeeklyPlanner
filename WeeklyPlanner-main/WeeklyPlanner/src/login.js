@@ -38,6 +38,73 @@ logRect.style.background = "linear-gradient(-90deg , rgba(252.88,252.88,252.88,1
 
 loginBox.appendChild(logRect);
 
+var rightLine = document.createElement("img");
+rightLine.id = "rightLine";
+rightLine.style.left = "351px";
+rightLine.style.top = "534px";
+rightLine.style.width = "244px";
+rightLine.style.height = "1px";
+rightLine.src = "skins/vector_2.png";
+
+loginBox.appendChild(rightLine);
+
+var message = document.createElement("div");
+message.innerHTML = "";
+message.style.textAlign = "left";
+message.id = "message";
+message.style.left = "508px";
+message.style.top = "500px";
+message.style.width = "390px";
+message.style.height = "90px";
+message.style.fontFamily = "Roboto";
+message.style.fontSize = "24px";
+message.style.overflow = "hidden";
+message.position = "absolute";
+message.style.color = "#000000";
+
+contentContainer.appendChild(message);
+
+var leftLine = document.createElement("img");
+leftLine.id = "leftLine";
+leftLine.style.left = "1px";
+leftLine.style.top = "535px";
+leftLine.style.width = "253px";
+leftLine.style.height = "1px";
+leftLine.src = "skins/vector_1.png";
+
+loginBox.appendChild(leftLine);
+
+var or = document.createElement("div");
+or.innerHTML = "OR";
+or.style.textAlign = "left";
+or.id = "or";
+or.style.left = "286px";
+or.style.top = "521px";
+or.style.width = "46px";
+or.style.height = "47px";
+or.style.fontFamily = "Roboto";
+or.style.fontSize = "24px";
+or.style.textShadow = "0px 0px 1px #000203";
+or.style.overflow = "hidden";
+or.style.color = "#8A7E7E";
+
+loginBox.appendChild(or);
+
+var accountLogin = document.createElement("div");
+accountLogin.innerHTML = "Account Login";
+accountLogin.style.textAlign = "left";
+accountLogin.id = "accountLogin";
+accountLogin.style.left = "145px";
+accountLogin.style.top = "83px";
+accountLogin.style.width = "332px";
+accountLogin.style.height = "90px";
+accountLogin.style.fontFamily = "Roboto";
+accountLogin.style.fontSize = "48px";
+accountLogin.style.overflow = "hidden";
+accountLogin.style.color = "#000000";
+
+loginBox.appendChild(accountLogin);
+
 var passwordBox = document.createElement("div");
 passwordBox.id = "passwordbox";
 passwordBox.style.width = "406px";
@@ -73,19 +140,20 @@ password.style.color = "#000000";
 
 passwordBox.appendChild(password);
 
-var passwordTextbox = document.createElement("INPUT");
-passwordTextbox.setAttribute("passwordText","passwordTextbox");
-passwordTextbox.placeholder = "Password";
-passwordTextbox.style.fontFamily = "Roboto";
-passwordTextbox.style.fontSize = "20px";
-passwordTextbox.style.left = "40px";
-passwordTextbox.style.top = "2px";
-passwordTextbox.style.width = "365px";
-passwordTextbox.style.height = "44px";
-passwordTextbox.style.border = "0px solid #000000";
-passwordTextbox.setAttribute("type", "password");
+// var passwordTextbox = document.createElement("INPUT");
+// passwordTextbox.setAttribute("passwordText","passwordTextbox");
+// passwordTextbox.placeholder = "Password";
+// passwordTextbox.id = 'designation';
+// passwordTextbox.style.fontFamily = "Roboto";
+// passwordTextbox.style.fontSize = "20px";
+// passwordTextbox.style.left = "40px";
+// passwordTextbox.style.top = "2px";
+// passwordTextbox.style.width = "365px";
+// passwordTextbox.style.height = "44px";
+// passwordTextbox.style.border = "0px solid #000000";
+// passwordTextbox.setAttribute("type", "password");
 
-passwordBox.appendChild(passwordTextbox);
+// passwordBox.appendChild(passwordTextbox);
 
 var image2 = document.createElement("img");
 image2.id = "image2";
@@ -117,19 +185,20 @@ emailRect.style.background = 'rgba(255,255,255,1)';
 
 emailBox.appendChild(emailRect);
 
-var emailTextbox = document.createElement("INPUT");
-emailTextbox.setAttribute("emailText","emailTextbox");
-emailTextbox.placeholder = "Enter Email";
-emailTextbox.style.fontFamily = "Roboto";
-emailTextbox.style.fontSize = "20px";
-emailTextbox.style.left = "40px";
-emailTextbox.style.top = "2px";
-emailTextbox.style.width = "365px";
-emailTextbox.style.height = "44px";
-emailTextbox.style.border = "0px solid #000000";
-emailTextbox.style.background = 'rgba(255,255,255,1)';
+// var emailTextbox = document.createElement("INPUT");
+// emailTextbox.setAttribute("emailText","emailTextbox");
+// emailTextbox.placeholder = "Enter Email";
+// emailTextbox.id = 'username';
+// emailTextbox.style.fontFamily = "Roboto";
+// emailTextbox.style.fontSize = "20px";
+// emailTextbox.style.left = "40px";
+// emailTextbox.style.top = "2px";
+// emailTextbox.style.width = "365px";
+// emailTextbox.style.height = "44px";
+// emailTextbox.style.border = "0px solid #000000";
+// emailTextbox.style.background = 'rgba(255,255,255,1)';
 
-emailBox.appendChild(emailTextbox);
+// emailBox.appendChild(emailTextbox);
 
 var image_1 = document.createElement("img");
 image_1.id = "image_1";
@@ -140,51 +209,6 @@ image_1.style.height = "31px";
 image_1.src = "skins/image_1.png";
 
 emailBox.appendChild(image_1);
-
-var logButton = document.createElement("div");
-logButton.id = "logButton";
-logButton.style.width = "400px";
-logButton.style.height = "58px";
-logButton.style.left = "95px";
-logButton.style.top = "401px";
-logButton.style.position = "absolute";
-logButton.style.cursor = "pointer";
-logButton.addEventListener("click", goToMain2);
-
-function goToMain2() {
-    alert("Email obtained: " + emailTextbox.value + "\nPassword obtained: " + passwordTextbox.value)
-    location.href="main2.html"
-}
-
-loginBox.appendChild(logButton);
-
-var logButtonRect = document.createElement("div");
-logButtonRect.id = "logButtonRect";
-logButtonRect.style.left = "0px";
-logButtonRect.style.opacity = "100";
-logButtonRect.style.filter = "alpha(opacity='0')";
-logButtonRect.style.top = "0px";
-logButtonRect.style.width = "415px";
-logButtonRect.style.height = "66px";
-logButtonRect.style.border = "4px solid #000203";
-logButtonRect.style.background = 'rgba(196,196,196,0)';
-
-logButton.appendChild(logButtonRect);
-
-var login = document.createElement("div");
-login.innerHTML = "LOGIN";
-login.style.textAlign = "left";
-login.id = "login";
-login.style.left = "170px";
-login.style.top = "19px";
-login.style.width = "191px";
-login.style.height = "49.48px";
-login.style.fontFamily = "Roboto";
-login.style.fontSize = "24px";
-login.style.overflow = "hidden";
-login.style.color = "#000000";
-
-logButton.appendChild(login);
 
 var registerButton = document.createElement("div");
 registerButton.id = "registerButton";
@@ -229,54 +253,69 @@ function gotoRegister() {
 
 registerButton.appendChild(register);
 
-var rightLine = document.createElement("img");
-rightLine.id = "rightLine";
-rightLine.style.left = "351px";
-rightLine.style.top = "534px";
-rightLine.style.width = "244px";
-rightLine.style.height = "1px";
-rightLine.src = "skins/vector_2.png";
+// var logButton = document.createElement("div");
+// logButton.id = "logButton";
+// logButton.style.width = "400px";
+// logButton.style.height = "58px";
+// logButton.style.left = "95px";
+// logButton.style.top = "401px";
+// logButton.style.position = "absolute";
+// logButton.style.cursor = "pointer";
+// logButton.addEventListener("click", goToMain2);
 
-loginBox.appendChild(rightLine);
 
-var leftLine = document.createElement("img");
-leftLine.id = "leftLine";
-leftLine.style.left = "1px";
-leftLine.style.top = "535px";
-leftLine.style.width = "253px";
-leftLine.style.height = "1px";
-leftLine.src = "skins/vector_1.png";
+// loginBox.appendChild(logButton);
 
-loginBox.appendChild(leftLine);
+// var logButtonRect = document.createElement("div");
+// logButtonRect.id = "logButtonRect";
+// logButtonRect.style.left = "0px";
+// logButtonRect.style.opacity = "100";
+// logButtonRect.style.filter = "alpha(opacity='0')";
+// logButtonRect.style.top = "0px";
+// logButtonRect.style.width = "415px";
+// logButtonRect.style.height = "66px";
+// logButtonRect.style.border = "4px solid #000203";
+// logButtonRect.style.background = 'rgba(196,196,196,0)';
 
-var or = document.createElement("div");
-or.innerHTML = "OR";
-or.style.textAlign = "left";
-or.id = "or";
-or.style.left = "286px";
-or.style.top = "521px";
-or.style.width = "46px";
-or.style.height = "47px";
-or.style.fontFamily = "Roboto";
-or.style.fontSize = "24px";
-or.style.textShadow = "0px 0px 1px #000203";
-or.style.overflow = "hidden";
-or.style.color = "#8A7E7E";
+// logButton.appendChild(logButtonRect);
 
-loginBox.appendChild(or);
+// var login = document.createElement("div");
+// login.innerHTML = "LOGIN";
+// login.style.textAlign = "left";
+// login.id = "login";
+// login.style.left = "170px";
+// login.style.top = "19px";
+// login.style.width = "191px";
+// login.style.height = "49.48px";
+// login.style.fontFamily = "Roboto";
+// login.style.fontSize = "24px";
+// login.style.overflow = "hidden";
+// login.style.color = "#000000";
 
-var accountLogin = document.createElement("div");
-accountLogin.innerHTML = "Account Login";
-accountLogin.style.textAlign = "left";
-accountLogin.id = "accountLogin";
-accountLogin.style.left = "145px";
-accountLogin.style.top = "83px";
-accountLogin.style.width = "332px";
-accountLogin.style.height = "90px";
-accountLogin.style.fontFamily = "Roboto";
-accountLogin.style.fontSize = "48px";
-accountLogin.style.overflow = "hidden";
-accountLogin.style.color = "#000000";
+// logButton.appendChild(login);
 
-loginBox.appendChild(accountLogin);
-
+$(document).ready(function(){
+    $('#form').submit(function(e){
+        console.log("ff made");
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('designation').value;
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url:"login.php",
+            data:
+            {
+                username: username,
+                designation: password
+            },
+            success:function(result){
+                if(result == 1){
+                    document.getElementById('message').innerHTML = "Login Successful";
+                    setTimeout(() => {location.href= "main2.html";},2000);
+                }else{
+                    document.getElementById('message').innerHTML = result;
+                }
+            }
+        })
+    });
+});

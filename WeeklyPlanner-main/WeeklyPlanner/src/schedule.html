@@ -8,9 +8,24 @@
 
 		 <style type="text/css">
  
- /*--START OF SIDEBAR CSS--*/
+ .button {
+	background-color: #707070;
+	left: 38%;
+	position: absolute;
+	border: none;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 30px;
+	margin: 2px 15px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+/*--START OF SIDEBAR CSS--*/
  
- .sidenav {
+.sidenav {
    height: 100%;
    width: 0;
    position: fixed;
@@ -96,6 +111,111 @@
  }
  
  /*--END OF DROPDOWN CSS--*/
+
+ /*--START OF OVERLAY CSS--*/
+
+ .overlay {
+   height: 0;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 10%;
+   left: 40%;
+   background-color: #FEEFC8;
+   border-radius: 20px;
+   overflow-x: hidden;
+   transition: 0.7s;
+   padding-top: 0;
+ }
+ 
+ .overlay a {
+	 padding: 8px 8px 8px 32px;
+	 text-decoration: none;
+	 font-size: 25px;
+	 color: black;
+	 display: block;
+	 transition: 0.3s;
+ }
+ 
+ .overlay a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .overlay .closeNoteBtn {
+	 position: absolute;
+	 top: 0;
+	 right: 25px;
+	 font-size: 36px;
+	 margin-left: 50px;
+ }
+ 
+ #mainOverlay {
+	 transition: margin-left .5s;
+	 padding: 16px;
+ }
+ 
+ /*--END OF OVERLAY CSS--*/
+
+ /*--START OF BUTTON GROUP CSS--*/
+
+.btn-group {
+	margin: 0px 15px;
+}
+
+.btn-group button {
+  background-color: #ffffff; /* Green background */
+  border: 1px solid rgb(0, 0, 0); /* Green border */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #ffe298;
+}
+
+/*--END OF BUTTON GROUP CSS--*/
+ 
+ input[type=title] {
+   font-family: monospace;
+   width: 90%;
+   padding: 12px 20px;
+   margin: 0px 15px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+ }
+
+ input[type=desc], textarea {
+	font-family: monospace;
+   	width: 90%;
+   	height: 200px;
+   	left: 15px;
+   	padding: 12px 20px;
+   	margin: 1px;
+   	display: inline-block;
+   	border: 1px solid #ccc;
+   	border-radius: 4px;
+   	box-sizing: border-box;
+   	resize: none;
+ }
+
+ label {
+	 padding: 0px 15px;
+ }
  
 			 /* Only edit this if you know what you are doing! */
  body { 
@@ -139,7 +259,7 @@
 			 <a href="help.html">Help</a>
 			 <a></a>
 			 <a></a>
-			 <a href="#">Log Out</a>
+			 <a href="main.html">Log Out</a>
 		 </div>
 		 <div id="main"></div>
 		 <div class="dropdown">    
@@ -157,6 +277,92 @@
 					<a href="#"> October </a>
 					<a href="#"> November </a>
 					<a href="#"> December </a>  
-				 </div>    
+				 </div>  
+		</div>
+		<div id="addTaskOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeAdd();clearInputAdd()">x</a><br><br><br>
+			<label style="font-size: 20px;">Task Name:</label><br><br>
+			<input type="title" id="taskName" placeholder="Enter task name"><br><br><br><br>
+
+			<label style="font-size: 20px;">Task Description:</label><br><br>
+			<textarea type="desc" id="taskDescr" placeholder="Task description"></textarea><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+			<label style="font-size: 20px;">Day of the Week:</label><br><br>
+			<div class="btn-group">
+				<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
+				<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
+				<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
+				<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
+				<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
+				<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
+				<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
+			</div>
+
+			<br><br><br>		
+			<button class="button">Submit</button>
+
+			
+		</div>
+		<div id="editTaskOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeEdit();clearInputEdit()">x</a><br><br><br>
+			<label style="font-size: 20px;">Task to Edit:</label><br><br>
+			<input type="title" id="taskName" placeholder="Enter task name"><br><br><br>
+			
+			<label style="font-size: 20px;">Edited Task Name:</label><br><br>
+			<input type="title" id="editedTaskName" placeholder="Enter task name"><br><br><br>
+
+			<label style="font-size: 20px;">Edited Task Description:</label><br><br>
+			<textarea type="desc" id="editedTaskDescr" placeholder="Enter task description"></textarea><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+			<label style="font-size: 20px;">Edited Day of the Week:</label><br><br>
+			<div class="btn-group">
+				<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
+				<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
+				<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
+				<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
+				<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
+				<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
+				<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
+			</div>
+
+			<br><br><br>			
+			<button class="button">Submit</button> <br>
+
+			
+		</div>
+		<div id="removeTaskOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeRemove();clearInputRemove()">x</a><br><br><br>
+			<label style="font-size: 20px;">Task to Remove:</label><br><br>
+			<input type="title" id="taskName" placeholder="Enter task name"><br><br><br><br>
+			
+			<button class="button">Submit</button>
+
+			
+		</div>
+		<div id="reminderOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeReminder();clearInputReminder()">x</a><br><br><br>
+			<label style="font-size: 20px;">Task to set reminder:</label><br><br>
+			<input type="title" id="taskName" placeholder="Enter task name"><br><br><br><br>
+
+			<label style="font-size: 20px;">Day for reminder:</label><br><br>
+			<div class="btn-group">
+				<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
+				<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
+				<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
+				<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
+				<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
+				<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
+				<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
+			</div>
+
+			<br><br><br>			
+			<label style="font-size: 20px;">Time for reminder:</label><br><br>
+			<input type="title" id="timeReminder" placeholder="Enter time"><br><br><br>
+			
+			<button class="button">Submit</button>
+
+			
+		</div>
+		<div id="mainOverlay"></div>  
 	 </body>
  </html>

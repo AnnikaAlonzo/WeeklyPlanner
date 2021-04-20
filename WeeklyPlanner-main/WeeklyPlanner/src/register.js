@@ -13,7 +13,6 @@ bgRegister.style.left = "0px";
 bgRegister.style.top = "0px";
 bgRegister.style.width = "1440px";
 bgRegister.style.height = "1024px";
-bgRegister.style.background = 'rgba(181,212,235,1)';
 
 contentContainer.appendChild(bgRegister);
 
@@ -47,6 +46,37 @@ passwordBox.style.top = "352px";
 passwordBox.style.position = "absolute";
 registerBox.appendChild(passwordBox);
 
+var accountRegister = document.createElement("div");
+accountRegister.innerHTML = "Account Register";
+accountRegister.style.textAlign = "left";
+accountRegister.id = "accountRegister";
+accountRegister.style.left = "514px";
+accountRegister.style.top = "216px";
+accountRegister.style.width = "390px";
+accountRegister.style.height = "90px";
+accountRegister.style.fontFamily = "Roboto";
+accountRegister.style.fontSize = "48px";
+accountRegister.style.overflow = "hidden";
+accountRegister.style.color = "#000000";
+
+contentContainer.appendChild(accountRegister);
+
+var message = document.createElement("div");
+message.innerHTML = "";
+message.style.textAlign = "center";
+message.id = "message";
+message.style.left = "520px";
+message.style.top = "790px";
+message.style.width = "390px";
+message.style.height = "90px";
+message.style.fontFamily = "Roboto";
+message.style.fontSize = "24px";
+message.style.overflow = "hidden";
+message.position = "absolute";
+message.style.color = "#000000";
+
+contentContainer.appendChild(message);
+
 var passRect = document.createElement("div");
 passRect.id = "passRect";
 passRect.style.left = "0px";
@@ -72,20 +102,6 @@ password.style.overflow = "hidden";
 password.style.color = "#000000";
 
 passwordBox.appendChild(password);
-
-var passwordTextbox = document.createElement("INPUT");
-passwordTextbox.setAttribute("passwordText","passwordTextbox");
-passwordTextbox.placeholder = "Password";
-passwordTextbox.style.fontFamily = "Roboto";
-passwordTextbox.style.fontSize = "20px";
-passwordTextbox.style.left = "38px";
-passwordTextbox.style.top = "1px";
-passwordTextbox.style.width = "367px";
-passwordTextbox.style.height = "45px";
-passwordTextbox.style.border = "0px solid #000000";
-passwordTextbox.setAttribute("type", "password");
-
-passwordBox.appendChild(passwordTextbox);
 
 var image2 = document.createElement("img");
 image2.id = "image2";
@@ -132,20 +148,6 @@ confirmPassword.style.color = "#000000";
 
 confirmPasswordBox.appendChild(confirmPassword);
 
-var confirmPasswordTextbox = document.createElement("INPUT");
-confirmPasswordTextbox.setAttribute("confirmPasswordText","confirmPasswordTextbox");
-confirmPasswordTextbox.placeholder = "Confirm Password";
-confirmPasswordTextbox.style.fontFamily = "Roboto";
-confirmPasswordTextbox.style.fontSize = "20px";
-confirmPasswordTextbox.style.left = "38px";
-confirmPasswordTextbox.style.top = "1px";
-confirmPasswordTextbox.style.width = "367px";
-confirmPasswordTextbox.style.height = "45px";
-confirmPasswordTextbox.style.border = "0px solid #000000";
-confirmPasswordTextbox.setAttribute("type", "password");
-
-confirmPasswordBox.appendChild(confirmPasswordTextbox);
-
 var image_2_ek1 = document.createElement("img");
 image_2_ek1.id = "image_2_ek1";
 image_2_ek1.style.left = "6px";
@@ -191,19 +193,6 @@ firstName.style.color = "#010101";
 
 firstNameBox.appendChild(firstName);
 
-var firstNameTextbox = document.createElement("INPUT");
-firstNameTextbox.setAttribute("firstNameText","firstNameTextbox");
-firstNameTextbox.placeholder = "First Name";
-firstNameTextbox.style.fontFamily = "Roboto";
-firstNameTextbox.style.fontSize = "20px";
-firstNameTextbox.style.left = "38px";
-firstNameTextbox.style.top = "1px";
-firstNameTextbox.style.width = "367px";
-firstNameTextbox.style.height = "45px";
-firstNameTextbox.style.border = "0px solid #000000";
-
-firstNameBox.appendChild(firstNameTextbox);
-
 var image_1 = document.createElement("img");
 image_1.id = "image_1";
 image_1.style.left = "6px";
@@ -247,20 +236,7 @@ lastName.style.fontSize = "24px";
 lastName.style.overflow = "hidden";
 lastName.style.color = "#010101";
 
-lastNameBox.appendChild(lastName);
-
-var lastNameTextbox = document.createElement("INPUT");
-lastNameTextbox.setAttribute("lastNameText","lastNameTextbox");
-lastNameTextbox.placeholder = "Last Name";
-lastNameTextbox.style.fontFamily = "Roboto";
-lastNameTextbox.style.fontSize = "20px";
-lastNameTextbox.style.left = "38px";
-lastNameTextbox.style.top = "1px";
-lastNameTextbox.style.width = "367px";
-lastNameTextbox.style.height = "45px";
-lastNameTextbox.style.border = "0px solid #000000";
-
-lastNameBox.appendChild(lastNameTextbox);
+lastNameBox.appendChild(lastName); 
 
 var image_1_ek1 = document.createElement("img");
 image_1_ek1.id = "image_1_ek1";
@@ -307,19 +283,6 @@ emailAddress.style.color = "#010101";
 
 emailBox.appendChild(emailAddress);
 
-var emailTextbox = document.createElement("INPUT");
-emailTextbox.setAttribute("emailText","emailTextbox");
-emailTextbox.placeholder = "Email Address";
-emailTextbox.style.fontFamily = "Roboto";
-emailTextbox.style.fontSize = "20px";
-emailTextbox.style.left = "38px";
-emailTextbox.style.top = "1px";
-emailTextbox.style.width = "367px";
-emailTextbox.style.height = "45px";
-emailTextbox.style.border = "0px solid #000000";
-
-emailBox.appendChild(emailTextbox);
-
 var image_1_ek2 = document.createElement("img");
 image_1_ek2.id = "image_1_ek2";
 image_1_ek2.style.left = "6px";
@@ -330,69 +293,88 @@ image_1_ek2.src = "skins/image_1_ek2.png";
 
 emailBox.appendChild(image_1_ek2);
 
-var registerButton = document.createElement("div");
-registerButton.id = "registerButton";
-registerButton.style.width = "540.12px";
-registerButton.style.height = "66px";
-registerButton.style.left = "96px";
-registerButton.style.top = "539px";
-registerButton.style.position = "absolute";
-registerButton.style.cursor = "pointer";
-registerButton.addEventListener("click", goToLogin);
+// var registerRect = document.createElement("div");
+// registerRect.id = "rectangle_1";
+// registerRect.style.left = "0px";
+// registerRect.style.opacity = "100";
+// registerRect.style.filter = "alpha(opacity='0')";
+// registerRect.style.top = "0px";
+// registerRect.style.width = "414px";
+// registerRect.style.height = "74px";
+// registerRect.style.border = "4px solid #000203";
+// registerRect.style.background = 'rgba(196,196,196,0)';
 
-function goToLogin() {
-    if(passwordTextbox.value === confirmPasswordTextbox.value) {
-        alert("First and last name obtained: " + firstNameTextbox.value + " " + lastNameTextbox.value + 
-        "\nEmail obtained: " + emailTextbox.value + "\nPassword obtained: " + passwordTextbox.value);
-        location.href="login.html";
-    } else {
-        alert("Password does not match.");
-    }
-    
-}
+// registerButton.appendChild(registerRect);
 
-registerBox.appendChild(registerButton);
+// var register = document.createElement("div");
+// register.innerHTML = "REGISTER";
+// register.style.textAlign = "left";
+// register.id = "register";
+// register.style.left = "155px";
+// register.style.top = "26px";
+// register.style.width = "404.12px";
+// register.style.height = "62.62px";
+// register.style.fontFamily = "Roboto";
+// register.style.fontSize = "24px";
+// register.style.overflow = "hidden";
+// register.style.color = "#000000";
 
-var registerRect = document.createElement("div");
-registerRect.id = "registerRect";
-registerRect.style.left = "0px";
-registerRect.style.opacity = "100";
-registerRect.style.filter = "alpha(opacity='0')";
-registerRect.style.top = "0px";
-registerRect.style.width = "414px";
-registerRect.style.height = "74px";
-registerRect.style.border = "4px solid #000203";
-registerRect.style.background = 'rgba(196,196,196,0)';
+// registerButton.appendChild(register);
 
-registerButton.appendChild(registerRect);
+var lastNameTextbox = document.createElement("INPUT");
+lastNameTextbox.setAttribute("lastNameText","lastNameTextbox");
+lastNameTextbox.placeholder = "Last Name";
+lastNameTextbox.style.fontFamily = "Roboto";
+lastNameTextbox.style.fontSize = "20px";
+lastNameTextbox.style.left = "38px";
+lastNameTextbox.style.top = "1px";
+lastNameTextbox.style.width = "367px";
+lastNameTextbox.style.height = "45px";
+lastNameTextbox.style.border = "0px solid #000000";
 
-var register = document.createElement("div");
-register.innerHTML = "REGISTER";
-register.style.textAlign = "left";
-register.id = "register";
-register.style.left = "155px";
-register.style.top = "26px";
-register.style.width = "404.12px";
-register.style.height = "62.62px";
-register.style.fontFamily = "Roboto";
-register.style.fontSize = "24px";
-register.style.overflow = "hidden";
-register.style.color = "#000000";
+lastNameBox.appendChild(lastNameTextbox);
 
-registerButton.appendChild(register);
+var firstNameTextbox = document.createElement("INPUT");
+firstNameTextbox.setAttribute("firstNameText","firstNameTextbox");
+firstNameTextbox.placeholder = "First Name";
+firstNameTextbox.style.fontFamily = "Roboto";
+firstNameTextbox.style.fontSize = "20px";
+firstNameTextbox.style.left = "38px";
+firstNameTextbox.style.top = "1px";
+firstNameTextbox.style.width = "367px";
+firstNameTextbox.style.height = "45px";
+firstNameTextbox.style.border = "0px solid #000000";
 
-var accountRegister = document.createElement("div");
-accountRegister.innerHTML = "Account Register";
-accountRegister.style.textAlign = "left";
-accountRegister.id = "accountRegister";
-accountRegister.style.left = "514px";
-accountRegister.style.top = "216px";
-accountRegister.style.width = "390px";
-accountRegister.style.height = "90px";
-accountRegister.style.fontFamily = "Roboto";
-accountRegister.style.fontSize = "48px";
-accountRegister.style.overflow = "hidden";
-accountRegister.style.color = "#000000";
+firstNameBox.appendChild(firstNameTextbox);
 
-contentContainer.appendChild(accountRegister);
-
+$(document).ready(function() {
+    $('#form').submit(function(e){
+        var username =  document.getElementById('username').value;
+        var password =  document.getElementById('designation').value;
+        var confirm = document.getElementById('confirm').value;
+        e.preventDefault();
+        if(password === confirm){
+            $.ajax({
+                type: "POST",
+                url:'index.php',
+                data:
+                {
+                    username: username,
+                    designation: password
+                },
+                success:function(a){
+                    if(a == 1){
+                        document.getElementById('message').innerHTML = "Registered Successfully";
+                        setTimeout(() => {location.href= "login.html";},2000);
+                    }else{
+                        document.getElementById('message').innerHTML = "Email Already Exists";
+                        document.getElementById('form').reset();
+                    }
+                }
+            });
+        }else{
+            document.getElementById('message').innerHTML = "Passwords Do Not Match";
+        }
+        
+    });
+});

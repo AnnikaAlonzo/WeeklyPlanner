@@ -572,7 +572,31 @@ remindersButton.style.left = "0px";
 remindersButton.style.top = "323px";
 remindersButton.style.position = "absolute";
 remindersButton.style.cursor = "pointer";
+remindersButton.addEventListener("click", reminder);
+remindersButton.addEventListener("click", closeNav);
+
 buttons.appendChild(remindersButton);
+
+function reminder() {
+    document.getElementById("reminderOverlay").style.width = "575px";
+    document.getElementById("reminderOverlay").style.height = "500px";
+    document.getElementById("reminderOverlay").style.border = "1px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "250px";
+}
+  
+function closeReminder() {
+    document.getElementById("reminderOverlay").style.width = "0";
+    document.getElementById("reminderOverlay").style.height = "0";
+    document.getElementById("reminderOverlay").style.border = "0px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "0";
+}
+
+function clearInputReminder() {
+
+    document.getElementById("taskName").value = "";
+    document.getElementById("dayReminder").value = "";
+    document.getElementById("timeReminder").value = "";
+}
 
 var remindersRect = document.createElement("div");
 remindersRect.id = "remindersRect";
@@ -668,26 +692,49 @@ questionMarkSymbol.style.color = "#000000";
 
 helpButton.appendChild(questionMarkSymbol);
 
-var removeSchedButton = document.createElement("div");
-removeSchedButton.id = "removeSchedButton";
-removeSchedButton.style.width = "294px";
-removeSchedButton.style.height = "64px";
-removeSchedButton.style.left = "0px";
-removeSchedButton.style.top = "163px";
-removeSchedButton.style.position = "absolute";
-removeSchedButton.style.cursor = "pointer";
-buttons.appendChild(removeSchedButton);
-
 var removeTaskButton = document.createElement("div");
 removeTaskButton.id = "removeTaskButton";
-removeTaskButton.style.left = "0px";
-removeTaskButton.style.top = "0px";
 removeTaskButton.style.width = "294px";
 removeTaskButton.style.height = "64px";
-removeTaskButton.style.borderRadius = "50px";
-removeTaskButton.style.background = 'rgba(254,248,232,1)';
+removeTaskButton.style.left = "0px";
+removeTaskButton.style.top = "163px";
+removeTaskButton.style.position = "absolute";
+removeTaskButton.style.cursor = "pointer";
+removeTaskButton.addEventListener("click", removeTask);
+removeTaskButton.addEventListener("click", closeNav);
 
-removeSchedButton.appendChild(removeTaskButton);
+buttons.appendChild(removeTaskButton);
+
+function removeTask() {
+    document.getElementById("removeTaskOverlay").style.width = "575px";
+    document.getElementById("removeTaskOverlay").style.height = "300px";
+    document.getElementById("removeTaskOverlay").style.border = "1px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "250px";
+}
+  
+function closeRemove() {
+    document.getElementById("removeTaskOverlay").style.width = "0";
+    document.getElementById("removeTaskOverlay").style.height = "0";
+    document.getElementById("removeTaskOverlay").style.border = "0px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "0";
+}
+
+function clearInputRemove() {
+
+    document.getElementById("taskName").value = "";
+
+}
+
+var removeTaskRect = document.createElement("div");
+removeTaskRect.id = "removeTaskRect";
+removeTaskRect.style.left = "0px";
+removeTaskRect.style.top = "0px";
+removeTaskRect.style.width = "294px";
+removeTaskRect.style.height = "64px";
+removeTaskRect.style.borderRadius = "50px";
+removeTaskRect.style.background = 'rgba(254,248,232,1)';
+
+removeTaskButton.appendChild(removeTaskRect);
 
 var removeTaskText = document.createElement("div");
 removeTaskText.innerHTML = "Remove Task";
@@ -702,7 +749,7 @@ removeTaskText.style.fontSize = "28px";
 removeTaskText.style.overflow = "hidden";
 removeTaskText.style.color = "#000000";
 
-removeSchedButton.appendChild(removeTaskText);
+removeTaskButton.appendChild(removeTaskText);
 
 var minusSymbol = document.createElement("div");
 minusSymbol.innerHTML = "-";
@@ -718,7 +765,7 @@ minusSymbol.style.textShadow = "0px 0px 1px #000000";
 minusSymbol.style.overflow = "hidden";
 minusSymbol.style.color = "#000000";
 
-removeSchedButton.appendChild(minusSymbol);
+removeTaskButton.appendChild(minusSymbol);
 
 var viewSchedButton = document.createElement("div");
 viewSchedButton.id = "viewSchedButton";
@@ -780,7 +827,34 @@ editTaskButton.style.left = "0px";
 editTaskButton.style.top = "83px";
 editTaskButton.style.position = "absolute";
 editTaskButton.style.cursor = "pointer";
+editTaskButton.addEventListener("click", editTask);
+editTaskButton.addEventListener("click", closeNav);
+
 buttons.appendChild(editTaskButton);
+
+function editTask() {
+    document.getElementById("editTaskOverlay").style.width = "575px";
+    document.getElementById("editTaskOverlay").style.height = "580px";
+    document.getElementById("editTaskOverlay").style.border = "1px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "250px";
+}
+  
+function closeEdit() {
+    document.getElementById("editTaskOverlay").style.width = "0";
+    document.getElementById("editTaskOverlay").style.height = "0";
+    document.getElementById("editTaskOverlay").style.border = "0px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "0";
+}
+
+
+function clearInputEdit() {
+
+    document.getElementById("taskName").value = "";
+    document.getElementById("editedTaskName").value = "";
+    document.getElementById("editedTaskDescr").value = "";
+    document.getElementById("editedDayDue").value = "";
+
+}
 
 var editTaskRect = document.createElement("div");
 editTaskRect.id = "editTaskRect";
@@ -832,7 +906,30 @@ addTaskButton.style.left = "0px";
 addTaskButton.style.top = "0px";
 addTaskButton.style.position = "absolute";
 addTaskButton.style.cursor = "pointer";
+addTaskButton.addEventListener("click", addTask);
+addTaskButton.addEventListener("click", closeNav);
 buttons.appendChild(addTaskButton);
+
+function addTask() {
+    document.getElementById("addTaskOverlay").style.width = "575px";
+    document.getElementById("addTaskOverlay").style.height = "580px";
+    document.getElementById("addTaskOverlay").style.border = "1px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "250px";
+}
+  
+function closeAdd() {
+    document.getElementById("addTaskOverlay").style.width = "0";
+    document.getElementById("addTaskOverlay").style.height = "0";
+    document.getElementById("addTaskOverlay").style.border = "0px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "0";
+}
+
+function clearInputAdd() {
+
+    document.getElementById("taskName").value = "";
+    document.getElementById("taskDescr").value = "";
+    document.getElementById("dayDue").value = "";
+}
 
 var addTaskRect = document.createElement("div");
 addTaskRect.id = "addTaskRect";

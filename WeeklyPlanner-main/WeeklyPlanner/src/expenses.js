@@ -849,7 +849,25 @@ addExpButton.style.height = "67px";
 addExpButton.style.left = "0px";
 addExpButton.style.top = "0px";
 addExpButton.style.position = "absolute";
+addExpButton.style.cursor = "pointer";
+addExpButton.addEventListener("click", addExp);
+addExpButton.addEventListener("click", closeNav);
+
 buttons.appendChild(addExpButton);
+
+function addExp() {
+    document.getElementById("myOverlay").style.width = "600px";
+    document.getElementById("myOverlay").style.height = "400px";
+    document.getElementById("myOverlay").style.border = "1px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "250px";
+}
+  
+function closeAdd() {
+    document.getElementById("myOverlay").style.width = "0";
+    document.getElementById("myOverlay").style.height = "0";
+    document.getElementById("myOverlay").style.border = "0px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "0";
+}
 
 var addExpRect = document.createElement("div");
 addExpRect.id = "addExpRect";
@@ -1025,3 +1043,21 @@ line41.style.background = "#000000";
 
 contentContainer.appendChild(line41);
 
+function clearInput() {
+    document.getElementById("nameInp").value = "";
+    document.getElementById("amntInp").value = "";
+
+    for (var i=1; i<=7; i++){
+        document.getElementById("button"+i).style.backgroundColor= "white";
+    }
+}
+
+function selectBtn(IDS) {
+    if (document.getElementById(IDS).className == "unSelected") {
+        document.getElementById(IDS).className = "Selected";
+        document.getElementById(IDS).style.backgroundColor = '#ffe298';
+    } else {
+        document.getElementById(IDS).className = "unSelected";
+        document.getElementById(IDS).style.backgroundColor = 'white';
+    }
+}
