@@ -21,10 +21,17 @@ from the week.
 - With the new username and password recorded, the user can login and use the website to their content
 
 ##### Revision Logs
->> April 4, 2021: Inital commit of files (Alonzo)
->> April 8, 2021: Updated login, register, main, and main2 features (Alonzo, Ayson, Supangan)
->> April 13, 2021: Updated the main features of the program and small updates for the minor features (Alonzo, Ayson, Supangan)
->> April 14 - 19, 2021: Created a test database and connected it to the program, specifically login and register, added php files (Ayson)
->> April 17, 2021: Updated personal notes feature (Supangan)
->> April 18 - 20, 2021: Updated schedule feature (Alonzo)
->> April 18 - 20, 2021: Updated expense feature (Alonzo, Supangan)
+- April 4, 2021: Inital commit of files (Alonzo)
+- April 8, 2021: Updated login, register, main, and main2 features (Alonzo, Ayson, Supangan)
+- April 13, 2021: Updated the main features of the program and small updates for the minor features (Alonzo, Ayson, Supangan)
+- April 14 - 19, 2021: Created a test database and connected it to the program, specifically login and register, added php files (Ayson)
+- April 17, 2021: Updated personal notes feature (Supangan)
+- April 18 - 20, 2021: Updated schedule feature (Alonzo)
+- April 18 - 20, 2021: Updated expense feature (Alonzo, Supangan)
+
+##### Contributors
+Annika Dominique Alonzo: Primary front-end programmer, secondary back-end programmer
+
+Sergie Ezekiel Ayson: Primary back-end programmer, secondary front-end programmer
+
+Lance Nathan Supangan: Primary front-end programmer, secondary back-end programmer
