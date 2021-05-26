@@ -373,11 +373,11 @@ input {
 			 /* Add your custom CSS here */
  
 		 </style>
-		<script src = "https://code.jquery.com/jquery-3.6.0.js"></script>
+		 <script src = "https://code.jquery.com/jquery-3.6.0.js"></script>
 		 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=4"></script>
 	 </head>
 	 <body>
-		 <script type="text/javascript" src="schedule.js"></script>
+		 <script type="text/javascript" src="viewSchedule.js"></script>
 		 <div id="mySidenav" class="sidenav">
 			<b><a href="main2.html">WEEKLY<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLANNER</a></b>
 			 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
@@ -385,120 +385,22 @@ input {
 			 <a href="personalNotes.html">Personal Notes</a>
 			 <a href="expenses.html">Expenses</a>
 			 <a onclick="openAboutUs();closeNav()" style="cursor: pointer;">About Us</a>
-			 <a onclick="openSideHelp();closeNav()" style="cursor: pointer;">Help</a>
+			 <a onclick="openHelp();closeNav()" style="cursor: pointer;">Help</a>
 			 <a></a>
 			 <a></a>
 			 <a href="main.html">Log Out</a>
 		 </div>
 		 <div id="main"></div>
 		 <div class="dropdown">    
-			<div id="addTaskOverlay" class="overlay">
-				<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeAdd()">x</a><br><br><br>
-				<label style="font-size: 20px;">Task Name:</label><br><br>
-				<input type="title" id="addtaskName" placeholder="Enter task name"><br><br><br><br>
-
-				<label style="font-size: 20px;">Task Description:</label><br><br>
-				<textarea type="desc" id="addtaskDescr" placeholder="Task description"></textarea><br><br><br><br><br><br><br><br><br><br><br><br>
-				
-				<label style="font-size: 20px;">Day of the Week:</label><br><br>
-				<input type="date" id="addtaskDate">
-
-
-				<!-- <div class="btn-group">
-					<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
-					<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
-					<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
-					<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
-					<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
-					<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
-					<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
-				</div> -->
-
-				<br><br><br>		
-				<button class="button" id="addTaskBtn">Submit</button>
-
-				
-			</div>
-			<div id="editTaskOverlay" class="overlay">
-				<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeEdit()">x</a><br><br><br>
-				<label style="font-size: 20px;">Task to Edit:</label><br><br>
-				<input type="title" id="editTaskName" placeholder="Enter task name"><br><br><br>
-
-				<label style="font-size: 20px;">Edited Task Description:</label><br><br>
-				<textarea type="desc" id="editedTaskDescr" placeholder="Enter task description"></textarea><br><br><br><br><br><br><br><br><br><br><br><br>
-				
-				<label style="font-size: 20px;">Edited Day of the Week:</label><br><br>
-				<input type="date" id="editTaskDate">
-				<!-- <div class="btn-group">
-					<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
-					<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
-					<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
-					<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
-					<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
-					<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
-					<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
-				</div> -->
-
-				<br><br><br>			
-				<button class="button" id="saveEditBtn">Save</button> <br>
-
-				
-			</div>
-			<div id="removeTaskOverlay" class="overlay">
-				<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeRemove()">x</a><br><br><br>
-				<label style="font-size: 20px;">Task to Remove:</label><br><br>
-				<input type="title" id="deleteTaskName" placeholder="Enter task name"><br><br><br><br>
-				
-				<button class="button" id="deleteBtn">Delete</button>
-
-				
-			</div>
-			<div id="reminderOverlay" class="overlay">
-				<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeReminder()">x</a><br><br><br>
-				<label style="font-size: 20px;">Task to set reminder:</label><br><br>
-				<input type="title" id="reminderTaskName" placeholder="Enter task name"><br><br><br><br>
-
-				<label style="font-size: 20px;">Day for reminder:</label><br><br>
-				<input type="date" id="reminderDate">
-
-				<!-- <div class="btn-group">
-					<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
-					<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
-					<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
-					<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
-					<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
-					<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
-					<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
-				</div> -->
-
-				<br><br><br>			
-				<label style="font-size: 20px;">Time for reminder:</label><br><br>
-				<input type="time" id="reminderTime"><br><br><br>
-				
-				<button class="button" id="setReminderBtn">Set</button>
-
-			</div>
 
 			<div id="helpOverlay" class="overlay">
-				<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeHelp()">x</a><br><br><br>
+				<a href="javascript:void(0)" class="closeAddBtn" onclick="closeHelp()">x</a><br><br><br>
 
 				<label style="font-size: 20px;">HELP</label><br><br><br>
-				<label style="font-size: 20px;">+ Add Task</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Enter the task name</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Enter a description for the task</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Select a date for the task and then press submit</label><br><br>
-				<label style="font-size: 20px;">~ Edit Task</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Can overwrite a specific task</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Same mechanics as with adding tasks</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Check the correct date before submitting</label><br><br>
-				<label style="font-size: 20px;">- Remove Task</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Enter the name of the task you want to remove</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Press delete when you have typed in the name</label><br><br>
-				<label style="font-size: 20px;">> View Schedule</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; This will show your schedule and all the tasks you have</label><br><br>
-				<label style="font-size: 20px;">O Reminders</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Enter the name of the task you want to set a reminder for</label><br>
-				<label style="font-size: 20px;">&emsp;&#8594; Select a date and time then press submit</label><br>
+				<label style="font-size: 20px;">This page shows the whole schedule of the current user logged in</label><br><br><br>
+				<label style="font-size: 20px;">- Go Back</label><br>
+				<label style="font-size: 20px;">&emsp;&#8594; The go back button allows the user to go back to the schedule page</label><br>
+
 			</div>
 
 			<div id="aboutUsOverlay" class="overlayAbout">

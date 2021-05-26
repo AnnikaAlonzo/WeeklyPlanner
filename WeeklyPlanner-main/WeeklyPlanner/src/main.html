@@ -1,25 +1,72 @@
-<!-- 
-/*
- *	This content is generated from the PSD File Info.
- *	(Alt+Shift+Ctrl+I).
- *
- *	@file 		ui_ux_v1
- *	@date 		1617544111241
- *	@title 		Page 1
- *	@author 	
- *	@keywords 	
- *	@generator 	Export Kit v1.3.figma
- *
-*/
- -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
 	<head>
 		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<title>Main</title>
+		<title>Weekly Planner</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 
 		<style type="text/css">
+
+label {
+	float: left;
+	padding-left: 40px;
+	font-size: 34px; 
+	padding-right: 40px;
+	font-family: Sansation;
+	overflow: hidden;
+ }
+
+ img {
+	left: 40px;
+	top: 506px;
+	width: "126.13px";
+	height: "175px";
+	float: left;
+	overflow: hidden;
+ }
+
+/*--START OF OVERLAY CSS--*/
+ 
+.overlay {
+   height: 0;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 10%;
+   left: 38%;
+   background-color: rgba(241.19,210.03,236.51,1);
+   overflow-x: hidden;
+   transition: 0.7s;
+   padding-top: 0;
+ }
+ 
+ .overlay a {
+	 padding: 8px 8px 8px 32px;
+	 text-decoration: none;
+	 font-size: 25px;
+	 color: black;
+	 display: block;
+	 transition: 0.3s;
+ }
+ 
+ .overlay a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .overlay .closeAddBtn {
+	 position: absolute;
+	 top: 0;
+	 right: 25px;
+	 font-size: 36px;
+	 margin-left: 50px;
+ }
+ 
+ #mainOverlay {
+	 transition: margin-left .5s;
+	 padding: 16px;
+ }
+
+ /*--END OF OVERLAY CSS--*/
 
 			/* Only edit this if you know what you are doing! */
 body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
@@ -31,9 +78,29 @@ div { position: absolute; }
 			/* Add your custom CSS here */
 
 		</style>
+		<script src = "https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=4"></script>
 	</head>
 	<body>
 		<script type="text/javascript" src="main.js"></script>
+
+		<div id="aboutUsOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closeAddBtn" onclick="closeAboutUs()">x</a><br><br><br>
+
+			<label style="padding-top: 20px;">WE ARE ANNIKA ALONZO, SERGIE AYSON, AND LANCE SUPANGAN, THE DEVELOPERS OF THIS WEBSITE. WE ARE CURRENT COMPUTER ENGINEERING STUDENTS AT DE LA SALLE UNIVERSITY. THIS WEBSITE IS OUR FINAL OUTCOME FOR OUR SOFTWARE DESIGN LAB.</label>
+			
+			<img src="skins/kiel_1.png">
+			<img src="skins/annika_1.png" style="left: 221px;">
+			<img src="skins/lance_1.png" style="left: 408px;">
+
+			<label style="padding-top: 240px;">SERGIE&emsp;&emsp;ANNIKA&emsp;&ensp;LANCE</label>
+			
+		</div>
+		<div id="aboutWebOverlay" class="overlay">
+			<a href="javascript:void(0)" class="closeAddBtn" onclick="closeAboutWeb()">x</a><br><br><br>
+
+			<label style="padding-top: 130px;">THE WEEKLY PLANNER IS MADE FOR PEOPLE WHO HAVE A HARD TIME KEEPING TRACK OF THEIR SCHEDULE AND WANT AN EASY FIX TO THAT PROBLEM. THEY MAY ALSO WRITE DOWN ANY NOTES OR KEEP TRACK OF THEIR EXPENSES.</label>
+			
+		</div>
 	</body>
 </html>

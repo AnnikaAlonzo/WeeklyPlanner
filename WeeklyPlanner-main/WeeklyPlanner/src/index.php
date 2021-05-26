@@ -1,22 +1,12 @@
 <?php
-    $username = $_POST['username'];
-    $password = $_POST['designation'];
+   $server = "localhost";
+   $sUsername = "root";
+   $password = "";
+   $dbname = "testsql";
+   
+   $con = mysqli_connect($server,$sUsername,$password,$dbname);
 
-    $con = new mysqli('localhost','root','','testsql');
-    
-    if($con -> connect_error){
-        echo "CONNECTED PROBABLY";
-    }
-
-    $query = "INSERT INTO userdetails (username, designation) VALUES ('$username','$password')";
-    $query1 = mysqli_query($con, "SELECT username FROM userdetails WHERE username = '".$username."'");
-
-    if(!(mysqli_num_rows($query1) > 0)){
-        $query_run = mysqli_query($con,$query);
-        if($query_run){
-            echo "1";
-        }
-    }else{
-        echo "Email Already Exists";
-    }
+   if($con -> connect_error){
+       echo "NOT CONNECTED PROBABLY";
+   }
 ?>

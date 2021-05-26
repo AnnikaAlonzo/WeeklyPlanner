@@ -3,10 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
 	<head>
 		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Expenses</title>
+		<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    	<link rel="stylesheet" href="calendar.css" type="text/css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 
 		<style type="text/css">
+
+input {
+	padding: 8px;
+	margin-left: 15px;
+}
 
 .button {
 	background-color: #707070;
@@ -22,6 +32,64 @@
 	border-radius: 20px;
 	cursor: pointer;
 }
+
+/*--START OF OVERLAY ABOUT US CSS--*/
+
+.aboutUsLabel {
+	float: left;
+	padding-left: 40px;
+	font-size: 34px; 
+	padding-right: 40px;
+	font-family: Sansation;
+	overflow: hidden;
+ }
+
+ img {
+	left: 40px;
+	top: 506px;
+	width: "126.13px";
+	height: "175px";
+	float: left;
+	overflow: hidden;
+ }
+ 
+.overlayAbout {
+   height: 0;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 10%;
+   left: 38%;
+   background-color: rgba(241.19,210.03,236.51,1);
+   overflow-x: hidden;
+   transition: 0.7s;
+   padding-top: 0;
+ }
+ 
+ .overlayAbout a {
+	 padding: 8px 8px 8px 32px;
+	 text-decoration: none;
+	 font-size: 25px;
+	 color: black;
+	 display: block;
+	 transition: 0.3s;
+ }
+ 
+ .overlayAbout a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .overlayAbout .closeAddBtn {
+	 position: absolute;
+	 top: 0;
+	 right: 25px;
+	 font-size: 36px;
+	 margin-left: 50px;
+ }
+ 
+ 
+/*--END OF OVERLAY ABOUT US CSS--*/
+
 
 /*--START OF SIDEBAR CSS--*/
  
@@ -187,6 +255,68 @@
 }
 
 /*--END OF BUTTON GROUP CSS--*/
+
+.calContainer { 
+	left: 200px;
+	margin: 150px auto; 
+	max-width: 960px; 
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #f3b121;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
  
  input[type=title] {
    font-family: monospace;
@@ -212,8 +342,7 @@
  }
 			 /* Only edit this if you know what you are doing! */
  img { 
-	 position: 
-	 absolute; 
+	 position: absolute; 
 	 display: block; 
 	 margin: 0px; 
 	 border: none; 
@@ -223,6 +352,7 @@
  div { 
 	 position: absolute; 
  }
+
 			 input, textarea{ 
 				 position:absolute; 
 				 display:block; 
@@ -240,55 +370,151 @@
 			 <a href="schedule.html">Schedule</a>
 			 <a href="personalNotes.html">Personal Notes</a>
 			 <a href="expenses.html">Expenses</a>
-			 <a href="aboutUs.html">About Us</a>
-			 <a href="help.html">Help</a>
+			 <a onclick="openAboutUs();closeNav()" style="cursor: pointer;">About Us</a>
+			 <a onclick="openSideHelp();closeNav()" style="cursor: pointer;">Help</a>
 			 <a></a>
 			 <a></a>
 			 <a href="main.html">Log Out</a>
 		 </div>
 		 <div id="main"></div>
-		 <div class="dropdown">    
-				 <!-- dropdown list items will show when we click the drop button -->   
-				 <div id="list-items">
-					<a href="#"> January </a>  
-					<a href="#"> February </a>  
-					<a href="#"> March </a>  
-					<a href="#"> April </a>  
-					<a href="#"> May </a>
-					<a href="#"> June </a>
-					<a href="#"> July </a>
-					<a href="#"> August </a>
-					<a href="#"> September </a>
-					<a href="#"> October </a>
-					<a href="#"> November </a>
-					<a href="#"> December </a>  
-				 </div>  
-				 <div id="myOverlay" class="overlay">
-					<a href="javascript:void(0)" class="closeAddBtn" onclick="closeAdd();clearInput()">x</a><br><br><br>
-					<label style="font-size: 20px;">EXPENSE NAME:</label><br>
-					<input type="title" id="nameInp" placeholder="Name"><br><br><br><br>
-		
+		 <div class="dropdown">      
+				 <div id="addOverlay" class="overlay">
+					<a href="javascript:void(0)" class="closeAddBtn" onclick="closeAdd()">x</a><br><br><br>
+
+					<label style="font-size: 20px;">ADD EXPENSES</label><br><br><br>
+					<label style="font-size: 20px;">DATE:</label><br>
+					
+					<input type="date" id="addDate">
+
+	    			<br><br><br><br>
+
 					<label style="font-size: 20px;">EXPENSE AMOUNT:</label><br>
-					<input type="title" id="amntInp" placeholder="Amount"></input><br><br><br><br>
-
-					<label style="font-size: 20px;">DAY OF THE WEEK:</label><br>
-
-					<div class="btn-group">
-						<button class="unSelected" id="button1" onclick="selectBtn(this.id)">M</button>
-						<button class="unSelected" id="button2" onclick="selectBtn(this.id)">T</button>
-						<button class="unSelected" id="button3" onclick="selectBtn(this.id)">W</button>
-						<button class="unSelected" id="button4" onclick="selectBtn(this.id)">H</button>
-						<button class="unSelected" id="button5" onclick="selectBtn(this.id)">F</button>
-						<button class="unSelected" id="button6" onclick="selectBtn(this.id)">S</button>
-						<button class="unSelected" id="button7" onclick="selectBtn(this.id)">Su</button>
-					</div>
+					<input type="number" id="addAmount" placeholder="Amount"></input>
 
 					<br><br><br><br>
 
-					<button class="button">Submit</button>
+					<button class="button" id="submitAdd">Submit</button>
+				</div>
+
+				<div id="editOverlay" class="overlay">
+					<a href="javascript:void(0)" class="closeAddBtn" onclick="closeEdit()">x</a><br><br><br>
+
+					<label style="font-size: 20px;">EDIT EXPENSES</label><br><br><br>
+					<label style="font-size: 20px;">DATE:</label><br>
+					<input type="date" id="editDate">
+
+					<br><br><br><br>
+
+					<label style="font-size: 20px;">NEW EXPENSE AMOUNT:</label><br>
+					<input type="number" id="editAmount" placeholder="Amount"></input>
+
+					<br><br><br><br>
+
+					<button class="button" id="submitEdit">Submit</button>
+				</div>
+
+				<div id="remOverlay" class="overlay">
+					<a href="javascript:void(0)" class="closeAddBtn" onclick="closeRem()">x</a><br><br><br>
+					
+					<label style="font-size: 20px;">REMOVE EXPENSES</label><br><br><br>
+					<label style="font-size: 20px;">DATE:</label><br>
+					<input type="date" id="removeDate">
+
+					<br><br><br><br><br><br><br>
+
+					<button class="button" id="submitRemove">Submit</button>
 		
+					<div id="tallyOverlay" class="overlay">
+						<a href="javascript:void(0)" class="closeAddBtn" onclick="closeTally()">x</a><br><br><br>
+	
+						<label style="font-size: 20px;">TALLY EXPENSES</label><br><br><br>
+						<label style="font-size: 20px;">DATE:</label><br>
+						<input type="date" id="tallyDate1" style="position: absolute;">
+						<p style="margin-left: 200px; position: absolute; text-align: center;">to</p>
+						<input type="date" id="tallyDate2" style="margin-left: 240px; position: absolute;">
+	
+						<br><br><br><br>
+	
+						<button class="button" id="submitTally">Submit</button><br><br><br><br><br>
+
+						<label style="font-size: 20px; margin-left: 33%;" id="calcTally"></label>
+					</div>
+
+					<div id="helpOverlay" class="overlay">
+						<a href="javascript:void(0)" class="closeAddBtn" onclick="closeHelp()">x</a><br><br><br>
+	
+						<label style="font-size: 20px;">HELP</label><br><br><br>
+						<label style="font-size: 20px;">+ Add Expense</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Select a specific date when you spent money</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Enter how much you spent for the day</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Press the submit button when you chose the date and amount</label><br><br>
+						<label style="font-size: 20px;">~ Edit Expense</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Can overwrite the current amount of a specific date</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Same mechanics as with adding expenses</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Check the correct date and amount before submitting</label><br><br>
+						<label style="font-size: 20px;">- Remove Expense</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Shows a list of all the dates with the expenses written</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Removes any expense amount from a specific date</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Select any of the choices you wish to remove</label><br><br>
+						<label style="font-size: 20px;">* Tally Expense</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Select two dates for the range of the calculation</label><br>
+						<label style="font-size: 20px;">&emsp;&#8594; Submitting will prompt the user the amount from date a to date b</label><br>
+					</div>
 					
 				</div>
-				<div id="mainOverlay"></div>  
+
+				<div id="aboutUsOverlay" class="overlayAbout">
+					<a href="javascript:void(0)" class="closeAddBtn" onclick="closeAboutUs()">x</a><br><br><br>
+		
+					<label class="aboutUsLabel" style="padding-top: 20px;">WE ARE ANNIKA ALONZO, SERGIE AYSON, AND LANCE SUPANGAN, THE DEVELOPERS OF THIS WEBSITE. WE ARE CURRENT COMPUTER ENGINEERING STUDENTS AT DE LA SALLE UNIVERSITY. THIS WEBSITE IS OUR FINAL OUTCOME FOR OUR SOFTWARE DESIGN LAB.</label>
+					
+					<img src="skins/kiel_1.png">
+					<img src="skins/annika_1.png" style="left: 221px;">
+					<img src="skins/lance_1.png" style="left: 408px;">
+		
+					<label class="aboutUsLabel" style="padding-top: 240px;">SERGIE&emsp;&emsp;ANNIKA&emsp;&ensp;LANCE</label>
+					
+				</div>
+	
+				<div id="sideHelpOverlay" class="overlayAbout">
+					<a href="javascript:void(0)" class="closeAddBtn" onclick="closeSideHelp()">x</a><br><br><br>
+		
+					<label class="aboutUsLabel" style="padding-top: 60px;">NOT SURE WHAT TO DO?<br/><br/>ITS EASY. JUST CLICK ON ANY OF THE OPTIONS ABOVE AND IT WILL TAKE YOU TO THE RESPECTIVE PAGE. <br/><br/>CLICK ON 'WEEKLY PLANNER' ABOVE TO RETURN TO THE MAIN PAGE.<br/><br/>START YOUR WEEKLY PLANNER JOURNEY NOW.</label>
+					
+				</div>
+
+				<div id="mainOverlay"></div>
+				</div>
+				
+				<div class="calContainer" style="position: relative;">
+					<div class="icalendar" style="position: relative;">
+					  <div class="icalendar__month" style="position: relative;">
+						<div class="icalendar__prev" onclick="moveDate('prev')" style="position: relative;">
+						  <span>&#10094</span>
+						</div>
+						<div class="icalendar__current-date" style="position: relative;">
+						  <h2 id="icalendarMonth"></h2>
+						  <div>
+							<div id="icalendarDateStr" style="position: relative;"></div>
+						  </div>
+						</div>
+						<div class="icalendar__next" onclick="moveDate('next')" style="position: relative;">
+						  <span>&#10095</span>
+						</div>
+					  </div>
+					  <div class="icalendar__week-days" style="position: relative;">
+						<div style="position: relative;">Sun</div>
+						<div style="position: relative;">Mon</div>
+						<div style="position: relative;">Tue</div>
+						<div style="position: relative;">Wed</div>
+						<div style="position: relative;">Thu</div>
+						<div style="position: relative;">Fri</div>
+						<div style="position: relative;">Sat</div>
+					  </div>
+					  <div class="icalendar__days" onclick="viewNotes(this.class)" style="position: relative;"></div>
+				
+					  <script src="./calendar.js" type="text/javascript"></script>
+					</div>
+				  </div>
 	 </body>
 </html>

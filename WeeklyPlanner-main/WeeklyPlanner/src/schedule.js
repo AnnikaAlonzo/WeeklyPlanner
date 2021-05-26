@@ -60,6 +60,13 @@ image_4.style.height = "49px";
 image_4.src = "skins/image_4.png";
 image_4.style.cursor = "pointer";
 image_4.addEventListener("click", openNav);
+image_4.addEventListener("click", closeAdd);
+image_4.addEventListener("click", closeEdit);
+image_4.addEventListener("click", closeReminder);
+image_4.addEventListener("click", closeRemove);
+image_4.addEventListener("click", closeAboutUs);
+image_4.addEventListener("click", closeHelp);
+image_4.addEventListener("click", closeSideHelp);
 
 contentContainer.appendChild(image_4);
 
@@ -71,489 +78,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
-}
-
-var scheduleBox = document.createElement("div");
-scheduleBox.id = "scheduleBox";
-scheduleBox.style.width = "925px";
-scheduleBox.style.height = "627px";
-scheduleBox.style.left = "405px";
-scheduleBox.style.top = "224px";
-scheduleBox.style.position = "absolute";
-contentContainer.appendChild(scheduleBox);
-
-//Actual schedule box
-var body = document.createElement("img");
-body.id = "body";
-body.style.left = "0px";
-body.style.top = "0px";
-body.style.width = "926px";
-body.style.height = "627px";
-body.src = "skins/body.png";
-
-scheduleBox.appendChild(body);
-
-var days = document.createElement("div");
-days.id = "days";
-days.style.width = "925px";
-days.style.height = "73px";
-days.style.left = "0px";
-days.style.top = "103px";
-days.style.position = "absolute";
-scheduleBox.appendChild(days);
-
-
-//M-Su Dates of Schedule (From rect 8 to 14)
-var monRect = document.createElement("div"); //Monday
-monRect.id = "monRect";
-monRect.style.left = "0px";
-monRect.style.top = "13px";
-monRect.style.width = "132px";
-monRect.style.height = "49px";
-monRect.style.border = "1px solid #000000";
-monRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(monRect);
-
-var tuesRect = document.createElement("img"); //Tuesday
-tuesRect.id = "tuesRect";
-tuesRect.style.left = "132px";
-tuesRect.style.top = "13px";
-tuesRect.style.width = "132px";
-tuesRect.style.height = "49px";
-tuesRect.style.border = "1px solid #000000";
-tuesRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(tuesRect);
-
-var wedRect = document.createElement("div"); //Wednesday
-wedRect.id = "wedRect";
-wedRect.style.left = "264px";
-wedRect.style.top = "13px";
-wedRect.style.width = "132px";
-wedRect.style.height = "49px";
-wedRect.style.border = "1px solid #000000";
-wedRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(wedRect);
-
-var thursRect = document.createElement("div"); //Thursday
-thursRect.id = "thursRect";
-thursRect.style.left = "396px";
-thursRect.style.top = "13px";
-thursRect.style.width = "132px";
-thursRect.style.height = "49px";
-thursRect.style.border = "1px solid #000000";
-thursRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(thursRect);
-
-var friRect = document.createElement("div"); //Friday
-friRect.id = "friRect";
-friRect.style.left = "528px";
-friRect.style.top = "13px";
-friRect.style.width = "132px";
-friRect.style.height = "49px";
-friRect.style.border = "1px solid #000000";
-friRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(friRect);
-
-var satRect = document.createElement("div"); //Saturday
-satRect.id = "satRect";
-satRect.style.left = "660px";
-satRect.style.top = "13px";
-satRect.style.width = "132px";
-satRect.style.height = "49px";
-satRect.style.border = "1px solid #000000";
-satRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(satRect);
-
-var sunRect = document.createElement("div"); //Sunday
-sunRect.id = "sunRect";
-sunRect.style.left = "791px";
-sunRect.style.top = "13px";
-sunRect.style.width = "132px";
-sunRect.style.height = "49px";
-sunRect.style.border = "1px solid #000000";
-sunRect.style.background = 'rgba(225,221,221,1)';
-
-days.appendChild(sunRect);
-
-var m = document.createElement("div");
-m.innerHTML = "M";
-m.style.textAlign = "center";
-m.id = "m";
-m.style.left = "35px";
-m.style.top = "0px";
-m.style.width = "67px";
-m.style.height = "108px";
-m.style.fontFamily = "Poppins";
-m.style.fontSize = "48px";
-m.style.textShadow = "0px 0px 1px #000000";
-m.style.overflow = "hidden";
-m.style.color = "#000000";
-
-days.appendChild(m);
-
-var t = document.createElement("div");
-t.innerHTML = "T";
-t.style.textAlign = "center";
-t.id = "t";
-t.style.left = "174px";
-t.style.top = "0px";
-t.style.width = "51px";
-t.style.height = "108px";
-t.style.fontFamily = "Poppins";
-t.style.fontSize = "48px";
-t.style.textShadow = "0px 0px 1px #000000";
-t.style.overflow = "hidden";
-t.style.color = "#000000";
-
-days.appendChild(t);
-
-var f = document.createElement("div");
-f.innerHTML = "F";
-f.style.textAlign = "center";
-f.id = "f";
-f.style.left = "571px";
-f.style.top = "1px";
-f.style.width = "50px";
-f.style.height = "108px";
-f.style.fontFamily = "Poppins";
-f.style.fontSize = "48px";
-f.style.textShadow = "0px 0px 1px #000000";
-f.style.overflow = "hidden";
-f.style.color = "#000000";
-
-days.appendChild(f);
-
-var s = document.createElement("div");
-s.innerHTML = "S";
-s.style.textAlign = "center";
-s.id = "s";
-s.style.left = "700px";
-s.style.top = "0px";
-s.style.width = "54px";
-s.style.height = "108px";
-s.style.fontFamily = "Poppins";
-s.style.fontSize = "48px";
-s.style.textShadow = "0px 0px 1px #000000";
-s.style.overflow = "hidden";
-s.style.color = "#000000";
-
-days.appendChild(s);
-
-var su = document.createElement("div");
-su.innerHTML = "Su";
-su.style.textAlign = "center";
-su.id = "su";
-su.style.left = "820px";
-su.style.top = "1px";
-su.style.width = "84px";
-su.style.height = "108px";
-su.style.fontFamily = "Poppins";
-su.style.fontSize = "48px";
-su.style.textShadow = "0px 0px 1px #000000";
-su.style.overflow = "hidden";
-su.style.color = "#000000";
-
-days.appendChild(su);
-
-var w = document.createElement("div");
-w.innerHTML = "W";
-w.style.textAlign = "center";
-w.id = "w";
-w.style.left = "295px";
-w.style.top = "0px";
-w.style.width = "72px";
-w.style.height = "108px";
-w.style.fontFamily = "Poppins";
-w.style.fontSize = "48px";
-w.style.textShadow = "0px 0px 1px #000000";
-w.style.overflow = "hidden";
-w.style.color = "#000000";
-
-days.appendChild(w);
-
-var h = document.createElement("div");
-h.innerHTML = "H";
-h.style.textAlign = "center";
-h.id = "h";
-h.style.left = "433px";
-h.style.top = "0px";
-h.style.width = "59px";
-h.style.height = "108px";
-h.style.fontFamily = "Poppins";
-h.style.fontSize = "48px";
-h.style.textShadow = "0px 0px 1px #000000";
-h.style.overflow = "hidden";
-h.style.color = "#000000";
-
-days.appendChild(h);
-
-var monYrLabel = document.createElement("div");
-monYrLabel.id = "monYrLabel";
-monYrLabel.style.width = "814px";
-monYrLabel.style.height = "116px";
-monYrLabel.style.left = "55px";
-monYrLabel.style.top = "0px";
-monYrLabel.style.position = "absolute";
-scheduleBox.appendChild(monYrLabel);
-
-var date1 = document.createElement("div");
-date1.innerHTML = "3";
-date1.style.textAlign = "center";
-date1.id = "date1";
-date1.style.left = "-4px";
-date1.style.top = "79px";
-date1.style.width = "27px";
-date1.style.height = "53px";
-date1.style.fontFamily = "Poppins";
-date1.style.fontSize = "24px";
-date1.style.overflow = "hidden";
-date1.style.color = "#000000";
-
-monYrLabel.appendChild(date1);
-
-var date2 = document.createElement("div");
-date2.innerHTML = "4";
-date2.style.textAlign = "center";
-date2.id = "date2";
-date2.style.left = "131px";
-date2.style.top = "79px";
-date2.style.width = "27px";
-date2.style.height = "53px";
-date2.style.fontFamily = "Poppins";
-date2.style.fontSize = "24px";
-date2.style.overflow = "hidden";
-date2.style.color = "#000000";
-
-monYrLabel.appendChild(date2);
-
-var date5 = document.createElement("div");
-date5.innerHTML = "7";
-date5.style.textAlign = "center";
-date5.id = "date5";
-date5.style.left = "528px";
-date5.style.top = "79px";
-date5.style.width = "25px";
-date5.style.height = "53px";
-date5.style.fontFamily = "Poppins";
-date5.style.fontSize = "24px";
-date5.style.overflow = "hidden";
-date5.style.color = "#000000";
-
-monYrLabel.appendChild(date5);
-
-var date6 = document.createElement("div");
-date6.innerHTML = "8";
-date6.style.textAlign = "center";
-date6.id = "date6";
-date6.style.left = "659px";
-date6.style.top = "79px";
-date6.style.width = "27px";
-date6.style.height = "53px";
-date6.style.fontFamily = "Poppins";
-date6.style.fontSize = "24px";
-date6.style.overflow = "hidden";
-date6.style.color = "#000000";
-
-monYrLabel.appendChild(date6);
-
-var date7 = document.createElement("div");
-date7.innerHTML = "9";
-date7.style.textAlign = "center";
-date7.id = "date7";
-date7.style.left = "795px";
-date7.style.top = "79px";
-date7.style.width = "27px";
-date7.style.height = "53px";
-date7.style.fontFamily = "Poppins";
-date7.style.fontSize = "24px";
-date7.style.overflow = "hidden";
-date7.style.color = "#000000";
-
-monYrLabel.appendChild(date7);
-
-var date3 = document.createElement("div");
-date3.innerHTML = "5";
-date3.style.textAlign = "center";
-date3.id = "date3";
-date3.style.left = "263px";
-date3.style.top = "79px";
-date3.style.width = "27px";
-date3.style.height = "53px";
-date3.style.fontFamily = "Poppins";
-date3.style.fontSize = "24px";
-date3.style.overflow = "hidden";
-date3.style.color = "#000000";
-
-monYrLabel.appendChild(date3);
-
-var date4 = document.createElement("div");
-date4.innerHTML = "6";
-date4.style.textAlign = "center";
-date4.id = "date4";
-date4.style.left = "394px";
-date4.style.top = "79px";
-date4.style.width = "28px";
-date4.style.height = "53px";
-date4.style.fontFamily = "Poppins";
-date4.style.fontSize = "24px";
-date4.style.overflow = "hidden";
-date4.style.color = "#000000";
-
-monYrLabel.appendChild(date4);
-
-var month = document.createElement("div");
-month.innerHTML = "APRIL";
-month.style.textAlign = "center";
-month.id = "month";
-month.style.left = "165px";
-month.style.top = "15px";
-month.style.width = "399px";
-month.style.height = "113px";
-month.style.fontFamily = "Sansation";
-month.style.fontSize = "48px";
-month.style.overflow = "hidden";
-month.style.color = "#000000";
-
-monYrLabel.appendChild(month);
-
-var year = document.createElement("div");
-year.innerHTML = "2021";
-year.style.textAlign = "center";
-year.id = "year";
-year.style.left = "295px";
-year.style.top = "15px";
-year.style.width = "399px";
-year.style.height = "113px";
-year.style.fontFamily = "Sansation";
-year.style.fontSize = "48px";
-year.style.overflow = "hidden";
-year.style.color = "#000000";
-
-monYrLabel.appendChild(year);
-
-var dividers = document.createElement("div");
-dividers.id = "dividers";
-dividers.style.width = "660px";
-dividers.style.height = "464px";
-dividers.style.left = "132px";
-dividers.style.top = "163px";
-dividers.style.position = "absolute";
-scheduleBox.appendChild(dividers);
-
-var line1 = document.createElement("div");
-line1.id = "line1";
-line1.style.left = "-229px";
-line1.style.top = "232px";
-line1.style.width = "459px";
-line1.style.height = "1px";
-line1.style.transform = "rotate(-90deg)";
-line1.style.background = "#000000";
-
-dividers.appendChild(line1);
-
-var line2 = document.createElement("div");
-line2.id = "line2";
-line2.style.left = "-97px";
-line2.style.top = "232px";
-line2.style.width = "459px";
-line2.style.height = "1px";
-line2.style.transform = "rotate(-90deg)";
-line2.style.background = "#000000";
-
-dividers.appendChild(line2);
-
-var line3 = document.createElement("div");
-line3.id = "line3";
-line3.style.left = "35px";
-line3.style.top = "232px";
-line3.style.width = "459px";
-line3.style.height = "1px";
-line3.style.transform = "rotate(-90deg)";
-line3.style.background = "#000000";
-
-dividers.appendChild(line3);
-
-var line4 = document.createElement("div");
-line4.id = "line4";
-line4.style.left = "167px";
-line4.style.top = "232px";
-line4.style.width = "459px";
-line4.style.height = "1px";
-line4.style.transform = "rotate(-90deg)";
-line4.style.background = "#000000";
-
-dividers.appendChild(line4);
-
-var line5 = document.createElement("div");
-line5.id = "line5";
-line5.style.left = "299px";
-line5.style.top = "232px";
-line5.style.width = "459px";
-line5.style.height = "1px";
-line5.style.transform = "rotate(-90deg)";
-line5.style.background = "#000000";
-
-dividers.appendChild(line5);
-
-var line6 = document.createElement("div");
-line6.id = "line6";
-line6.style.left = "430px";
-line6.style.top = "232px";
-line6.style.width = "459px";
-line6.style.height = "1px";
-line6.style.transform = "rotate(-90deg)";
-line6.style.background = "#000000";
-
-dividers.appendChild(line6);
-
-var rightArrow = document.createElement("img"); //Right tab
-rightArrow.id = "rightArrow";
-rightArrow.style.left = "878px";
-rightArrow.style.top = "40px";
-rightArrow.style.width = "30px";
-rightArrow.style.height = "30px";
-rightArrow.src = "skins/arrow_1.png";
-rightArrow.style.cursor = "pointer";
-
-scheduleBox.appendChild(rightArrow);
-
-var leftArrow = document.createElement("img"); //Left tab
-leftArrow.id = "leftArrow";
-leftArrow.style.left = "20px";
-leftArrow.style.top = "40px";
-leftArrow.style.width = "30px";
-leftArrow.style.height = "30px";
-leftArrow.src = "skins/arrow_2.png";
-leftArrow.style.cursor = "pointer";
-
-scheduleBox.appendChild(leftArrow);
-
-var downArrow = document.createElement("img"); //Month and year tab
-downArrow.id = "downArrow";
-downArrow.style.left = "310px";
-downArrow.style.top = "35px";
-downArrow.style.width = "30px";
-downArrow.style.height = "20px";
-downArrow.src = "skins/arrow_3.png";
-downArrow.style.cursor = "pointer";
-downArrow.addEventListener("click", showHide);
-
-scheduleBox.appendChild(downArrow);
-
-function showHide() {  
-    var click = document.getElementById("list-items");
-    if(click.style.display === "none") {  
-       click.style.display = "block";  
-    } else {  
-       click.style.display = "none";  
-    }   
-}  
+} 
 
 var buttons = document.createElement("div");
 buttons.id = "buttons";
@@ -574,6 +99,12 @@ remindersButton.style.position = "absolute";
 remindersButton.style.cursor = "pointer";
 remindersButton.addEventListener("click", reminder);
 remindersButton.addEventListener("click", closeNav);
+remindersButton.addEventListener("click", closeAdd);
+remindersButton.addEventListener("click", closeEdit);
+remindersButton.addEventListener("click", closeRemove);
+remindersButton.addEventListener("click", closeAboutUs);
+remindersButton.addEventListener("click", closeHelp);
+remindersButton.addEventListener("click", closeSideHelp);
 
 buttons.appendChild(remindersButton);
 
@@ -589,13 +120,6 @@ function closeReminder() {
     document.getElementById("reminderOverlay").style.height = "0";
     document.getElementById("reminderOverlay").style.border = "0px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "0";
-}
-
-function clearInputReminder() {
-
-    document.getElementById("taskName").value = "";
-    document.getElementById("dayReminder").value = "";
-    document.getElementById("timeReminder").value = "";
 }
 
 var remindersRect = document.createElement("div");
@@ -648,7 +172,30 @@ helpButton.style.left = "0px";
 helpButton.style.top = "403px";
 helpButton.style.position = "absolute";
 helpButton.style.cursor = "pointer";
+helpButton.addEventListener("click", helpTab);
+helpButton.addEventListener("click", closeNav);
+helpButton.addEventListener("click", closeRemove);
+helpButton.addEventListener("click", closeReminder);
+helpButton.addEventListener("click", closeEdit);
+helpButton.addEventListener("click", closeAdd);
+helpButton.addEventListener("click", closeSideHelp);
+helpButton.addEventListener("click", closeAboutUs);
+
 buttons.appendChild(helpButton);
+
+function helpTab() {
+    document.getElementById("helpOverlay").style.width = "650px";
+    document.getElementById("helpOverlay").style.height = "600px";
+    document.getElementById("helpOverlay").style.border = "1px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "250px";
+}
+      
+function closeHelp() {
+    document.getElementById("helpOverlay").style.width = "0";
+    document.getElementById("helpOverlay").style.height = "0";
+    document.getElementById("helpOverlay").style.border = "0px solid black";
+    document.getElementById("mainOverlay").style.marginLeft = "0";
+}
 
 var helpRect = document.createElement("div");
 helpRect.id = "helpRect";
@@ -702,6 +249,12 @@ removeTaskButton.style.position = "absolute";
 removeTaskButton.style.cursor = "pointer";
 removeTaskButton.addEventListener("click", removeTask);
 removeTaskButton.addEventListener("click", closeNav);
+removeTaskButton.addEventListener("click", closeAdd);
+removeTaskButton.addEventListener("click", closeEdit);
+removeTaskButton.addEventListener("click", closeReminder);
+removeTaskButton.addEventListener("click", closeAboutUs);
+removeTaskButton.addEventListener("click", closeHelp);
+removeTaskButton.addEventListener("click", closeSideHelp);
 
 buttons.appendChild(removeTaskButton);
 
@@ -717,12 +270,6 @@ function closeRemove() {
     document.getElementById("removeTaskOverlay").style.height = "0";
     document.getElementById("removeTaskOverlay").style.border = "0px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "0";
-}
-
-function clearInputRemove() {
-
-    document.getElementById("taskName").value = "";
-
 }
 
 var removeTaskRect = document.createElement("div");
@@ -775,6 +322,13 @@ viewSchedButton.style.left = "0px";
 viewSchedButton.style.top = "243px";
 viewSchedButton.style.position = "absolute";
 viewSchedButton.style.cursor = "pointer";
+viewSchedButton.addEventListener("click", goToViewSched);
+
+function goToViewSched() {
+    location.href="viewSchedule.html"
+}
+
+
 buttons.appendChild(viewSchedButton);
 
 var viewSchedRect = document.createElement("div");
@@ -829,6 +383,12 @@ editTaskButton.style.position = "absolute";
 editTaskButton.style.cursor = "pointer";
 editTaskButton.addEventListener("click", editTask);
 editTaskButton.addEventListener("click", closeNav);
+editTaskButton.addEventListener("click", closeAdd);
+editTaskButton.addEventListener("click", closeReminder);
+editTaskButton.addEventListener("click", closeRemove);
+editTaskButton.addEventListener("click", closeAboutUs);
+editTaskButton.addEventListener("click", closeHelp);
+editTaskButton.addEventListener("click", closeSideHelp);
 
 buttons.appendChild(editTaskButton);
 
@@ -844,16 +404,6 @@ function closeEdit() {
     document.getElementById("editTaskOverlay").style.height = "0";
     document.getElementById("editTaskOverlay").style.border = "0px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "0";
-}
-
-
-function clearInputEdit() {
-
-    document.getElementById("taskName").value = "";
-    document.getElementById("editedTaskName").value = "";
-    document.getElementById("editedTaskDescr").value = "";
-    document.getElementById("editedDayDue").value = "";
-
 }
 
 var editTaskRect = document.createElement("div");
@@ -908,6 +458,13 @@ addTaskButton.style.position = "absolute";
 addTaskButton.style.cursor = "pointer";
 addTaskButton.addEventListener("click", addTask);
 addTaskButton.addEventListener("click", closeNav);
+addTaskButton.addEventListener("click", closeEdit);
+addTaskButton.addEventListener("click", closeReminder);
+addTaskButton.addEventListener("click", closeRemove);
+addTaskButton.addEventListener("click", closeAboutUs);
+addTaskButton.addEventListener("click", closeHelp);
+addTaskButton.addEventListener("click", closeSideHelp);
+
 buttons.appendChild(addTaskButton);
 
 function addTask() {
@@ -922,13 +479,6 @@ function closeAdd() {
     document.getElementById("addTaskOverlay").style.height = "0";
     document.getElementById("addTaskOverlay").style.border = "0px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "0";
-}
-
-function clearInputAdd() {
-
-    document.getElementById("taskName").value = "";
-    document.getElementById("taskDescr").value = "";
-    document.getElementById("dayDue").value = "";
 }
 
 var addTaskRect = document.createElement("div");
@@ -1130,3 +680,274 @@ line53.style.background = "#000000";
 
 contentContainer.appendChild(line53);
 
+function openAboutUs() {
+    document.getElementById("aboutUsOverlay").style.width = "595px";
+    document.getElementById("aboutUsOverlay").style.height = "766px";
+}
+  
+function closeAboutUs() {
+    document.getElementById("aboutUsOverlay").style.width = "0";
+    document.getElementById("aboutUsOverlay").style.height = "0";
+}
+
+function openSideHelp() {
+    document.getElementById("sideHelpOverlay").style.width = "595px";
+    document.getElementById("sideHelpOverlay").style.height = "766px";
+}
+  
+function closeSideHelp() {
+    document.getElementById("sideHelpOverlay").style.width = "0";
+    document.getElementById("sideHelpOverlay").style.height = "0";
+}
+
+var taskNameArr = [];
+var taskDescArr = [];
+var taskDayArr = [];
+var taskMonthArr = [];
+var taskYearArr = [];
+var reminderDayArr = [];
+var reminderMonthArr = [];
+var reminderYearArr = [];
+var taskHourArr = [];
+var taskMinArr = [];
+var i = 0;
+var index = 0;
+var currentUser;
+
+function getUser(){
+    $(onload).ready(function(){
+        currentUser = sessionStorage.getItem('currentUser');
+        console.log(currentUser);
+    })
+}
+
+$(document).ready(function() {
+    getUser();
+    taskNameLoad();
+    taskDescLoad();
+    taskDayLoad();
+    taskMonthLoad();
+    taskYearLoad();
+    $('#addTaskBtn').click("click",function() {
+        console.log("it worked");
+        var date = document.getElementById("addtaskDate").value;
+        var dateArr = [];
+
+        dateArr = date.split('-');
+
+        taskNameArr.push(document.getElementById("addtaskName").value);
+        taskDescArr.push(document.getElementById("addtaskDescr").value);
+        taskYearArr.push(dateArr[0]);
+        taskMonthArr.push(dateArr[1]);
+        taskDayArr.push(dateArr[2]);
+
+        addToDB();
+
+        document.getElementById("addtaskName").value = "";
+        document.getElementById("addtaskDescr").value = "";
+        document.getElementById("addtaskDate").value = "";
+
+    })
+
+    $('#saveEditBtn').click("click", function(){
+        taskEdited();
+
+        document.getElementById("editTaskName").value = "";
+        document.getElementById("editedTaskDescr").value = "";
+        document.getElementById("editTaskDate").value = "";
+    })
+
+    $('#deleteBtn').click("click", function() {
+        deleteTask();
+
+        document.getElementById("deleteTaskName").value = "";
+    })
+
+    $('#setReminderBtn').click("click", function(){
+        reminderTask();
+
+        document.getElementById("reminderTaskName").value = "";
+        document.getElementById("reminderDate").value = "";
+        document.getElementById("reminderTime").value = "";
+    })
+});
+
+
+function addToDB(){
+    $.ajax({
+        type: "POST",
+        url: "scheduleAddTask.php",
+        data: {
+            currentUser: currentUser,
+            taskName: JSON.stringify(taskNameArr),
+            taskDesc: JSON.stringify(taskDescArr),
+            taskDay: JSON.stringify(taskDayArr),
+            taskMonth: JSON.stringify(taskMonthArr),
+            taskYear: JSON.stringify(taskYearArr)
+        },
+        success:function(result) {
+            
+        }
+    })
+}
+
+function taskNameLoad() {
+    $(onload).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: "taskNameLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+}
+
+function taskDescLoad() {
+    $(onload).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: "taskDescLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+}
+
+function taskDayLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskDayLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+}
+
+function taskMonthLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskMonthLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+}
+
+function taskYearLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskYearLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+}
+
+function taskEdited() {
+    console.log("worked");
+    var date = document.getElementById("editTaskDate").value;
+    var dateArr = [];
+
+    dateArr = date.split('-');
+
+    taskNameArr.push(document.getElementById("editTaskName").value);
+    taskDescArr.push(document.getElementById("editedTaskDescr").value);
+    taskYearArr.push(dateArr[0]);
+    taskMonthArr.push(dateArr[1]);
+    taskDayArr.push(dateArr[2]);
+
+    $.ajax({
+        type: "POST",
+        url: "scheduleEditTask.php",
+        data: {
+            currentUser: currentUser,
+            taskName: JSON.stringify(taskNameArr),
+            taskDesc: JSON.stringify(taskDescArr),
+            taskDay: JSON.stringify(taskDayArr),
+            taskMonth: JSON.stringify(taskMonthArr),
+            taskYear: JSON.stringify(taskYearArr)
+        },
+        success:function(result) {
+            
+        }
+    })
+}
+
+
+function deleteTask() {
+    taskNameArr.push(document.getElementById("deleteTaskName").value);
+
+    $.ajax({
+        type: "POST",
+        url: "scheduleDeleteTask.php",
+        data: {
+            taskName: JSON.stringify(taskNameArr),
+        },
+        success:function(result) {
+            console.log("boom");
+        }
+    })
+}
+
+function reminderTask() {
+    console.log("worked");
+    var reminderDate = document.getElementById("reminderDate").value;
+    var time = document.getElementById("reminderTime").value;
+    var reminderDateArr = [];
+    var timeArr = [];
+
+    reminderDateArr = reminderDate.split('-');
+    timeArr = time.split(':');
+
+    taskNameArr.push(document.getElementById("reminderTaskName").value);
+    reminderYearArr.push(reminderDateArr[0]);
+    reminderMonthArr.push(reminderDateArr[1]);
+    reminderDayArr.push(reminderDateArr[2]);
+    taskHourArr.push(timeArr[0]);
+    taskMinArr.push(timeArr[1]);
+
+    $.ajax({
+        type: "POST",
+        url: "scheduleReminder.php",
+        data: {
+            currentUser: currentUser,
+            taskName: JSON.stringify(taskNameArr),
+            reminderDay: JSON.stringify(reminderDayArr),
+            reminderMonth: JSON.stringify(reminderMonthArr),
+            reminderYear: JSON.stringify(reminderYearArr),
+            taskHour: JSON.stringify(taskHourArr),
+            taskMin: JSON.stringify(taskMinArr)
+        },
+        success:function(result) {
+            console.log("boomboom");
+        }
+    })
+}

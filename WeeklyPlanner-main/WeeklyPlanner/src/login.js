@@ -264,6 +264,7 @@ registerButton.appendChild(register);
 // logButton.addEventListener("click", goToMain2);
 
 
+
 // loginBox.appendChild(logButton);
 
 // var logButtonRect = document.createElement("div");
@@ -293,24 +294,27 @@ registerButton.appendChild(register);
 // login.style.color = "#000000";
 
 // logButton.appendChild(login);
+var username;
 
 $(document).ready(function(){
+    console.log("ddd");
     $('#form').submit(function(e){
-        console.log("ff made");
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('designation').value;
+        console.log("sd made");
+        username = document.getElementById('email').value;
+        var password = document.getElementById('pass').value;
         e.preventDefault();
         $.ajax({
             type: "POST",
             url:"login.php",
             data:
             {
-                username: username,
-                designation: password
+                email: username,
+                pass: password
             },
             success:function(result){
                 if(result == 1){
                     document.getElementById('message').innerHTML = "Login Successful";
+                    getName();
                     setTimeout(() => {location.href= "main2.html";},2000);
                 }else{
                     document.getElementById('message').innerHTML = result;
@@ -319,3 +323,14 @@ $(document).ready(function(){
         })
     });
 });
+
+function getName(){
+    $.ajax({
+        type:"POST",
+        url:"getName.php",
+        data:{email: username},
+        success:function(result){
+            sessionStorage.setItem("currentUser",result);
+        }
+    })
+}

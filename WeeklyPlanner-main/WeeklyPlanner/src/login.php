@@ -1,23 +1,15 @@
 <?php
-    $server = "localhost";
-    $sUsername = "root";
-    $password = "";
-    $dbname = "testsql";
-    
-    $con = mysqli_connect($server,$sUsername,$password,$dbname);
+    include "index.php";
 
-    $name = $_POST['username'];
-    $designation = $_POST['designation'];
+    $email = $_POST['email'];
+    $password = $_POST['pass'];
 
-    if($con -> connect_error){
-        echo "NOT CONNECTED PROBABLY";
-    }
-    $exists = mysqli_query($con,"SELECT username FROM userdetails WHERE username = '".$name."'");
+    $exists = mysqli_query($con,"SELECT email FROM details WHERE email = '".$email."'");
 
     if(mysqli_num_rows($exists) > 0){
         
-        if(isset($name,$designation)){
-            $query1 = mysqli_query($con,"SELECT username, designation FROM userdetails WHERE username = '".$name."' AND BINARY designation = '".$designation."'");
+        if(isset($email,$password)){
+            $query1 = mysqli_query($con,"SELECT email, pass FROM details WHERE email = '".$email."' AND BINARY pass = '".$password."'");
 
             if(mysqli_num_rows($query1) > 0){
                 echo "1";

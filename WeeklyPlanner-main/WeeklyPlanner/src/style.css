@@ -1,3 +1,105 @@
 body {
     background-color: rgba(181, 212, 235, 1);
 }
+
+/* REGISTER HTML */
+form [name = 'rusername']{
+    position:absolute;
+    width: 363px;
+    height: 43px;
+    left:770px;
+    top: 442px;
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'rdesignation']{
+    width: 363px;
+    height: 43px;
+    position:absolute;
+    top: 503px;
+    left:770px;
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'designation']::placeholder{
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'registerButton']{
+    position:absolute;
+    top: 690px;
+    left: 730px;
+}
+
+form [name = 'username']::placeholder{
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'confirm']{
+    width: 363px;
+    height: 43px;
+    position:absolute;
+    top: 564px;
+    left:770px;
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'confirm']::placeholder{
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+/* Login Menu */
+
+form [name = 'lusername']{
+    position:absolute;
+    width: 363px;
+    height: 43px;
+    left:782px;
+    top: 368px;
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'password']{
+    width: 363px;
+    height: 43px;
+    position:absolute;
+    top: 439px;
+    left:782px;
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'password']::placeholder{
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'lButton']{
+    position:absolute;
+    top: 551px;
+    left: 738px;
+}
+
+form [name = 'lusername']::placeholder{
+    font-size:20px;
+    font-style:"Roboto";
+}
+
+form [name = 'text']{
+    top: 551px;
+    left: 738px;
+}
+/* PERSONAL NOTES */
+.overlay [id = "saveButton"]{
+    position:absolute;
+    top: 400px;
+    left: 455px;
+}
+

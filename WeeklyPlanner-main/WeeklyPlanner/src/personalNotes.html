@@ -7,7 +7,66 @@
 		 <link rel="stylesheet" type="text/css" href="style.css">
 
 		 <style type="text/css">
+		 
+/*--START OF OVERLAY ABOUT US CSS--*/
+
+.aboutUsLabel {
+	float: left;
+	padding-left: 40px;
+	font-size: 34px; 
+	padding-right: 40px;
+	font-family: Sansation;
+	overflow: hidden;
+ }
+
+ img {
+	left: 40px;
+	top: 506px;
+	width: "126.13px";
+	height: "175px";
+	float: left;
+	overflow: hidden;
+ }
  
+.overlayAbout {
+   height: 0;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 10%;
+   left: 38%;
+   background-color: rgba(241.19,210.03,236.51,1);
+   overflow-x: hidden;
+   transition: 0.7s;
+   padding-top: 0;
+ }
+ 
+ .overlayAbout a {
+	 padding: 8px 8px 8px 32px;
+	 text-decoration: none;
+	 font-size: 25px;
+	 color: black;
+	 display: block;
+	 transition: 0.3s;
+ }
+ 
+ .overlayAbout a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .overlayAbout .closeAddBtn {
+	 position: absolute;
+	 top: 0;
+	 right: 25px;
+	 font-size: 36px;
+	 margin-left: 50px;
+ }
+ 
+ 
+/*--END OF OVERLAY ABOUT US CSS--*/
+
+
+
  .button {
 	 background-color: #35366e;
 	 border: none;
@@ -127,7 +186,7 @@
  }
  
  /*--END OF OVERLAY CSS--*/
- 
+
  input[type=title] {
    font-family: monospace;
    width: 90%;
@@ -183,7 +242,9 @@
 			 /* Add your custom CSS here */
  
 		 </style>
+		<script src = "https://code.jquery.com/jquery-3.6.0.js"></script>
 		 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=4"></script>
+		 <link rel="shortcut icon" href="#">
 	 </head>
 	 <body>
 		 <script type="text/javascript" src="personalNotes.js"></script>
@@ -193,8 +254,8 @@
 			 <a href="schedule.html">Schedule</a>
 			 <a href="personalNotes.html">Personal Notes</a>
 			 <a href="expenses.html">Expenses</a>
-			 <a href="aboutUs.html">About Us</a>
-			 <a href="help.html">Help</a>
+			 <a onclick="openAboutUs();closeNav()" style="cursor: pointer;">About Us</a>
+			 <a onclick="openHelp();closeNav()" style="cursor: pointer;">Help</a>
 			 <a></a>
 			 <a></a>
 			 <a href="main.html">Log Out</a>
@@ -203,16 +264,36 @@
  
 		 <div id="myOverlay" class="overlay">
 			 <a href="javascript:void(0)" class="closeNoteBtn" onclick="closeNote();clearInput()">x</a><br><br><br>
-			 <label>Title</label><br>
-			 <input type="title" id="titleInp" placeholder="Enter Title"><br><br><br><br>
- 
-			 <label>Description</label><br>
-			 <textarea type="desc" id="descInp" placeholder="Description"></textarea><br><br><br><br><br><br><br><br><br><br><br><br>
- 
-			 <button class="button">Submit</button>
- 
-			 
-		 </div>
-		 <div id="mainOverlay"></div>
+				<label>Title</label><br>
+				<input type="title" id="titleInp" placeholder="Enter Title"><br><br><br><br>
+	
+				<label>Description</label><br>
+				<textarea type="desc" id="descInp" placeholder="Description"></textarea><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+				<input type = "image" src="skins/saveButton.png" alt="submit" id = "saveButton" width = "100" height = "40">
+		</div>
+
+		<div id="aboutUsOverlay" class="overlayAbout">
+			<a href="javascript:void(0)" class="closeAddBtn" onclick="closeAboutUs()">x</a><br><br><br>
+
+			<label class="aboutUsLabel" style="padding-top: 20px;">WE ARE ANNIKA ALONZO, SERGIE AYSON, AND LANCE SUPANGAN, THE DEVELOPERS OF THIS WEBSITE. WE ARE CURRENT COMPUTER ENGINEERING STUDENTS AT DE LA SALLE UNIVERSITY. THIS WEBSITE IS OUR FINAL OUTCOME FOR OUR SOFTWARE DESIGN LAB.</label>
+			
+			<img src="skins/kiel_1.png">
+			<img src="skins/annika_1.png" style="left: 221px;">
+			<img src="skins/lance_1.png" style="left: 408px;">
+
+			<label class="aboutUsLabel" style="padding-top: 240px;">SERGIE&emsp;&emsp;ANNIKA&emsp;&ensp;LANCE</label>
+			
+		</div>
+
+		<div id="helpOverlay" class="overlayAbout">
+			<a href="javascript:void(0)" class="closeAddBtn" onclick="closeHelp()">x</a><br><br><br>
+
+			<label class="aboutUsLabel" style="padding-top: 60px;">NOT SURE WHAT TO DO?<br/><br/>ITS EASY. JUST CLICK ON ANY OF THE OPTIONS ABOVE AND IT WILL TAKE YOU TO THE RESPECTIVE PAGE. <br/><br/>CLICK ON 'WEEKLY PLANNER' ABOVE TO RETURN TO THE MAIN PAGE.<br/><br/>START YOUR WEEKLY PLANNER JOURNEY NOW.</label>
+			
+		</div>
+   
+		<div id="mainOverlay"></div>
+
 	 </body>
  </html>
