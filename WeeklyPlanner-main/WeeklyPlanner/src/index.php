@@ -1,8 +1,8 @@
 <?php
    $server = "localhost";
-   $sUsername = "root";
-   $password = "";
-   $dbname = "testsql";
+   $sUsername = "id16955391_wpdb";
+   $password = "WeeklyPlannerDBPass119!";
+   $dbname = "id16955391_weeklyplannerdb";
    
    $con = mysqli_connect($server,$sUsername,$password,$dbname);
 

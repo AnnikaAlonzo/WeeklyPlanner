@@ -26,6 +26,82 @@ header.style.top = "57px";
 header.style.position = "absolute";
 contentContainer.appendChild(header);
 
+var titleRect = document.createElement("div");
+titleRect.id = "titleRect";
+titleRect.style.border = "5px solid #d17b7b"
+titleRect.style.left = "737px";
+titleRect.style.top = "250px";
+titleRect.style.width = "700px";
+titleRect.style.height = "60px";
+titleRect.style.background = 'rgba(225,221,221,1)';
+titleRect.style.overflowX = "hidden";
+titleRect.style.overflowY = "auto";
+
+contentContainer.appendChild(titleRect);
+
+var descrRect = document.createElement("div");
+descrRect.id = "descrRect";
+descrRect.style.border = "5px solid #d17b7b"
+descrRect.style.left = "737px";
+descrRect.style.top = "350px";
+descrRect.style.width = "700px";
+descrRect.style.height = "460px";
+descrRect.style.background = 'rgba(225,221,221,1)';
+descrRect.style.overflowX = "hidden";
+descrRect.style.overflowY = "auto";
+
+contentContainer.appendChild(descrRect);
+
+var dateRect = document.createElement("div");
+dateRect.id = "dateRect";
+dateRect.style.border = "5px solid #d17b7b"
+dateRect.style.left = "737px";
+dateRect.style.top = "850px";
+dateRect.style.width = "700px";
+dateRect.style.height = "60px";
+dateRect.style.background = 'rgba(225,221,221,1)';
+dateRect.style.overflowX = "hidden";
+dateRect.style.overflowY = "auto";
+
+contentContainer.appendChild(dateRect);
+
+var listRect = document.createElement("div");
+listRect.id = "listRect";
+listRect.style.border = "5px solid #d17b7b"
+listRect.style.left = "400px";
+listRect.style.top = "250px";
+listRect.style.width = "290px";
+listRect.style.height = "665px";
+listRect.style.background = 'rgba(225,221,221,1)';
+listRect.style.overflowX = "hidden";
+listRect.style.overflowY = "auto";
+
+contentContainer.appendChild(listRect);
+
+var editButton = document.createElement("img");
+editButton.id = "image_3";
+editButton.style.left = "1320px";
+editButton.style.top = "855px";
+editButton.style.width = "55px";
+editButton.style.height = "55px";
+editButton.style.cursor = "pointer";
+editButton.src = "skins/editSave.png";
+editButton.addEventListener("click", displaySave);
+
+contentContainer.appendChild(editButton);
+
+var deleteButton = document.createElement("img");
+deleteButton.id = "image_3";
+deleteButton.style.left = "1380px";
+deleteButton.style.top = "855px";
+deleteButton.style.width = "50px";
+deleteButton.style.height = "50px";
+deleteButton.style.cursor = "pointer";
+deleteButton.src = "skins/delete.png";
+deleteButton.addEventListener("click", deleteNode);
+
+contentContainer.appendChild(deleteButton);
+
 var headerRect = document.createElement("div");
 headerRect.id = "headerRect";
 headerRect.style.left = "0px";
@@ -396,6 +472,29 @@ function closeSideHelp() {
     document.getElementById("sideHelpOverlay").style.height = "0";
 }
 
+var titleArr = [];
+var prevTitle = [];
+var descrArr = [];
+var dayArr = [];
+var monthArr = [];
+var yearArr = [];
+var i = 0;
+var index = 0;
+var disTitle;
+var disDescr;
+var disDate;
+var selected;
+var currentUser;
+
+$(document).ready(function(){
+    getUser();
+    taskNameLoad();
+    taskDescLoad();
+    taskDayLoad();
+    taskMonthLoad();
+    taskYearLoad();
+})
+
 function getUser(){
     $(onload).ready(function(){
         currentUser = sessionStorage.getItem('currentUser');
@@ -403,5 +502,288 @@ function getUser(){
     })
 }
 
+function taskNameLoad() {
+    $(onload).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: "taskNameLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    var titleTemp = data.split(",");
+                    list(titleTemp);
+                }
+            }
+        })
+    })
+}
 
+function taskDescLoad() {
+    $(onload).ready(function(){
+        $.ajax({
+            type: "POST",
+            url: "taskDescLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    var descTemp = data.split(",");
+                    updateDesc(descTemp);
+                }
+            }
+        })
+    })
+}
 
+function taskDayLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskDayLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    var dayTemp = data.split(",");
+                    updateDay(dayTemp);
+                }
+            }
+        })
+    })
+}
+
+function taskMonthLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskMonthLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    var monthTemp = data.split(",");
+                    updateMonth(monthTemp);
+                }
+            }
+        })
+    })
+}
+
+function taskYearLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskYearLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    var yearTemp = data.split(",");
+                    updateYear(yearTemp);
+                }
+            }
+        })
+    })
+}
+
+function updateDesc(data){
+    var k;
+    for(k = 0; k < data.length; k++){
+        descrArr.push(data[k]);
+    } 
+}
+
+function updateDay(data){
+    var k;
+    for(k = 0; k < data.length; k++){
+        dayArr.push(data[k]);
+    } 
+}
+
+function updateMonth(data){
+    var k;
+    for(k = 0; k < data.length; k++){
+        monthArr.push(data[k]);
+    } 
+}
+
+function updateYear(data){
+    var k;
+    for(k = 0; k < data.length; k++){
+        yearArr.push(data[k]);
+    } 
+}
+
+function list(data) {
+    var tempI;
+    for(tempI = 0; tempI < data.length; tempI++){  
+        var temp = data[tempI];
+        (function(){
+            titleArr.push(temp);
+            prevTitle.push(temp);
+            var row = document.createElement("li");
+            row.innerHTML = titleArr[i];
+            row.style.border = "1px solid #d17b7b";
+            row.style.width = "290px";
+            row.style.height = "50px";
+            row.style.textAlign = "center";
+            row.style.paddingTop = "25px";
+            row.style.listStyle = "none";
+            row.style.fontStyle = "Sansation";
+            row.style.cursor = "pointer";
+            row.addEventListener("click", function(){
+                while(descrRect.hasChildNodes()){
+                    descrRect.removeChild(descrRect.lastChild);
+                    titleRect.removeChild(titleRect.lastChild);
+                    dateRect.removeChild(dateRect.lastChild);
+                }
+                displayTitle(row.innerHTML);
+                displayDesc(row.innerHTML);
+                displayDate(row.innerHTML);
+            });
+            listRect.appendChild(row);
+            i++;
+        })();
+    }
+}
+
+function displayTitle(name) {
+    disTitle = document.createElement("div");
+    index = titleArr.indexOf(name);
+    selected = name;
+    console.log(name);
+    disTitle.innerHTML = titleArr[index];
+    disTitle.contentEditable = "true";
+    disTitle.style.border = "1px solid #d17b7b";
+    disTitle.style.width = "700px";
+    disTitle.style.height = "60px";
+    disTitle.style.display = "block";
+    disTitle.style.padding = "2px";
+    disTitle.style.fontStyle = "Sansation";
+    document.execCommand("defaultParagraphSeparator", false, "p");
+    titleRect.append(disTitle);
+}
+
+function displayDesc(name) {
+    disDescr = document.createElement("div");
+    index = titleArr.indexOf(name);
+    console.log(name);
+    disDescr.innerHTML = descrArr[index];
+    disDescr.contentEditable = "true";
+    disDescr.style.border = "1px solid #d17b7b";
+    disDescr.style.width = "700px";
+    disDescr.style.height = "460px";
+    disDescr.style.display = "block";
+    disDescr.style.padding = "2px";
+    disDescr.style.fontStyle = "Sansation";
+    document.execCommand("defaultParagraphSeparator", false, "p");
+    descrRect.append(disDescr);
+}
+
+function displayDate(name) {
+    disDate = document.createElement("div");
+    index = titleArr.indexOf(name);
+    console.log(name);
+    var tempDate = yearArr[index] + "-" + monthArr[index] + "-" + dayArr[index];
+    disDate.innerHTML = tempDate;
+    disDate.contentEditable = "true";
+    disDate.style.border = "1px solid #d17b7b";
+    disDate.style.width = "700px";
+    disDate.style.height = "60px";
+    disDate.style.display = "block";
+    disDate.style.padding = "2px";
+    disDate.style.fontStyle = "Sansation";
+    document.execCommand("defaultParagraphSeparator", false, "p");
+    dateRect.append(disDate);
+}
+
+function displaySave(){
+    titleArr[index] = disTitle.innerHTML;
+    descrArr[index] = disDescr.innerHTML;
+    
+    var tempDate = [];
+    
+    tempDate = disDate.innerHTML.split('-');
+
+    yearArr[index] = tempDate[0];
+    monthArr[index] = tempDate[1];
+    dayArr[index] = tempDate[2];
+    // taskMonthArr.push(dateArr[1]);
+    // taskDayArr.push(dateArr[2]);
+
+    $.ajax({
+        type: "POST",
+        url: "updatedSchedule.php",
+        data: {
+            // title: JSON.stringify(notesArray),
+            // descriptions: JSON.stringify(descrArr),
+            taskName: JSON.stringify(titleArr),
+            prevTitle: JSON.stringify(prevTitle),
+            taskDesc: JSON.stringify(descrArr),
+            taskDay: JSON.stringify(dayArr),
+            taskMonth: JSON.stringify(monthArr),
+            taskYear: JSON.stringify(yearArr)
+        },
+        success:function(result) {
+            setTimeout(function() {
+                window.location.reload();
+            }, 1500)
+        }
+    })
+}
+
+function deleteNode(){
+    console.log("MADE CHANGES");
+    var k;
+    k = titleArr.indexOf(selected);
+    listRect.removeChild(listRect.childNodes[k]);
+    descrRect.removeChild(descrRect.lastChild);
+    titleRect.removeChild(titleRect.lastChild);
+    dateRect.removeChild(dateRect.lastChild);
+    deleteFromArray();
+    deleteFromDB();
+}
+
+function deleteFromArray(){
+    var j;
+
+    for(j = 0; j < titleArr.length; j++){
+        if(titleArr[j] == selected){
+            titleArr.splice(j,1);
+            descrArr.splice(j,1);
+            dayArr.splice(j,1);
+            monthArr.splice(j,1);
+            yearArr.splice(j,1);
+            i--;
+        }
+    }
+}
+
+function deleteFromDB(){
+    $.ajax({
+        type: "POST",
+        url: "scheduleRemove.php",
+        data: {
+            taskName: selected
+        },
+        success:function(result) {
+            
+        }
+    })
+}

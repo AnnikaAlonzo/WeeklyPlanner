@@ -6,16 +6,16 @@
     $reminderDay = json_decode($_POST['reminderDay']);
     $reminderMonth = json_decode($_POST['reminderMonth']);
     $reminderYear = json_decode($_POST['reminderYear']);
-    $taskHour = json_decode($_POST['taskHour']);
-    $taskMin = json_decode($_POST['taskMin']);
+    $reminderHour = json_decode($_POST['reminderHour']);
+    $reminderMin = json_decode($_POST['reminderMin']);
 
 
     $exists = mysqli_query($con, "SELECT taskName FROM schedule WHERE taskName = '".$taskName."'");
 
     if(mysqli_num_rows($exists) > 0) {
-        $query1 = mysqli_query($con, "SELECT taskName, reminderDay, reminderMonth, reminderYear, taskHour, taskMin FROM schedule 
+        $query1 = mysqli_query($con, "SELECT taskName, reminderDay, reminderMonth, reminderYear, reminderHour, reminderMin FROM schedule 
         WHERE taskName = '".$taskName."' AND reminderDay = '".$reminderDay."' AND reminderMonth = '".$reminderMonth."' AND reminderYear = '".$reminderYear."'
-        AND taskHour = '".$taskHour."' AND taskMin = '".$taskMin."'");
+        AND reminderHour = '".$reminderHour."' AND reminderMin = '".$reminderMin."'");
 
         if(mysqli_num_rows($query1) > 0) {
             echo "1";
@@ -27,7 +27,7 @@
     for($i = 0; $i < count($taskName); $i++) {
         if($taskName != "") {
             $insertquery = "UPDATE schedule SET reminderDay = '$reminderDay[$i]', reminderMonth = '$reminderMonth[$i]', reminderYear = '$reminderYear[$i]', 
-            taskHour = '$taskHour[$i]', taskMin = '$taskMin[$i]' WHERE taskName = '$taskName[$i]'";
+            reminderHour = '$reminderHour[$i]', reminderMin = '$reminderMin[$i]' WHERE taskName = '$taskName[$i]'";
     
             if(!mysqli_query($con, $insertquery)) {
                 die('Error '.mysqli_error($con));

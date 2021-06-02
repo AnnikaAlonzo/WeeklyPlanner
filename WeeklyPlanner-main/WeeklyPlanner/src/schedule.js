@@ -1,4 +1,3 @@
-
 var contentContainer = document.createElement("div");
 contentContainer.style.width = "1440px";
 contentContainer.id = "contentContainer";
@@ -94,10 +93,11 @@ remindersButton.id = "remindersButton";
 remindersButton.style.width = "294px";
 remindersButton.style.height = "64px";
 remindersButton.style.left = "0px";
-remindersButton.style.top = "323px";
+remindersButton.style.top = "225px";
 remindersButton.style.position = "absolute";
 remindersButton.style.cursor = "pointer";
 remindersButton.addEventListener("click", reminder);
+remindersButton.addEventListener("click", allTasks);
 remindersButton.addEventListener("click", closeNav);
 remindersButton.addEventListener("click", closeAdd);
 remindersButton.addEventListener("click", closeEdit);
@@ -169,7 +169,7 @@ helpButton.id = "helpButton";
 helpButton.style.width = "294px";
 helpButton.style.height = "64px";
 helpButton.style.left = "0px";
-helpButton.style.top = "403px";
+helpButton.style.top = "300px";
 helpButton.style.position = "absolute";
 helpButton.style.cursor = "pointer";
 helpButton.addEventListener("click", helpTab);
@@ -185,7 +185,7 @@ buttons.appendChild(helpButton);
 
 function helpTab() {
     document.getElementById("helpOverlay").style.width = "650px";
-    document.getElementById("helpOverlay").style.height = "600px";
+    document.getElementById("helpOverlay").style.height = "450px";
     document.getElementById("helpOverlay").style.border = "1px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "250px";
 }
@@ -239,24 +239,24 @@ questionMarkSymbol.style.color = "#000000";
 
 helpButton.appendChild(questionMarkSymbol);
 
-var removeTaskButton = document.createElement("div");
-removeTaskButton.id = "removeTaskButton";
-removeTaskButton.style.width = "294px";
-removeTaskButton.style.height = "64px";
-removeTaskButton.style.left = "0px";
-removeTaskButton.style.top = "163px";
-removeTaskButton.style.position = "absolute";
-removeTaskButton.style.cursor = "pointer";
-removeTaskButton.addEventListener("click", removeTask);
-removeTaskButton.addEventListener("click", closeNav);
-removeTaskButton.addEventListener("click", closeAdd);
-removeTaskButton.addEventListener("click", closeEdit);
-removeTaskButton.addEventListener("click", closeReminder);
-removeTaskButton.addEventListener("click", closeAboutUs);
-removeTaskButton.addEventListener("click", closeHelp);
-removeTaskButton.addEventListener("click", closeSideHelp);
+// var removeTaskButton = document.createElement("div");
+// removeTaskButton.id = "removeTaskButton";
+// removeTaskButton.style.width = "294px";
+// removeTaskButton.style.height = "64px";
+// removeTaskButton.style.left = "0px";
+// removeTaskButton.style.top = "163px";
+// removeTaskButton.style.position = "absolute";
+// removeTaskButton.style.cursor = "pointer";
+// removeTaskButton.addEventListener("click", removeTask);
+// removeTaskButton.addEventListener("click", closeNav);
+// removeTaskButton.addEventListener("click", closeAdd);
+// removeTaskButton.addEventListener("click", closeEdit);
+// removeTaskButton.addEventListener("click", closeReminder);
+// removeTaskButton.addEventListener("click", closeAboutUs);
+// removeTaskButton.addEventListener("click", closeHelp);
+// removeTaskButton.addEventListener("click", closeSideHelp);
 
-buttons.appendChild(removeTaskButton);
+// buttons.appendChild(removeTaskButton);
 
 function removeTask() {
     document.getElementById("removeTaskOverlay").style.width = "575px";
@@ -272,54 +272,54 @@ function closeRemove() {
     document.getElementById("mainOverlay").style.marginLeft = "0";
 }
 
-var removeTaskRect = document.createElement("div");
-removeTaskRect.id = "removeTaskRect";
-removeTaskRect.style.left = "0px";
-removeTaskRect.style.top = "0px";
-removeTaskRect.style.width = "294px";
-removeTaskRect.style.height = "64px";
-removeTaskRect.style.borderRadius = "50px";
-removeTaskRect.style.background = 'rgba(254,248,232,1)';
+// var removeTaskRect = document.createElement("div");
+// removeTaskRect.id = "removeTaskRect";
+// removeTaskRect.style.left = "0px";
+// removeTaskRect.style.top = "0px";
+// removeTaskRect.style.width = "294px";
+// removeTaskRect.style.height = "64px";
+// removeTaskRect.style.borderRadius = "50px";
+// removeTaskRect.style.background = 'rgba(254,248,232,1)';
 
-removeTaskButton.appendChild(removeTaskRect);
+// removeTaskButton.appendChild(removeTaskRect);
 
-var removeTaskText = document.createElement("div");
-removeTaskText.innerHTML = "Remove Task";
-removeTaskText.style.textAlign = "left";
-removeTaskText.id = "removeTaskText";
-removeTaskText.style.left = "58px";
-removeTaskText.style.top = "18px";
-removeTaskText.style.width = "178px";
-removeTaskText.style.height = "55px";
-removeTaskText.style.fontFamily = "Radley";
-removeTaskText.style.fontSize = "28px";
-removeTaskText.style.overflow = "hidden";
-removeTaskText.style.color = "#000000";
+// var removeTaskText = document.createElement("div");
+// removeTaskText.innerHTML = "Remove Task";
+// removeTaskText.style.textAlign = "left";
+// removeTaskText.id = "removeTaskText";
+// removeTaskText.style.left = "58px";
+// removeTaskText.style.top = "18px";
+// removeTaskText.style.width = "178px";
+// removeTaskText.style.height = "55px";
+// removeTaskText.style.fontFamily = "Radley";
+// removeTaskText.style.fontSize = "28px";
+// removeTaskText.style.overflow = "hidden";
+// removeTaskText.style.color = "#000000";
 
-removeTaskButton.appendChild(removeTaskText);
+// removeTaskButton.appendChild(removeTaskText);
 
-var minusSymbol = document.createElement("div");
-minusSymbol.innerHTML = "-";
-minusSymbol.style.textAlign = "center";
-minusSymbol.id = "minusSymbol";
-minusSymbol.style.left = "14px";
-minusSymbol.style.top = "3px";
-minusSymbol.style.width = "45px";
-minusSymbol.style.height = "97px";
-minusSymbol.style.fontFamily = "Radley";
-minusSymbol.style.fontSize = "48px";
-minusSymbol.style.textShadow = "0px 0px 1px #000000";
-minusSymbol.style.overflow = "hidden";
-minusSymbol.style.color = "#000000";
+// var minusSymbol = document.createElement("div");
+// minusSymbol.innerHTML = "-";
+// minusSymbol.style.textAlign = "center";
+// minusSymbol.id = "minusSymbol";
+// minusSymbol.style.left = "14px";
+// minusSymbol.style.top = "3px";
+// minusSymbol.style.width = "45px";
+// minusSymbol.style.height = "97px";
+// minusSymbol.style.fontFamily = "Radley";
+// minusSymbol.style.fontSize = "48px";
+// minusSymbol.style.textShadow = "0px 0px 1px #000000";
+// minusSymbol.style.overflow = "hidden";
+// minusSymbol.style.color = "#000000";
 
-removeTaskButton.appendChild(minusSymbol);
+// removeTaskButton.appendChild(minusSymbol);
 
 var viewSchedButton = document.createElement("div");
 viewSchedButton.id = "viewSchedButton";
 viewSchedButton.style.width = "294px";
 viewSchedButton.style.height = "64px";
 viewSchedButton.style.left = "0px";
-viewSchedButton.style.top = "243px";
+viewSchedButton.style.top = "150px";
 viewSchedButton.style.position = "absolute";
 viewSchedButton.style.cursor = "pointer";
 viewSchedButton.addEventListener("click", goToViewSched);
@@ -343,7 +343,7 @@ viewSchedRect.style.background = 'rgba(254,248,232,1)';
 viewSchedButton.appendChild(viewSchedRect);
 
 var viewSchedText = document.createElement("div");
-viewSchedText.innerHTML = "View Schedule";
+viewSchedText.innerHTML = "View Tasks";
 viewSchedText.style.textAlign = "left";
 viewSchedText.id = "viewSchedText";
 viewSchedText.style.left = "58px";
@@ -373,24 +373,24 @@ arrowSymbol.style.color = "#000000";
 
 viewSchedButton.appendChild(arrowSymbol);
 
-var editTaskButton = document.createElement("div");
-editTaskButton.id = "editTaskButton";
-editTaskButton.style.width = "294px";
-editTaskButton.style.height = "64px";
-editTaskButton.style.left = "0px";
-editTaskButton.style.top = "83px";
-editTaskButton.style.position = "absolute";
-editTaskButton.style.cursor = "pointer";
-editTaskButton.addEventListener("click", editTask);
-editTaskButton.addEventListener("click", closeNav);
-editTaskButton.addEventListener("click", closeAdd);
-editTaskButton.addEventListener("click", closeReminder);
-editTaskButton.addEventListener("click", closeRemove);
-editTaskButton.addEventListener("click", closeAboutUs);
-editTaskButton.addEventListener("click", closeHelp);
-editTaskButton.addEventListener("click", closeSideHelp);
+// var editTaskButton = document.createElement("div");
+// editTaskButton.id = "editTaskButton";
+// editTaskButton.style.width = "294px";
+// editTaskButton.style.height = "64px";
+// editTaskButton.style.left = "0px";
+// editTaskButton.style.top = "83px";
+// editTaskButton.style.position = "absolute";
+// editTaskButton.style.cursor = "pointer";
+// editTaskButton.addEventListener("click", editTask);
+// editTaskButton.addEventListener("click", closeNav);
+// editTaskButton.addEventListener("click", closeAdd);
+// editTaskButton.addEventListener("click", closeReminder);
+// editTaskButton.addEventListener("click", closeRemove);
+// editTaskButton.addEventListener("click", closeAboutUs);
+// editTaskButton.addEventListener("click", closeHelp);
+// editTaskButton.addEventListener("click", closeSideHelp);
 
-buttons.appendChild(editTaskButton);
+// buttons.appendChild(editTaskButton);
 
 function editTask() {
     document.getElementById("editTaskOverlay").style.width = "575px";
@@ -406,54 +406,54 @@ function closeEdit() {
     document.getElementById("mainOverlay").style.marginLeft = "0";
 }
 
-var editTaskRect = document.createElement("div");
-editTaskRect.id = "editTaskRect";
-editTaskRect.style.left = "0px";
-editTaskRect.style.top = "0px";
-editTaskRect.style.width = "294px";
-editTaskRect.style.height = "64px";
-editTaskRect.style.borderRadius = "50px";
-editTaskRect.style.background = 'rgba(254,248,232,1)';
+// var editTaskRect = document.createElement("div");
+// editTaskRect.id = "editTaskRect";
+// editTaskRect.style.left = "0px";
+// editTaskRect.style.top = "0px";
+// editTaskRect.style.width = "294px";
+// editTaskRect.style.height = "64px";
+// editTaskRect.style.borderRadius = "50px";
+// editTaskRect.style.background = 'rgba(254,248,232,1)';
 
-editTaskButton.appendChild(editTaskRect);
+// editTaskButton.appendChild(editTaskRect);
 
-var editTaskText = document.createElement("div");
-editTaskText.innerHTML = "Edit Task";
-editTaskText.style.textAlign = "left";
-editTaskText.id = "editTaskText";
-editTaskText.style.left = "58px";
-editTaskText.style.top = "18px";
-editTaskText.style.width = "133px";
-editTaskText.style.height = "55px";
-editTaskText.style.fontFamily = "Radley";
-editTaskText.style.fontSize = "28px";
-editTaskText.style.overflow = "hidden";
-editTaskText.style.color = "#000000";
+// var editTaskText = document.createElement("div");
+// editTaskText.innerHTML = "Edit Task";
+// editTaskText.style.textAlign = "left";
+// editTaskText.id = "editTaskText";
+// editTaskText.style.left = "58px";
+// editTaskText.style.top = "18px";
+// editTaskText.style.width = "133px";
+// editTaskText.style.height = "55px";
+// editTaskText.style.fontFamily = "Radley";
+// editTaskText.style.fontSize = "28px";
+// editTaskText.style.overflow = "hidden";
+// editTaskText.style.color = "#000000";
 
-editTaskButton.appendChild(editTaskText);
+// editTaskButton.appendChild(editTaskText);
 
-var wavyDashSymbol = document.createElement("div");
-wavyDashSymbol.innerHTML = "~";
-wavyDashSymbol.style.textAlign = "center";
-wavyDashSymbol.id = "wavyDashSymbol";
-wavyDashSymbol.style.left = "13px";
-wavyDashSymbol.style.top = "3px";
-wavyDashSymbol.style.width = "47px";
-wavyDashSymbol.style.height = "97px";
-wavyDashSymbol.style.fontFamily = "Radley";
-wavyDashSymbol.style.fontSize = "48px";
-wavyDashSymbol.style.textShadow = "0px 0px 1px #000000";
-wavyDashSymbol.style.overflow = "hidden";
-wavyDashSymbol.style.color = "#000000";
+// var wavyDashSymbol = document.createElement("div");
+// wavyDashSymbol.innerHTML = "~";
+// wavyDashSymbol.style.textAlign = "center";
+// wavyDashSymbol.id = "wavyDashSymbol";
+// wavyDashSymbol.style.left = "13px";
+// wavyDashSymbol.style.top = "3px";
+// wavyDashSymbol.style.width = "47px";
+// wavyDashSymbol.style.height = "97px";
+// wavyDashSymbol.style.fontFamily = "Radley";
+// wavyDashSymbol.style.fontSize = "48px";
+// wavyDashSymbol.style.textShadow = "0px 0px 1px #000000";
+// wavyDashSymbol.style.overflow = "hidden";
+// wavyDashSymbol.style.color = "#000000";
 
-editTaskButton.appendChild(wavyDashSymbol);
+// editTaskButton.appendChild(wavyDashSymbol);
 
 var addTaskButton = document.createElement("div");
 addTaskButton.id = "addTaskButton";
 addTaskButton.style.width = "294px";
 addTaskButton.style.height = "67px";
 addTaskButton.style.left = "0px";
-addTaskButton.style.top = "0px";
+addTaskButton.style.top = "70px";
 addTaskButton.style.position = "absolute";
 addTaskButton.style.cursor = "pointer";
 addTaskButton.addEventListener("click", addTask);
@@ -469,7 +469,7 @@ buttons.appendChild(addTaskButton);
 
 function addTask() {
     document.getElementById("addTaskOverlay").style.width = "575px";
-    document.getElementById("addTaskOverlay").style.height = "580px";
+    document.getElementById("addTaskOverlay").style.height = "700px";
     document.getElementById("addTaskOverlay").style.border = "1px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "250px";
 }
@@ -702,17 +702,27 @@ function closeSideHelp() {
 
 var taskNameArr = [];
 var taskDescArr = [];
+var taskHourArr = [];
+var taskMinArr = [];
 var taskDayArr = [];
 var taskMonthArr = [];
 var taskYearArr = [];
 var reminderDayArr = [];
 var reminderMonthArr = [];
 var reminderYearArr = [];
-var taskHourArr = [];
-var taskMinArr = [];
+var reminderHourArr = [];
+var reminderMinArr = [];
+
+var monthTemp = [];
+var dayTemp = [];
+var yearTemp = [];
+var minTemp = [];
+var hourTemp = [];
+
 var i = 0;
 var index = 0;
 var currentUser;
+let today = new Date();
 
 function getUser(){
     $(onload).ready(function(){
@@ -728,25 +738,53 @@ $(document).ready(function() {
     taskDayLoad();
     taskMonthLoad();
     taskYearLoad();
+    taskMinLoad();
+    taskHourLoad();
+    dayRender2Load();
+    //taskRenderDayLoad();
     $('#addTaskBtn').click("click",function() {
         console.log("it worked");
         var date = document.getElementById("addtaskDate").value;
         var dateArr = [];
+        var time = document.getElementById("addtaskTime").value;
+        var timeArr = [];
+        var overlap = false;
 
         dateArr = date.split('-');
+        timeArr = time.split(':');
 
-        taskNameArr.push(document.getElementById("addtaskName").value);
-        taskDescArr.push(document.getElementById("addtaskDescr").value);
-        taskYearArr.push(dateArr[0]);
-        taskMonthArr.push(dateArr[1]);
-        taskDayArr.push(dateArr[2]);
+        for (var x = 0; x < yearTemp.length; x++) {
+            if ((yearTemp[x] == parseInt(dateArr[0])) && (monthTemp[0] == parseInt(dateArr[1])) && (dayTemp[x] == parseInt(dateArr[2])) && (hourTemp[x] == parseInt(timeArr[0])) && (minTemp[x] == parseInt(timeArr[1]))) {
+                overlap = true;
+            }
+        }
 
-        addToDB();
+        if (overlap) {
+            alert("The task you are trying to add is overlapping with another task");
+        }
+        
+        if ((dateArr[0]>=today.getFullYear()) && (dateArr[1]>=today.getMonth()+1) && (dateArr[2]>=today.getDate()) && (overlap == false)) {
+            taskNameArr.push(document.getElementById("addtaskName").value);
+            taskDescArr.push(document.getElementById("addtaskDescr").value);
+            taskHourArr.push(timeArr[0]);
+            taskMinArr.push(timeArr[1]);
+            taskYearArr.push(dateArr[0]);
+            taskMonthArr.push(dateArr[1]);
+            taskDayArr.push(dateArr[2]);
 
-        document.getElementById("addtaskName").value = "";
-        document.getElementById("addtaskDescr").value = "";
-        document.getElementById("addtaskDate").value = "";
+            addToDB();
 
+            document.getElementById("addtaskName").value = "";
+            document.getElementById("addtaskDescr").value = "";
+            document.getElementById("addtaskTime").value = "";
+            document.getElementById("addtaskDate").value = "";
+            setTimeout(function() {
+                window.location.reload();
+            }, 1500)
+        } else if (overlap) {
+        } else {
+            alert("You can't add a task on a day that has already passed");
+        }
     })
 
     $('#saveEditBtn').click("click", function(){
@@ -755,12 +793,19 @@ $(document).ready(function() {
         document.getElementById("editTaskName").value = "";
         document.getElementById("editedTaskDescr").value = "";
         document.getElementById("editTaskDate").value = "";
+        setTimeout(function() {
+            window.location.reload();
+        }, 1500)
     })
 
     $('#deleteBtn').click("click", function() {
         deleteTask();
 
+        document.getElementById("removeTaskPopUp").innerHTML = "Removed: " + document.getElementById("deleteTaskName").value;
         document.getElementById("deleteTaskName").value = "";
+        setTimeout(function() {
+            window.location.reload();
+        }, 1500)
     })
 
     $('#setReminderBtn').click("click", function(){
@@ -769,6 +814,9 @@ $(document).ready(function() {
         document.getElementById("reminderTaskName").value = "";
         document.getElementById("reminderDate").value = "";
         document.getElementById("reminderTime").value = "";
+        setTimeout(function() {
+            window.location.reload();
+        }, 1500)
     })
 });
 
@@ -781,6 +829,8 @@ function addToDB(){
             currentUser: currentUser,
             taskName: JSON.stringify(taskNameArr),
             taskDesc: JSON.stringify(taskDescArr),
+            taskHour: JSON.stringify(taskHourArr),
+            taskMin: JSON.stringify(taskMinArr),
             taskDay: JSON.stringify(taskDayArr),
             taskMonth: JSON.stringify(taskMonthArr),
             taskYear: JSON.stringify(taskYearArr)
@@ -802,6 +852,10 @@ function taskNameLoad() {
             },
             success:function(data) {
                 console.log(data);
+                if(data.length != 0){
+                    var titleTemp = data.split(",");
+                    allTasks(titleTemp);
+                }
             }
         })
     })
@@ -834,6 +888,9 @@ function taskDayLoad(){
             },
             success:function(data) {
                 console.log(data);
+                if(data.length != 0){
+                    dayTemp = data.split(",");
+                }
             }
         })
     })
@@ -850,6 +907,9 @@ function taskMonthLoad(){
             },
             success:function(data) {
                 console.log(data);
+                if(data.length != 0){
+                    monthTemp = data.split(",");
+                }
             }
         })
     })
@@ -866,6 +926,47 @@ function taskYearLoad(){
             },
             success:function(data) {
                 console.log(data);
+                if(data.length != 0){
+                    yearTemp = data.split(",");
+                }
+            }
+        })
+    })
+}
+
+function taskHourLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskHourLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    hourTemp = data.split(",");
+                }
+            }
+        })
+    })
+}
+
+function taskMinLoad(){
+    $(onload).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "taskMinLoad.php",
+            data: 
+            {
+                currentUser: currentUser
+            },
+            success:function(data) {
+                console.log(data);
+                if(data.length != 0){
+                    minTemp = data.split(",");
+                }
             }
         })
     })
@@ -883,7 +984,6 @@ function taskEdited() {
     taskYearArr.push(dateArr[0]);
     taskMonthArr.push(dateArr[1]);
     taskDayArr.push(dateArr[2]);
-
     $.ajax({
         type: "POST",
         url: "scheduleEditTask.php",
@@ -913,12 +1013,13 @@ function deleteTask() {
         },
         success:function(result) {
             console.log("boom");
+            
         }
     })
 }
 
 function reminderTask() {
-    console.log("worked");
+    console.log("works");
     var reminderDate = document.getElementById("reminderDate").value;
     var time = document.getElementById("reminderTime").value;
     var reminderDateArr = [];
@@ -927,12 +1028,45 @@ function reminderTask() {
     reminderDateArr = reminderDate.split('-');
     timeArr = time.split(':');
 
-    taskNameArr.push(document.getElementById("reminderTaskName").value);
-    reminderYearArr.push(reminderDateArr[0]);
-    reminderMonthArr.push(reminderDateArr[1]);
-    reminderDayArr.push(reminderDateArr[2]);
-    taskHourArr.push(timeArr[0]);
-    taskMinArr.push(timeArr[1]);
+    if ((reminderDateArr[0]>=today.getFullYear()) && (reminderDateArr[1]>=today.getMonth()+1) && (reminderDateArr[2]>=today.getDate())) {
+        taskNameArr.push(document.getElementById("reminderTaskName").value);
+        reminderYearArr.push(reminderDateArr[0]);
+        reminderMonthArr.push(reminderDateArr[1]);
+        reminderDayArr.push(reminderDateArr[2]);
+        reminderHourArr.push(timeArr[0]);
+        reminderMinArr.push(timeArr[1]);
+
+        if (!window.Notification) {
+            console.log('Browser does not support notifications.');
+        } else {
+            // check if permission is already granted
+            if (Notification.permission === 'granted') {
+                // show notification here
+                var notify = new Notification('Reminder!', {
+                    body: 'Reminder set at ' + document.getElementById("reminderDate").value + " " + document.getElementById("reminderTime").value
+                        + " for task: " + document.getElementById("reminderTaskName").value
+                });
+            } else {
+                // request permission from user
+                Notification.requestPermission().then(function(p) {
+                    if(p === 'granted') {
+                        // show notification here
+                        var notify = new Notification('Reminder!', {
+                        body: 'Reminder set at ' + document.getElementById("reminderDate").value + " " + document.getElementById("reminderTime").value
+                        + " for task: " + document.getElementById("reminderTaskName").value
+                    });
+                    } else {
+                        console.log('User blocked notifications.');
+                    }
+                }).catch(function(err) {
+                    console.error(err);
+                });
+            }
+            console.log('SUPPORT.');
+        }
+    } else {
+        alert("You can't add a reminder on a day that has already passed");
+    }
 
     $.ajax({
         type: "POST",
@@ -943,11 +1077,20 @@ function reminderTask() {
             reminderDay: JSON.stringify(reminderDayArr),
             reminderMonth: JSON.stringify(reminderMonthArr),
             reminderYear: JSON.stringify(reminderYearArr),
-            taskHour: JSON.stringify(taskHourArr),
-            taskMin: JSON.stringify(taskMinArr)
+            reminderHour: JSON.stringify(reminderHourArr),
+            reminderMin: JSON.stringify(reminderMinArr)
         },
         success:function(result) {
             console.log("boomboom");
         }
     })
+}
+
+function allTasks(data) {
+    var temp = "";
+    for(var cntr = 0; cntr < data.length; cntr++) {
+        temp += "<br>Task " + (cntr + 1)+ ": " + data[cntr];
+
+        document.getElementById("listOfTasks").innerHTML = temp;
+    } 
 }

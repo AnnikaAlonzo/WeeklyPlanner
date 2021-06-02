@@ -385,7 +385,7 @@ input {
 			 <a href="personalNotes.html">Personal Notes</a>
 			 <a href="expenses.html">Expenses</a>
 			 <a onclick="openAboutUs();closeNav()" style="cursor: pointer;">About Us</a>
-			 <a onclick="openHelp();closeNav()" style="cursor: pointer;">Help</a>
+			 <a onclick="openSideHelp();closeNav()" style="cursor: pointer;">Help</a>
 			 <a></a>
 			 <a></a>
 			 <a href="main.html">Log Out</a>
@@ -394,10 +394,14 @@ input {
 		 <div class="dropdown">    
 
 			<div id="helpOverlay" class="overlay">
-				<a href="javascript:void(0)" class="closeAddBtn" onclick="closeHelp()">x</a><br><br><br>
+				<a href="javascript:void(0)" class="closeNoteBtn" onclick="closeHelp()">x</a><br><br><br>
 
 				<label style="font-size: 20px;">HELP</label><br><br><br>
-				<label style="font-size: 20px;">This page shows the whole schedule of the current user logged in</label><br><br><br>
+				<label style="font-size: 20px;">This page shows the full summary of all the tasks the user has</label><br><br>
+				<label style="font-size: 20px;">You will be able to view your task by clicking on one of the titles</label><br><br>
+				<label style="font-size: 20px;">You can freely change the title, description, and date of the task granted</label><br>
+				<label style="font-size: 20px;">that you will press the save button after doing so</label><br><br>
+				<label style="font-size: 20px;">Pressing the trashcan symbol will delete the selected task</label><br><br>
 				<label style="font-size: 20px;">- Go Back</label><br>
 				<label style="font-size: 20px;">&emsp;&#8594; The go back button allows the user to go back to the schedule page</label><br>
 
@@ -425,7 +429,7 @@ input {
 
 			<div id="mainOverlay"></div>  
 		</div>
-		<div class="calContainer" style="position: relative;">
+		<!-- <div class="calContainer" style="position: relative;">
 			<div class="icalendar" style="position: relative;">
 			  <div class="icalendar__month" style="position: relative;">
 				<div class="icalendar__prev" onclick="moveDate('prev')" style="position: relative;">
@@ -454,6 +458,6 @@ input {
 		
 			  <script src="./calendar.js" type="text/javascript"></script>
 			</div>
-		  </div>
+		  </div> -->
 	 </body>
  </html>

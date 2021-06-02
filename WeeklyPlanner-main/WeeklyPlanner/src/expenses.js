@@ -729,6 +729,7 @@ var dateYear1;
 var dateDay2;
 var dateMonth2;
 var dateYear2;
+let today = new Date();
 
 function getUser(){
     $(onload).ready(function(){
@@ -743,25 +744,37 @@ $(document).ready(function(){
     monthLoad();
     yearLoad();
     priceLoad();
+    dayRenderLoad();
+    
     $('#submitAdd').click("click",function() {
         var x = document.getElementById("addDate").value;
         var dateTemp = [];
 
         dateTemp = x.split('-');
 
-        yearArr.push(dateTemp[0]);
-        monthArr.push(dateTemp[1]);
-        dayArr.push(dateTemp[2]);
-        priceArr.push(document.getElementById("addAmount").value);
+        if ((dateTemp[0]>=today.getFullYear()) && (dateTemp[1]>=today.getMonth()+1) && (dateTemp[2]>today.getDate())) {
+            alert("You can't add your expenses further than today");
+        } else {
+            yearArr.push(dateTemp[0]);
+            monthArr.push(dateTemp[1]);
+            dayArr.push(dateTemp[2]);
+            priceArr.push(document.getElementById("addAmount").value);
 
-        addToDB();
+            addToDB();
+            setTimeout(function() {
+                window.location.reload();
+            }, 1500)
 
-        document.getElementById("addDate").value = "";
-        document.getElementById("addAmount").value = "";
+            document.getElementById("addDate").value = "";
+            document.getElementById("addAmount").value = "";
+        }
     })
 
     $('#submitEdit').click("click",function() {
         displaySave();
+        setTimeout(function() {
+            window.location.reload();
+        }, 1500)
 
         document.getElementById("editDate").value = "";
         document.getElementById("editAmount").value = "";
@@ -769,6 +782,9 @@ $(document).ready(function(){
 
     $('#submitRemove').click("click",function() {
         deleteFromDB();
+        setTimeout(function() {
+            window.location.reload();
+        }, 1500)
 
         document.getElementById("removeDate").value = "";
     })
@@ -929,6 +945,8 @@ function getTallyDB(){
     dateYear2 = parseInt(dateTemp2[0]);
     dateMonth2 = parseInt(dateTemp2[1]);
     dateDay2 = parseInt(dateTemp2[2]);
+
+    
 
     for (var cntr=0; cntr<tallyMonthArrTemp.length; cntr++) {
         if (((tallyDayArr[cntr] >= dateDay1) && (tallyDayArr[cntr] <= dateDay2)) && ((tallyMonthArr[cntr] >= dateMonth1) && (tallyMonthArr[cntr] <= dateMonth2)) && ((tallyYearArr[cntr] >= dateYear1) && (tallyYearArr[cntr] <= dateYear2))) {
