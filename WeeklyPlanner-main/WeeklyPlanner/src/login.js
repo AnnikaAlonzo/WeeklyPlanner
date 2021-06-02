@@ -140,21 +140,6 @@ password.style.color = "#000000";
 
 passwordBox.appendChild(password);
 
-// var passwordTextbox = document.createElement("INPUT");
-// passwordTextbox.setAttribute("passwordText","passwordTextbox");
-// passwordTextbox.placeholder = "Password";
-// passwordTextbox.id = 'designation';
-// passwordTextbox.style.fontFamily = "Roboto";
-// passwordTextbox.style.fontSize = "20px";
-// passwordTextbox.style.left = "40px";
-// passwordTextbox.style.top = "2px";
-// passwordTextbox.style.width = "365px";
-// passwordTextbox.style.height = "44px";
-// passwordTextbox.style.border = "0px solid #000000";
-// passwordTextbox.setAttribute("type", "password");
-
-// passwordBox.appendChild(passwordTextbox);
-
 var image2 = document.createElement("img");
 image2.id = "image2";
 image2.style.left = "6px";
@@ -184,21 +169,6 @@ emailRect.style.border = "1px solid #000000";
 emailRect.style.background = 'rgba(255,255,255,1)';
 
 emailBox.appendChild(emailRect);
-
-// var emailTextbox = document.createElement("INPUT");
-// emailTextbox.setAttribute("emailText","emailTextbox");
-// emailTextbox.placeholder = "Enter Email";
-// emailTextbox.id = 'username';
-// emailTextbox.style.fontFamily = "Roboto";
-// emailTextbox.style.fontSize = "20px";
-// emailTextbox.style.left = "40px";
-// emailTextbox.style.top = "2px";
-// emailTextbox.style.width = "365px";
-// emailTextbox.style.height = "44px";
-// emailTextbox.style.border = "0px solid #000000";
-// emailTextbox.style.background = 'rgba(255,255,255,1)';
-
-// emailBox.appendChild(emailTextbox);
 
 var image_1 = document.createElement("img");
 image_1.id = "image_1";
@@ -253,47 +223,6 @@ function gotoRegister() {
 
 registerButton.appendChild(register);
 
-// var logButton = document.createElement("div");
-// logButton.id = "logButton";
-// logButton.style.width = "400px";
-// logButton.style.height = "58px";
-// logButton.style.left = "95px";
-// logButton.style.top = "401px";
-// logButton.style.position = "absolute";
-// logButton.style.cursor = "pointer";
-// logButton.addEventListener("click", goToMain2);
-
-
-
-// loginBox.appendChild(logButton);
-
-// var logButtonRect = document.createElement("div");
-// logButtonRect.id = "logButtonRect";
-// logButtonRect.style.left = "0px";
-// logButtonRect.style.opacity = "100";
-// logButtonRect.style.filter = "alpha(opacity='0')";
-// logButtonRect.style.top = "0px";
-// logButtonRect.style.width = "415px";
-// logButtonRect.style.height = "66px";
-// logButtonRect.style.border = "4px solid #000203";
-// logButtonRect.style.background = 'rgba(196,196,196,0)';
-
-// logButton.appendChild(logButtonRect);
-
-// var login = document.createElement("div");
-// login.innerHTML = "LOGIN";
-// login.style.textAlign = "left";
-// login.id = "login";
-// login.style.left = "170px";
-// login.style.top = "19px";
-// login.style.width = "191px";
-// login.style.height = "49.48px";
-// login.style.fontFamily = "Roboto";
-// login.style.fontSize = "24px";
-// login.style.overflow = "hidden";
-// login.style.color = "#000000";
-
-// logButton.appendChild(login);
 var username;
 
 $(document).ready(function(){

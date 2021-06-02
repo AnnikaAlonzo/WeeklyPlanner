@@ -127,13 +127,6 @@ function moveDate(param) {
     renderDate();
 }
 
-// function getRenderUser(){
-//     $(onload).ready(function(){
-//         currentUser = sessionStorage.getItem('currentUser');
-//         console.log(currentUser);
-//     })
-// }
-
 function dayRenderLoad(){
     $(onload).ready(function() {
         $.ajax({
@@ -286,59 +279,3 @@ function dayRenderLoad(){
         })
     })
 }
-
-// function monthRenderLoad(){
-//     $(onload).ready(function() {
-//         $.ajax({
-//             type: "POST",
-//             url: "expenseMonthLoad.php",
-//             data: {currentUser: currentUser},
-//             success:function(data) {
-//                 console.log(data);
-//                 viewMonth = data;
-//             }
-//         })
-//     })
-// }
-
-// function yearRenderLoad(){
-//     $(onload).ready(function() {
-//         $.ajax({
-//             type: "POST",
-//             url: "expenseYearLoad.php",
-//             data: {currentUser: currentUser},
-//             success:function(data) {
-//                 console.log(data);
-//                 viewYear = data;
-//             }
-//         })
-//     })
-// }
-
-// function priceRenderLoad(){
-//     $(onload).ready(function() {
-//         $.ajax({
-//             type: "POST",
-//             url: "expensePriceLoad.php",
-//             data: {currentUser: currentUser},
-//             success:function(data) {
-//                 console.log(data);
-//                 viewPrice = data;
-//             }
-//         })
-//     })
-// }
-
-// function preSetArrays() {
-//     viewMonthArrTemp = viewMonth.split(',');
-//     viewDayArrTemp = viewDay.split(',');
-//     viewYearArrTemp = viewYear.split(',');
-//     viewPriceArrTemp = viewPrice.split(',');
-
-//     for (var cntr=0; cntr<viewMonthArrTemp.length; cntr++) {
-//         viewMonthArr.push(parseInt(viewMonthArrTemp[cntr]));
-//         viewDayArr.push(parseInt(viewDayArrTemp[cntr]));
-//         viewYearArr.push(parseInt(viewYearArrTemp[cntr]));
-//         viewPriceArr.push(parseInt(viewPriceArrTemp[cntr]));
-//     }
-// }

@@ -127,9 +127,6 @@ image_4.addEventListener("click", closeHelp);
 
 contentContainer.appendChild(image_4);
 
-//document.getElementById("titleInp").style.fontStyle="Sansation";
-//document.getElementById("descInp").style.fontStyle="Sansation";
-
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -223,9 +220,6 @@ $(document).ready(function(){
             notesListRect.appendChild(row);
             i++;
         } 
-
-        // document.getElementById("titleInp").value = "";
-        // document.getElementById("descInp").value = "";
 
         addToDB();
 

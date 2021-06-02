@@ -293,34 +293,6 @@ image_1_ek2.src = "skins/image_1_ek2.png";
 
 emailBox.appendChild(image_1_ek2);
 
-// var registerRect = document.createElement("div");
-// registerRect.id = "rectangle_1";
-// registerRect.style.left = "0px";
-// registerRect.style.opacity = "100";
-// registerRect.style.filter = "alpha(opacity='0')";
-// registerRect.style.top = "0px";
-// registerRect.style.width = "414px";
-// registerRect.style.height = "74px";
-// registerRect.style.border = "4px solid #000203";
-// registerRect.style.background = 'rgba(196,196,196,0)';
-
-// registerButton.appendChild(registerRect);
-
-// var register = document.createElement("div");
-// register.innerHTML = "REGISTER";
-// register.style.textAlign = "left";
-// register.id = "register";
-// register.style.left = "155px";
-// register.style.top = "26px";
-// register.style.width = "404.12px";
-// register.style.height = "62.62px";
-// register.style.fontFamily = "Roboto";
-// register.style.fontSize = "24px";
-// register.style.overflow = "hidden";
-// register.style.color = "#000000";
-
-// registerButton.appendChild(register);
-
 var lastNameTextbox = document.createElement("INPUT");
 lastNameTextbox.setAttribute("lastNameText","lastNameTextbox");
 lastNameTextbox.id = "lastname";

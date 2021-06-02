@@ -239,25 +239,6 @@ questionMarkSymbol.style.color = "#000000";
 
 helpButton.appendChild(questionMarkSymbol);
 
-// var removeTaskButton = document.createElement("div");
-// removeTaskButton.id = "removeTaskButton";
-// removeTaskButton.style.width = "294px";
-// removeTaskButton.style.height = "64px";
-// removeTaskButton.style.left = "0px";
-// removeTaskButton.style.top = "163px";
-// removeTaskButton.style.position = "absolute";
-// removeTaskButton.style.cursor = "pointer";
-// removeTaskButton.addEventListener("click", removeTask);
-// removeTaskButton.addEventListener("click", closeNav);
-// removeTaskButton.addEventListener("click", closeAdd);
-// removeTaskButton.addEventListener("click", closeEdit);
-// removeTaskButton.addEventListener("click", closeReminder);
-// removeTaskButton.addEventListener("click", closeAboutUs);
-// removeTaskButton.addEventListener("click", closeHelp);
-// removeTaskButton.addEventListener("click", closeSideHelp);
-
-// buttons.appendChild(removeTaskButton);
-
 function removeTask() {
     document.getElementById("removeTaskOverlay").style.width = "575px";
     document.getElementById("removeTaskOverlay").style.height = "300px";
@@ -271,48 +252,6 @@ function closeRemove() {
     document.getElementById("removeTaskOverlay").style.border = "0px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "0";
 }
-
-// var removeTaskRect = document.createElement("div");
-// removeTaskRect.id = "removeTaskRect";
-// removeTaskRect.style.left = "0px";
-// removeTaskRect.style.top = "0px";
-// removeTaskRect.style.width = "294px";
-// removeTaskRect.style.height = "64px";
-// removeTaskRect.style.borderRadius = "50px";
-// removeTaskRect.style.background = 'rgba(254,248,232,1)';
-
-// removeTaskButton.appendChild(removeTaskRect);
-
-// var removeTaskText = document.createElement("div");
-// removeTaskText.innerHTML = "Remove Task";
-// removeTaskText.style.textAlign = "left";
-// removeTaskText.id = "removeTaskText";
-// removeTaskText.style.left = "58px";
-// removeTaskText.style.top = "18px";
-// removeTaskText.style.width = "178px";
-// removeTaskText.style.height = "55px";
-// removeTaskText.style.fontFamily = "Radley";
-// removeTaskText.style.fontSize = "28px";
-// removeTaskText.style.overflow = "hidden";
-// removeTaskText.style.color = "#000000";
-
-// removeTaskButton.appendChild(removeTaskText);
-
-// var minusSymbol = document.createElement("div");
-// minusSymbol.innerHTML = "-";
-// minusSymbol.style.textAlign = "center";
-// minusSymbol.id = "minusSymbol";
-// minusSymbol.style.left = "14px";
-// minusSymbol.style.top = "3px";
-// minusSymbol.style.width = "45px";
-// minusSymbol.style.height = "97px";
-// minusSymbol.style.fontFamily = "Radley";
-// minusSymbol.style.fontSize = "48px";
-// minusSymbol.style.textShadow = "0px 0px 1px #000000";
-// minusSymbol.style.overflow = "hidden";
-// minusSymbol.style.color = "#000000";
-
-// removeTaskButton.appendChild(minusSymbol);
 
 var viewSchedButton = document.createElement("div");
 viewSchedButton.id = "viewSchedButton";
@@ -373,25 +312,6 @@ arrowSymbol.style.color = "#000000";
 
 viewSchedButton.appendChild(arrowSymbol);
 
-// var editTaskButton = document.createElement("div");
-// editTaskButton.id = "editTaskButton";
-// editTaskButton.style.width = "294px";
-// editTaskButton.style.height = "64px";
-// editTaskButton.style.left = "0px";
-// editTaskButton.style.top = "83px";
-// editTaskButton.style.position = "absolute";
-// editTaskButton.style.cursor = "pointer";
-// editTaskButton.addEventListener("click", editTask);
-// editTaskButton.addEventListener("click", closeNav);
-// editTaskButton.addEventListener("click", closeAdd);
-// editTaskButton.addEventListener("click", closeReminder);
-// editTaskButton.addEventListener("click", closeRemove);
-// editTaskButton.addEventListener("click", closeAboutUs);
-// editTaskButton.addEventListener("click", closeHelp);
-// editTaskButton.addEventListener("click", closeSideHelp);
-
-// buttons.appendChild(editTaskButton);
-
 function editTask() {
     document.getElementById("editTaskOverlay").style.width = "575px";
     document.getElementById("editTaskOverlay").style.height = "580px";
@@ -405,48 +325,6 @@ function closeEdit() {
     document.getElementById("editTaskOverlay").style.border = "0px solid black";
     document.getElementById("mainOverlay").style.marginLeft = "0";
 }
-
-// var editTaskRect = document.createElement("div");
-// editTaskRect.id = "editTaskRect";
-// editTaskRect.style.left = "0px";
-// editTaskRect.style.top = "0px";
-// editTaskRect.style.width = "294px";
-// editTaskRect.style.height = "64px";
-// editTaskRect.style.borderRadius = "50px";
-// editTaskRect.style.background = 'rgba(254,248,232,1)';
-
-// editTaskButton.appendChild(editTaskRect);
-
-// var editTaskText = document.createElement("div");
-// editTaskText.innerHTML = "Edit Task";
-// editTaskText.style.textAlign = "left";
-// editTaskText.id = "editTaskText";
-// editTaskText.style.left = "58px";
-// editTaskText.style.top = "18px";
-// editTaskText.style.width = "133px";
-// editTaskText.style.height = "55px";
-// editTaskText.style.fontFamily = "Radley";
-// editTaskText.style.fontSize = "28px";
-// editTaskText.style.overflow = "hidden";
-// editTaskText.style.color = "#000000";
-
-// editTaskButton.appendChild(editTaskText);
-
-// var wavyDashSymbol = document.createElement("div");
-// wavyDashSymbol.innerHTML = "~";
-// wavyDashSymbol.style.textAlign = "center";
-// wavyDashSymbol.id = "wavyDashSymbol";
-// wavyDashSymbol.style.left = "13px";
-// wavyDashSymbol.style.top = "3px";
-// wavyDashSymbol.style.width = "47px";
-// wavyDashSymbol.style.height = "97px";
-// wavyDashSymbol.style.fontFamily = "Radley";
-// wavyDashSymbol.style.fontSize = "48px";
-// wavyDashSymbol.style.textShadow = "0px 0px 1px #000000";
-// wavyDashSymbol.style.overflow = "hidden";
-// wavyDashSymbol.style.color = "#000000";
-
-// editTaskButton.appendChild(wavyDashSymbol);
 
 var addTaskButton = document.createElement("div");
 addTaskButton.id = "addTaskButton";
@@ -522,31 +400,6 @@ plusSymbol.style.overflow = "hidden";
 plusSymbol.style.color = "#000000";
 
 addTaskButton.appendChild(plusSymbol);
-
-// var image_2 = document.createElement("img");
-// image_2.id = "image_2";
-// image_2.style.left = "1188px";
-// image_2.style.top = "12px";
-// image_2.style.width = "31px";
-// image_2.style.height = "31px";
-// image_2.src = "skins/image_2.png";
-
-// contentContainer.appendChild(image_2);
-
-// var lance_supangan = document.createElement("div");
-// lance_supangan.innerHTML = "Lance Supangan";
-// lance_supangan.style.textAlign = "center";
-// lance_supangan.id = "lance_supangan";
-// lance_supangan.style.left = "1216px";
-// lance_supangan.style.top = "16px";
-// lance_supangan.style.width = "150px";
-// lance_supangan.style.height = "36px";
-// lance_supangan.style.fontFamily = "Sansation";
-// lance_supangan.style.fontSize = "18px";
-// lance_supangan.style.overflow = "hidden";
-// lance_supangan.style.color = "#000000";
-
-// contentContainer.appendChild(lance_supangan);
 
 var line42 = document.createElement("div");
 line42.id = "line42";
@@ -741,7 +594,6 @@ $(document).ready(function() {
     taskMinLoad();
     taskHourLoad();
     dayRender2Load();
-    //taskRenderDayLoad();
     $('#addTaskBtn').click("click",function() {
         console.log("it worked");
         var date = document.getElementById("addtaskDate").value;

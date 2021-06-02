@@ -295,31 +295,6 @@ minusSymbol.style.color = "#000000";
 
 goBackButton.appendChild(minusSymbol);
 
-// var image_2 = document.createElement("img");
-// image_2.id = "image_2";
-// image_2.style.left = "1188px";
-// image_2.style.top = "12px";
-// image_2.style.width = "31px";
-// image_2.style.height = "31px";
-// image_2.src = "skins/image_2.png";
-
-// contentContainer.appendChild(image_2);
-
-// var lance_supangan = document.createElement("div");
-// lance_supangan.innerHTML = "Lance Supangan";
-// lance_supangan.style.textAlign = "center";
-// lance_supangan.id = "lance_supangan";
-// lance_supangan.style.left = "1216px";
-// lance_supangan.style.top = "16px";
-// lance_supangan.style.width = "150px";
-// lance_supangan.style.height = "36px";
-// lance_supangan.style.fontFamily = "Sansation";
-// lance_supangan.style.fontSize = "18px";
-// lance_supangan.style.overflow = "hidden";
-// lance_supangan.style.color = "#000000";
-
-// contentContainer.appendChild(lance_supangan);
-
 var line42 = document.createElement("div");
 line42.id = "line42";
 line42.style.left = "99px";
@@ -724,15 +699,11 @@ function displaySave(){
     yearArr[index] = tempDate[0];
     monthArr[index] = tempDate[1];
     dayArr[index] = tempDate[2];
-    // taskMonthArr.push(dateArr[1]);
-    // taskDayArr.push(dateArr[2]);
 
     $.ajax({
         type: "POST",
         url: "updatedSchedule.php",
         data: {
-            // title: JSON.stringify(notesArray),
-            // descriptions: JSON.stringify(descrArr),
             taskName: JSON.stringify(titleArr),
             prevTitle: JSON.stringify(prevTitle),
             taskDesc: JSON.stringify(descrArr),

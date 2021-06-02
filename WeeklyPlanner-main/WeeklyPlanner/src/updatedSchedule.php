@@ -1,9 +1,6 @@
 <?php
     include "index.php";
 
-    // $noteTitle = json_decode($_POST['title']);
-    // $updatedDesc = json_decode($_POST['descriptions']);
-
     $taskName = json_decode($_POST['taskName']);
     $prevTitle = json_decode($_POST['prevTitle']);
     $taskDesc = json_decode($_POST['taskDesc']);

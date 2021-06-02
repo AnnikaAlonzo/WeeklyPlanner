@@ -49,11 +49,7 @@ function renderDate() {
     for (let i = 1; i <= endDate; i++) {
         if (i === today.getDate() && dt.getMonth() === today.getMonth() && dt.getFullYear() === today.getFullYear()) {
             cells += "<div class='icalendar__today'>" + i + "<br><br>32" + "</div>";
-            /*
-            big brain time: add stuff here edits the cells of the calendar
-            separate lists from the expenses of each day depending on the dates they saved it
-            each date will have a loaded expense list
-            */
+           
         } else {
             cells += "<div>" + i + "</div>";
         }
@@ -80,8 +76,4 @@ function moveDate(param) {
     }
 
     renderDate();
-}
-
-function viewNotes(param) {
-    //alert("Success " + param);
 }

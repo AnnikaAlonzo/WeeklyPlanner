@@ -164,57 +164,6 @@ asteriskSymbol.style.color = "#000000";
 
 tallyExpButton.appendChild(asteriskSymbol);
 
-/*var viewExpButton = document.createElement("div");
-viewExpButton.id = "viewExpButton";
-viewExpButton.style.width = "294px";
-viewExpButton.style.height = "66px";
-viewExpButton.style.left = "0px";
-viewExpButton.style.top = "325px";
-viewExpButton.style.position = "absolute";
-buttons.appendChild(viewExpButton);
-
-var viewExpRect = document.createElement("div");
-viewExpRect.id = "viewExpRect";
-viewExpRect.style.left = "0px";
-viewExpRect.style.top = "0px";
-viewExpRect.style.width = "294px";
-viewExpRect.style.height = "64px";
-viewExpRect.style.borderRadius = "50px";
-viewExpRect.style.background = 'rgba(254,248,232,1)';
-
-viewExpButton.appendChild(viewExpRect);
-
-var viewExpText = document.createElement("div");
-viewExpText.innerHTML = "View Expenses";
-viewExpText.style.textAlign = "left";
-viewExpText.id = "viewExpText";
-viewExpText.style.left = "58px";
-viewExpText.style.top = "18px";
-viewExpText.style.width = "197px";
-viewExpText.style.height = "55px";
-viewExpText.style.fontFamily = "Radley";
-viewExpText.style.fontSize = "28px";
-viewExpText.style.overflow = "hidden";
-viewExpText.style.color = "#000000";
-
-viewExpButton.appendChild(viewExpText);
-
-var arrowSymbol = document.createElement("div");
-arrowSymbol.innerHTML = ">";
-arrowSymbol.style.textAlign = "center";
-arrowSymbol.id = "arrowSymbol";
-arrowSymbol.style.left = "16px";
-arrowSymbol.style.top = "5px";
-arrowSymbol.style.width = "41px";
-arrowSymbol.style.height = "97px";
-arrowSymbol.style.fontFamily = "Radley";
-arrowSymbol.style.fontSize = "48px";
-arrowSymbol.style.textShadow = "0px 0px 1px #000000";
-arrowSymbol.style.overflow = "hidden";
-arrowSymbol.style.color = "#000000";
-
-viewExpButton.appendChild(arrowSymbol);*/
-
 var helpButton = document.createElement("div");
 helpButton.id = "helpButton";
 helpButton.style.width = "294px";
@@ -957,18 +906,3 @@ function getTallyDB(){
     document.getElementById("calcTally").innerHTML = "Total: Php " + tallySum;
     tallySum = 0;
 }
-
-
-/*
-Changes made (May 24):
-- New overlays for other buttons
-- removed clear input function (clears input from input)
-- removed selectBtn function (for interactable button color change)
-- added a new test functions to return specific data
-- changed input type for amount
-*/
-
-/*
-Changes made (May 25):
-- Database has been added for add, edit, remove, and tally expense
-*/

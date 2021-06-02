@@ -128,13 +128,6 @@ function moveDate(param) {
     renderDate();
 }
 
-// function getRenderUser(){
-//     $(onload).ready(function(){
-//         currentUser = sessionStorage.getItem('currentUser');
-//         console.log(currentUser);
-//     })
-// }
-
 function dayRender2Load(){
     $(onload).ready(function() {
         $.ajax({

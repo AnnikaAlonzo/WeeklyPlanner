@@ -3,7 +3,6 @@
 
     $currentUser = $_POST['currentUser'];
     $taskName = json_decode($_POST['taskName']);
-    // $updatedTaskName = json_decode($_POST['taskName']);
     $updatedTaskDesc = json_decode($_POST['taskDesc']);
     $updatedTaskHour = json_decode($_POST['taskHour']);
     $updatedTaskMin = json_decode($_POST['taskMin']);
