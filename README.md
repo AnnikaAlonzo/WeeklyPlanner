@@ -13,12 +13,14 @@ from the week.
 - An account made specifically from the website to save data
 
 ##### Environment Setup
-- A link will be provided for the user to access the project
-- The user must register an account first to be gain access to the project's functionalities
+- Website link: https://weekly-planner.000webhostapp.com/main.html
+- User may click on the link provided above to access the website
+- Then the user must register an account first to gain access to the project's functionalities
 - Registering an account can be seen at the login interface where it will direct the user accordingly
 - The username and password for the website must be different from other accounts; it will prompt the
   user with an error if there are duplicates of an account until the input is valid
-- With the new username and password recorded, the user can login and use the website to their content
+- With the new username and password recorded, the user can log in and use the website to their content
+- Once logged in, the user will be directed to the main page, where they may access the different features of the website
 
 ##### Revision Logs
 - April 4, 2021: Inital commit of files (Alonzo)
@@ -29,14 +31,17 @@ from the week.
 - April 18 - 20, 2021: Updated schedule feature (Alonzo)
 - April 18 - 20, 2021: Updated expense feature (Alonzo, Supangan)
 - May 5 - 11, 2021: For personal notes: added the displaying of titles by list and the description for that note when clicked on, plus the description can be edited and saved again (Ayson)
-- May 9 - 22, 2021: For expenses: fixed the calendar shown on this page and also made minor touches to the functionalities. Also setup the function to connect to the database (Supangan)
+- May 9 - 22, 2021: For expenses: fixed the calendar shown on this page and also made minor touches to the functionalities. Also set up the function to connect to the database (Supangan)
 - May 12 - 20, 2021: For personal notes: initial connect to the database (Alonzo)
-- May 20 - 21, 2021: For personal notes: fully connected to the database, system can recognize which user is logged in, can now also delete notes (Ayson)
+- May 20 - 21, 2021: For personal notes: fully connected to the database, the system can recognize which user is logged in, can now also delete notes (Ayson)
 - May 23, 2021: Redesigned the interface of the main pages, fixed personal notes list interface, added an ‘About Website’ to main pages and change ‘About Us’ to ‘About the Developers’ (Alonzo)
 - May 23 - 25, 2021: For schedule: fixed the calendar shown on this page and also made minor touches to the functionalities. Also created a php file to start connecting this function to the database (Alonzo)
 - May 23 - 26, 2021: For expense: connected all the functionalities to the database and made ‘Tally Expense’ work to show the user on the overlay (Supangan)
 - May 24, 2021: Added ‘About Website’ and ‘About the Developers’ overlay to main pages. Also added these to the sidebar menu plus ‘Help’ (Supangan)
 - May 25 - 26, 2021: For schedule: connected all functionalities to the database and made the page for ‘View Schedule’ (Alonzo)
+- June 1, 2021: For schedule: added view tasks, wherein the user can edit the title, description, and date. They can also delete tasks. New php file added for updating titles, description, and new date. (Supangan)
+- June 1 - 2, 2021: Added a function that avoids overlapping of tasks and update the calendar functions so that the user does not add a task on a date that has already passed. (Supangan)
+- June 2, 2021: Modified program so that it connects to an online database and users may use the link provided to access the website. (Alonzo)
 
 ##### Contributors
 Annika Dominique Alonzo: Primary front-end programmer, secondary back-end programmer
